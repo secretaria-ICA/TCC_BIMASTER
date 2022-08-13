@@ -5,8 +5,8 @@ Trabalho de conclusão de Curso do BI-Master turma 2020-2 PUC-Rio
 
 # Título do Trabalho
 
-#### Alun(o/a): [David Fernando Castillo Zúñiga](https://github.com/link_do_github).
-#### Orientador(/a/es/as): [Leonardo Forero](https://github.com/link_do_github).
+#### Alun(o/a): [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
+#### Orientador(/a/es/as): [Leonardo Forero Mendoza](https://github.com/leofome8).
 <!--#### Co-orientador(/a/es/as): [Nome Sobrenome](https://github.com/link_do_github).  caso não aplicável, remover esta linha -->
 
 ---
@@ -45,7 +45,7 @@ Donec molestie, ante quis tempus consequat, mauris ante fringilla elit, euismod 
 
 ---
 
-Matrícula: 123.456.789
+Matrícula: 202.100.173
 
 Pontifícia Universidade Católica do Rio de Janeiro
 
