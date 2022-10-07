@@ -3,7 +3,7 @@ Trabalho de conclusão de Curso do BI-Master turma 2020-2 PUC-Rio
 
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
 
-# Título do Trabalho
+# Reconhecimento de Aeronaves a partir de Imagens de Sensoreameno Remoto
 
 #### Alun(o/a): [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
 #### Orientador(/a/es/as): [Leonardo Forero Mendoza](https://github.com/leofome8).
@@ -27,7 +27,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+O reconhecimento de aeronaves a partir de imagens de sensoriamento remoto tem muitas aplicações na área civil e militar. .
 
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
