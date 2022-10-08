@@ -7,15 +7,12 @@ Trabalho de conclusão de Curso do BI-Master turma 2020-2 PUC-Rio
 
 #### Alun(o/a): [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
 #### Orientador(/a/es/as): [Leonardo Forero Mendoza](https://github.com/leofome8).
-<!--#### Co-orientador(/a/es/as): [Nome Sobrenome](https://github.com/link_do_github).  caso não aplicável, remover esta linha -->
-
 ---
 
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
 
-- [Link para o código](https://github.com/link_do_repositorio/nome_do_arquivo_de_codigo). <!-- caso não aplicável, remover esta linha -->
+- [Link para o código](https://github.com/davidfer88/TCC_BIMASTER). 
 
-<!-- - [Link para a monografia](https://link_da_monografia.com).  caso não aplicável, remover esta linha -->
 
 - Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
     - [Nome do Trabalho 1](https://link_do_trabalho.com).
