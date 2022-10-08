@@ -3,7 +3,7 @@ Trabalho de conclusão de Curso do BI-Master turma 2020-2 PUC-Rio
 
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
 
-# Reconhecimento de Aeronaves a partir de Imagens de Sensoreameno Remoto
+# Reconhecimento de Aeronaves a partir de Imagens de Sensoriameno Remoto
 
 #### Aluno: [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
 #### Orientador: [Leonardo Forero Mendoza](https://github.com/leofome8).
@@ -52,6 +52,10 @@ Todas as aeronaves foram anotadas com caixas delimitadoras nas imagens fornecida
 
 Uma pasta chamada `extras` contém 6 imagens extras que não são anotadas, mas podem ser usadas para testar um modelo em imagens novas - nunca vistas antes.
 
+
+Formato de de dados COCO e Pascal VOC para detecção de objetos.
+
+Uma das tarefas mais importantes em visão computacional é rotular os dados. Existem várias ferramentas disponíveis onde você pode carregar as imagens, rotular os objetos usando segmentação por instância. Isso ajuda na localização precisa do objeto usando caixas delimitadoras ou mascaramento usando polígonos. Essas informações são armazenadas em arquivos de anotação. Arquivos/arquivos de anotação podem estar nos formatos de dados COCO ou Pascal VOC.
 
 Yolo
 
