@@ -53,7 +53,9 @@ Todas as aeronaves foram anotadas com caixas delimitadoras nas imagens fornecida
 Uma pasta chamada `extras` contém 6 imagens extras que não são anotadas, mas podem ser usadas para testar um modelo em imagens novas - nunca vistas antes.
 
 
+Yolo
 
+YOLO um acrônimo para 'You only look once', é um algoritmo de detecção de objetos que divide imagens em um sistema de grade. Cada célula na grade é responsável por detectar objetos dentro de si. %%YOLO é um dos algoritmos de detecção de objetos mais famosos devido à sua velocidade e precisão. O código-fonte aberto está disponível no [GitHub](https://github.com/ultralytics/yolov5).
 
 Para a base de treino foram setados o:s seguintes parâmetros: pochs=10, batch_size=16, imgsz=512
 
