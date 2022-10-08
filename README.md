@@ -5,8 +5,8 @@ Trabalho de conclusão de Curso do BI-Master turma 2020-2 PUC-Rio
 
 # Reconhecimento de Aeronaves a partir de Imagens de Sensoreameno Remoto
 
-#### Alun(o/a): [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
-#### Orientador(/a/es/as): [Leonardo Forero Mendoza](https://github.com/leofome8).
+#### Aluno: [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
+#### Orientador: [Leonardo Forero Mendoza](https://github.com/leofome8).
 ---
 
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
