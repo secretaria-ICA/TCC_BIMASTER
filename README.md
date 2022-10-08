@@ -56,7 +56,7 @@ Uma pasta chamada `extras` contém 6 imagens extras que não são anotadas, mas 
 
 Formato de de dados COCO e Pascal VOC para detecção de objetos.
 
-Uma das tarefas mais importantes em visão computacional é rotular os dados. Existem várias ferramentas disponíveis onde você pode carregar as imagens, rotular os objetos usando segmentação por instância. Isso ajuda na localização precisa do objeto usando caixas delimitadoras ou mascaramento usando polígonos. Essas informações são armazenadas em arquivos de anotação. Arquivos/arquivos de anotação podem estar nos formatos de dados [COCO] (http://host.robots.ox.ac.uk/pascal/VOC/voc2012/devkit_doc.pdf)(Everingham, 2012) ou [Pascal VOC](https://arxiv.org/pdf/1405.0312.pdf)(Lin,2014).
+Uma das tarefas mais importantes em visão computacional é rotular os dados. Existem várias ferramentas disponíveis onde você pode carregar as imagens, rotular os objetos usando segmentação por instância. Isso ajuda na localização precisa do objeto usando caixas delimitadoras ou mascaramento usando polígonos. Essas informações são armazenadas em arquivos de anotação. Arquivos/arquivos de anotação podem estar nos formatos de dados [COCO] (http://host.robots.ox.ac.uk/pascal/VOC/voc2012/devkit_doc.pdf) (Everingham, 2012) ou [Pascal VOC](https://arxiv.org/pdf/1405.0312.pdf)(Lin,2014).
 
 https://towardsdatascience.com/coco-data-format-for-object-detection-a4c5eaf518c5
 
