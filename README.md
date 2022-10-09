@@ -33,6 +33,10 @@ O reconhecimento de aeronaves a partir de imagens de sensoriamento remoto tem mu
 
 Lorem ipsum dolor sit amet, .
 
+### Introdução
+
+Ao longo dos últimos anos, os detectores de objetos baseados em Rede Neural Convolucional (CNN) ganharam popularidade na comunidade de pesquisa devido à sua capacidade de calcular automaticamente recursos de imagens contextuais complexas  [8] . Os métodos atuais de vanguarda para detecção de objetos baseados em CNN podem ser amplamente categorizados como detectores de dois estágios baseados em região ou detectores de estágio único baseados em regressão. Exemplos de detectores baseados em região incluem CNN baseado em região (RCNN)  [9] , Fast RCNN  [10] e Faster RCNN  [11] , enquanto detectores como You Only Look Once (YOLO)  [12] e Single Shot MultiBox Detection ( SSD)  [13]são exemplos de detectores baseados em regressão. Os modelos baseados em regressão são geralmente menos precisos em comparação com os detectores baseados em região, no entanto, os detectores baseados em regressão são significativamente mais rápidos em comparação com os detectores baseados em região. Esforços têm sido feitos por pesquisadores para desenvolver novos modelos baseados em CNN para melhorar o desempenho e a eficiência  [14] 
+
 ### Metodologia
 
 WandB é um dashboard central para acompanhar  hiperparâmetros, métricas do sistema e previsões permitindo comparar modelos ao vivo.
