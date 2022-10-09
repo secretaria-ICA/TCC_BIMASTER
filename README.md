@@ -84,7 +84,12 @@ train: weights=yolov5s.pt, cfg=, data=dataset.yaml, hyp=yolov5/data/hyps/hyp.scr
 
 ### Resultados obtidos
 
+Inferencia para 2 épocas
+<img src="img/predi2epoc.png" style="width: 600px">
 
+Inferencia para 2 épocas
+
+<img src="img/predi10epoc.png" style="width: 600px">
 
 ### Conclusão 
 
