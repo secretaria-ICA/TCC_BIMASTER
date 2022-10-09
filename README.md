@@ -71,6 +71,9 @@ Na  arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a
 <img src="img/Overview of model structure about YOLOv5.jpg" style="width: 600px">
 
 #### Treinamento do modelo
+
+As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessario s subdividisão das imagens em imegens menores ou ladrilhos (tiles). São gerados blocos antecipadamente  com um tamanho setado em 512 pixels por 512 pixels. paa garantir que todas a s aeronaves possam ser vistas pela rede na integra , é permitida uma sobreposição de 64 pixels entre os blocos.
+
 Para a base de treino foram setados o:s seguintes parâmetros: epochs=10, batch_size=16, imgsz=512
 
 train: weights=yolov5s.pt, cfg=, data=dataset.yaml, hyp=yolov5/data/hyps/hyp.scratch-low.yaml, epochs=10, batch_size=16, imgsz=512, rect=False, resume=False, nosave=False, noval=False, noautoanchor=False, noplots=False, evolve=None, bucket=, cache=None, image_weights=False, device=, multi_scale=False, single_cls=False, optimizer=SGD, sync_bn=False, workers=8, project=yolov5/runs/train, name=exp, exist_ok=False, quad=False, cos_lr=False, label_smoothing=0.0, patience=100, freeze=[0], save_period=-1, seed=0, local_rank=-1, entity=None, upload_dataset=False, bbox_interval=-1, artifact_alias=latest
