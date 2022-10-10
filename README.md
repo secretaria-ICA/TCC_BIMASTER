@@ -88,6 +88,8 @@ train: weights=yolov5s.pt, cfg=, data=dataset.yaml, hyp=yolov5/data/hyps/hyp.scr
 
 Métricas de treinamento e validação para 10 épocas
 
+São apresentadas na seguinte figura as Métricas de treinamento e validação para 10 épocas. Observa-se 
+
 <img src="img/media_images_Results_10_0326a98d691b6ae1c41b_Compilado.png" style="width: 600px">
 
 Métricas de treinamento e validação para 10 épocas
