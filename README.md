@@ -86,12 +86,21 @@ train: weights=yolov5s.pt, cfg=, data=dataset.yaml, hyp=yolov5/data/hyps/hyp.scr
 
 ### Resultados obtidos
 
+Métricas de treinamento e validação para 10 épocas
+<img src="img/media_images_Results_10_0326a98d691b6ae1c41b_Compilado.png" style="width: 600px">
+
+Métricas de treinamento e validação para 10 épocas
+<img src="img/media_images_Results_20_6afe5cd66e9ae3135d0e_Compilado.png" style="width: 600px">
+
+Métricas de treinamento e validação para 10 épocas
+<img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 600px">
+
 Para acompanhamento das metricas do trinamento e validação é utilizado o  Wandb. WandB é um dashboard central para acompanhar  hiperparâmetros, métricas do sistema e previsões permitindo comparar modelos ao vivo.
 
 Inferencia para 2 épocas
 <img src="img/predi2epoc.png" style="width: 600px">
 
-Inferencia para 2 épocas
+Inferencia para 10 épocas
 
 <img src="img/predi10epoc.png" style="width: 600px">
 
