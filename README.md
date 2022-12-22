@@ -39,6 +39,8 @@ Lorem ipsum dolor sit amet, .
 
 Ao longo dos últimos anos, os detectores de objetos baseados em Rede Neural Convolucional (CNN) ganharam popularidade na comunidade de pesquisa devido à sua capacidade de calcular automaticamente recursos de imagens contextuais complexas  [8] . Os métodos atuais de vanguarda para detecção de objetos baseados em CNN podem ser amplamente categorizados como detectores de dois estágios baseados em região ou detectores de estágio único baseados em regressão. Exemplos de detectores baseados em região incluem CNN baseado em região (RCNN)  [9] , Fast RCNN  [10] e Faster RCNN  [11] , enquanto detectores como You Only Look Once (YOLO)  [12] e Single Shot MultiBox Detection ( SSD)  [13]são exemplos de detectores baseados em regressão. Os modelos baseados em regressão são geralmente menos precisos em comparação com os detectores baseados em região, no entanto, os detectores baseados em regressão são significativamente mais rápidos em comparação com os detectores baseados em região. Esforços têm sido feitos por pesquisadores para desenvolver novos modelos baseados em CNN para melhorar o desempenho e a eficiência  [14] 
 
+Ammart et. al. (2021) abordaram o problema de detecção de carros a partir de imagens aéreas usando Redes Neurais Convolucionais (CNNs).Eles avaliaram o desempenho de três algoritmos CNN de última geração, a saber, Faster R-CNN, bem como YOLOv3 e YOLOv4.
+
 ### Metodologia
 
 
@@ -86,9 +88,14 @@ train: weights=yolov5s.pt, cfg=, data=dataset.yaml, hyp=yolov5/data/hyps/hyp.scr
 
 ### Resultados obtidos
 
+As seguintes metricas foram usadas para avaliar o resultado
 loss_bbox: uma perda que mede o quão "apertadas" as caixas delimitadoras previstas são para o objeto de verdade básica (geralmente uma perda de regressão, L1, smoothL1etc.).
 
 loss_cls: uma perda que mede a exatidão da classificação de cada caixa delimitadora prevista: cada caixa pode conter uma classe de objeto ou um "background". Essa perda é geralmente chamada de perda de entropia cruzada.
+
+Precisão é uma medida . Indica quão confiaveis são as previsões positivas do modelo.
+
+O mAP é usado como uma métrica padrão para analizar a precisão de um modelo de deteção de objetos. The mAP incorpora um compromisso entre precisão e recall e considera tanto falsos positivos, como falsos negativos. 
 
 Métricas de treinamento e validação para 10 épocas
 
@@ -123,9 +130,13 @@ Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves
 
 ### Referências
 
+Ammar, A., Koubaa, A., Ahmed, M., Saad, A., & Benjdira, B. (2021). Vehicle detection from aerial images using deep learning: A comparative study. Electronics, 10(7), 820.
+
 Everingham, M., & Winn, J. (2012). The PASCAL visual object classes challenge 2012 (VOC2012) development kit. Pattern Anal. Stat. Model. Comput. Learn., Tech. Rep, 2007, 1-45.
 
 Ieamsaard, J., Charoensook, S. N., & Yammen, S. (2021, March). Deep learning-based face mask detection using yolov5. In 2021 9th International Electrical Engineering Congress (iEECON) (pp. 428-431). IEEE.
+
+Kasper-Eulaers, M., Hahn, N., Berger, S., Sebulonsen, T., Myrland, Ø., & Kummervold, P. E. (2021). Detecting heavy goods vehicles in rest areas in winter conditions using YOLOv5. Algorithms, 14(4), 114.
 
 Lin, T. Y., Maire, M., Belongie, S., Hays, J., Perona, P., Ramanan, D., ... & Zitnick, C. L. (2014, September). Microsoft coco: Common objects in context. In European conference on computer vision (pp. 740-755). Springer, Cham.
 
