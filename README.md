@@ -86,9 +86,13 @@ train: weights=yolov5s.pt, cfg=, data=dataset.yaml, hyp=yolov5/data/hyps/hyp.scr
 
 ### Resultados obtidos
 
+loss_bbox: uma perda que mede o quão "apertadas" as caixas delimitadoras previstas são para o objeto de verdade básica (geralmente uma perda de regressão, L1, smoothL1etc.).
+
+loss_cls: uma perda que mede a exatidão da classificação de cada caixa delimitadora prevista: cada caixa pode conter uma classe de objeto ou um "background". Essa perda é geralmente chamada de perda de entropia cruzada.
+
 Métricas de treinamento e validação para 10 épocas
 
-São apresentadas na seguinte figura as Métricas de treinamento e validação para 10 épocas. Observa-se 
+São apresentadas na seguinte figura as Métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que que a a
 
 <img src="img/media_images_Results_10_0326a98d691b6ae1c41b_Compilado.png" style="width: 600px">
 
@@ -96,7 +100,9 @@ Métricas de treinamento e validação para 10 épocas
 
 <img src="img/media_images_Results_20_6afe5cd66e9ae3135d0e_Compilado.png" style="width: 600px">
 
-Métricas de treinamento e validação para 10 épocas
+Métricas de treinamento e validação para 40 épocas
+
+São apresentadas na seguinte figura as métricas de treinamento e validação para 40 épocas. Observa-se para o treinamento que
 
 <img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 600px">
 
