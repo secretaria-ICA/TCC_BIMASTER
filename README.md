@@ -119,6 +119,27 @@ São apresentadas na seguinte figura as métricas de treinamento e validação p
 <img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 600px">
 
 
+|best/epoch	|9	|19	|36	|min	|max|
+|---|---|---|---|---|---|
+|best/mAP_0.5	|0,92437	|0,92197	|0,9272	|0,92197	|0,9272|
+|best/mAP_0.5:0.95	|0,6488	|0,67335	|0,68355	|0,6488	|0,68355|
+|best/precision	|0,96137	|0,95388	|0,96394	|0,95388	|0,96394|
+|best/recall	|0,8699	|0,87897	|0,87594	|0,8699	|0,87897|
+|metrics/mAP_0.5	|0,92422	|0,92199	|0,92718	|0,92199	|0,92718|
+|metrics/mAP_0.5:0.95	|0,64839	|0,67332	|0,68319	|0,64839	|0,68319|
+|metrics/precision	|0,96136	|0,9536	|0,96584	|0,9536	|0,96584|
+|metrics/recall	|0,86958	|0,87868	|0,87218	|0,86958	|0,87868|
+|train/box_loss	|0,02579	|0,02291	|0,01966	|0,01966	|0,02579|
+|train/cls_loss	|0	|0	|0	|0	|0|
+|train/obj_loss	|0,00982	|0,00891	|0,00789	|0,00789	|0,00982|
+|val/box_loss	|0,02359	|0,02229	|0,02196	|0,02196	|0,02359|
+|val/cls_loss	|0	|0	|0	|0	|0|
+|val/obj_loss	|0,00698	|0,00671	|0,00665	|0,00665	|0,00698|
+|x/lr0	|0,00208	|0,00109	|0,0005	|0,0005	|0,00208|
+|x/lr1	|0,00208	|0,00109	|0,0005	|0,0005	|0,00208|
+|x/lr2	|0,00208	|0,00109	|0,0005	|0,0005	|0,00208|
+
+
 São apresentadas a continuação figuras comas inferências para 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem.
 
 Observa-se para 10 épocas 
