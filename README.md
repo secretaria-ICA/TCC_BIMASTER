@@ -100,6 +100,8 @@ Recall é uma medida de "" seu modelo previu todas as vezes que deveria ter prev
 
 Precisão Média Média (mAP). O mAP é usado como uma métrica padrão para analizar a precisão de um modelo de deteção de objetos.  O calculo de mAP é baseada nas seguintes submétricas: matriz de confusão, Interseção sobre a União (IoU), recall e precisão. The mAP incorpora um compromisso entre precisão e recall e considera tanto falsos positivos, como falsos negativos. Os verdadeiros e falsos positivos da tarefa de detecção de objetos são classificados usando o limite IoU.
 
+Para acompanhamento das metricas do trinamento e validação é utilizado o  Wandb. WandB é um dashboard central para acompanhar  hiperparâmetros, métricas do sistema e previsões permitindo comparar modelos ao vivo.
+
 Métricas de treinamento e validação para 10 épocas
 
 São apresentadas na seguinte figura as Métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que que a a
@@ -116,7 +118,10 @@ São apresentadas na seguinte figura as métricas de treinamento e validação p
 
 <img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 600px">
 
-Para acompanhamento das metricas do trinamento e validação é utilizado o  Wandb. WandB é um dashboard central para acompanhar  hiperparâmetros, métricas do sistema e previsões permitindo comparar modelos ao vivo.
+
+São apresentadas a continuação figuras comas inferências para 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem.
+
+Observa-se para 10 épocas 
 
 Inferencia para 2 épocas
 
@@ -125,6 +130,11 @@ Inferencia para 2 épocas
 Inferencia para 10 épocas
 
 <img src="img/predi10epoc.png" style="width: 600px">
+
+
+Trabalhos futuros
+
+No presente trabalho foi abordado o problema de reconhecimento de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves.  
 
 ### Conclusão 
 
