@@ -131,7 +131,7 @@ Inferencia para 10 épocas
 
 <img src="img/predi10epoc.png" style="width: 600px">
 
-<img src="img/media_images_Results_20_6afe5cd66e9ae3135d0e_Compilado.png" style="width: 600px">
+<img src="img/predi20epoc.png" style="width: 600px">
 
 
 Trabalhos futuros
