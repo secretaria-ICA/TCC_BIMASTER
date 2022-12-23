@@ -119,8 +119,9 @@ São apresentadas na seguinte figura as métricas de treinamento e validação p
 <img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 600px">
 
 
-|best/epoch	|9	|19	|36	|min	|max|
+|Epoch	|10	|20	|50	|min	|max|
 |---|---|---|---|---|---|
+|best/epoch	|9	|19	|36	|	||
 |best/mAP_0.5	|0,92437	|0,92197	|0,9272	|0,92197	|0,9272|
 |best/mAP_0.5:0.95	|0,6488	|0,67335	|0,68355	|0,6488	|0,68355|
 |best/precision	|0,96137	|0,95388	|0,96394	|0,95388	|0,96394|
