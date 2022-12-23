@@ -88,14 +88,17 @@ train: weights=yolov5s.pt, cfg=, data=dataset.yaml, hyp=yolov5/data/hyps/hyp.scr
 
 ### Resultados obtidos
 
-As seguintes metricas foram usadas para avaliar o resultado
+As seguintes metricas foram usadas para avaliar o resultados 
+
 loss_bbox: uma perda que mede o quão "apertadas" as caixas delimitadoras previstas são para o objeto de verdade básica (geralmente uma perda de regressão, L1, smoothL1etc.).
 
 loss_cls: uma perda que mede a exatidão da classificação de cada caixa delimitadora prevista: cada caixa pode conter uma classe de objeto ou um "background". Essa perda é geralmente chamada de perda de entropia cruzada.
 
-Precisão é uma medida . Indica quão confiaveis são as previsões positivas do modelo.
+Precisão é uma medida de quando "" seu modelo prevê com que frequência ele prevê corretamente ?"" Indica o quanto podemos confiar nas previsões positivas do modelo.
 
-O mAP é usado como uma métrica padrão para analizar a precisão de um modelo de deteção de objetos. The mAP incorpora um compromisso entre precisão e recall e considera tanto falsos positivos, como falsos negativos. 
+Recall é uma medida de "" seu modelo previu todas as vezes que deveria ter previsto? "" Indica quaisquer previsões que não deveriam ter sido perdidas se o modelo estiver ausente. 
+
+Precisão Média Média (mAP). O mAP é usado como uma métrica padrão para analizar a precisão de um modelo de deteção de objetos.  O calculo de mAP é baseada nas seguintes submétricas: matriz de confusão, Interseção sobre a União (IoU), recall e precisão. The mAP incorpora um compromisso entre precisão e recall e considera tanto falsos positivos, como falsos negativos. Os verdadeiros e falsos positivos da tarefa de detecção de objetos são classificados usando o limite IoU.
 
 Métricas de treinamento e validação para 10 épocas
 
