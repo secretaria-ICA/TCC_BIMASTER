@@ -131,7 +131,13 @@ Inferencia para 10 épocas
 
 <img src="img/predi10epoc.png" style="width: 600px">
 
+Inferencia para 20 épocas
+
 <img src="img/predi20epoc.png" style="width: 600px">
+
+Inferencia para 50 épocas
+
+<img src="img/predi50epoc.png" style="width: 600px">
 
 
 Trabalhos futuros
