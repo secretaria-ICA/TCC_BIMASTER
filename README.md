@@ -104,9 +104,10 @@ Precisão Média Média (mAP). O mAP é usado como uma métrica padrão para ana
 
 Para acompanhamento das metricas do trinamento e validação é utilizado o  Wandb. WandB é um dashboard central para acompanhar  hiperparâmetros, métricas do sistema e previsões permitindo comparar modelos ao vivo.
 
-Métricas de treinamento e validação para 10 épocas
 
-São apresentadas na seguinte figura as Métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que que a a
+São apresentadas na seguinte figura as métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que a
+
+Métricas de treinamento e validação para 10 épocas
 
 <img src="img/media_images_Results_10_0326a98d691b6ae1c41b_Compilado.png" style="width: 600px">
 
@@ -120,6 +121,7 @@ São apresentadas na seguinte figura as métricas de treinamento e validação p
 
 <img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 600px">
 
+Na seguinte tabela são sumarizadas os melhores valores para as diferentes metricas apresentadas nas figuras anteriores para 10, 20 e 50 épocas.
 
 |Epoch	|10	|20	|50	|min	|max|
 |---|---|---|---|---|---|
