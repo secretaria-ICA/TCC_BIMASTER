@@ -42,6 +42,8 @@ In this work, an exploratory analysis of the Airbus aircraft detection dataset i
 Ao longo dos últimos anos, os detectores de objetos baseados em Rede Neural Convolucional (CNN) ganharam popularidade na comunidade de pesquisa devido à sua capacidade de calcular automaticamente recursos de imagens contextuais complexas  [8] . Os métodos atuais de vanguarda para detecção de objetos baseados em CNN podem ser amplamente categorizados como detectores de dois estágios baseados em região ou detectores de estágio único baseados em regressão. Exemplos de detectores baseados em região incluem CNN baseado em região (RCNN)  [9] , Fast RCNN  [10] e Faster RCNN  [11] , enquanto detectores como You Only Look Once (YOLO)  [12] e Single Shot MultiBox Detection ( SSD)  [13]são exemplos de detectores baseados em regressão. Os modelos baseados em regressão são geralmente menos precisos em comparação com os detectores baseados em região, no entanto, os detectores baseados em regressão são significativamente mais rápidos em comparação com os detectores baseados em região. Esforços têm sido feitos por pesquisadores para desenvolver novos modelos baseados em CNN para melhorar o desempenho e a eficiência  [14]. 
 
 Dei et al (2020) seleionaram a rede neural YOLO para fazer o reconhecimento automático de defeitos de corrosão e fadiga na superfície das aeronaves. Foram esabelecidose comparados entre si os modelos de detecção de defeitos de superfície de aeronaves baseados na rede neural YOLO e no Faster-RCNN.
+
+Visando os problemas de baixa eficiência e baixa precisão em métodos convencionais de detecção de defeitos de superfície para componentes de motores aeronáuticos, Liet al (2022) propseram um modelo de detecção de defeitos de superfície baseado em um algoritmo de detecção de objetos YOLOv5 aprimorado.
  
 Ammart et. al. (2021) abordaram o problema de detecção de carros a partir de imagens aéreas usando Redes Neurais Convolucionais (CNNs).Eles avaliaram o desempenho de três algoritmos CNN de última geração, a saber, Faster R-CNN, bem como YOLOv3 e YOLOv4.
 
@@ -189,6 +191,8 @@ Everingham, M., & Winn, J. (2012). The PASCAL visual object classes challenge 20
 Ieamsaard, J., Charoensook, S. N., & Yammen, S. (2021, March). Deep learning-based face mask detection using yolov5. In 2021 9th International Electrical Engineering Congress (iEECON) (pp. 428-431). IEEE.
 
 Kasper-Eulaers, M., Hahn, N., Berger, S., Sebulonsen, T., Myrland, Ø., & Kummervold, P. E. (2021). Detecting heavy goods vehicles in rest areas in winter conditions using YOLOv5. Algorithms, 14(4), 114.
+
+Li, X.;Wang, C.; Ju, H.; Li, Z. Sc Appl. Sci. 2022, 12, 7235. https://doi.org/10.3390/app12147235
 
 Lin, T. Y., Maire, M., Belongie, S., Hays, J., Perona, P., Ramanan, D., ... & Zitnick, C. L. (2014, September). Microsoft coco: Common objects in context. In European conference on computer vision (pp. 740-755). Springer, Cham.
 
