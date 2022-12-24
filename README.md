@@ -105,7 +105,7 @@ Precisão Média Média (mAP). O mAP é usado como uma métrica padrão para ana
 Para acompanhamento das metricas do trinamento e validação é utilizado o  Wandb. WandB é um dashboard central para acompanhar  hiperparâmetros, métricas do sistema e previsões permitindo comparar modelos ao vivo.
 
 
-São apresentadas na seguinte figura as métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que a
+São apresentadas na seguinte figura as métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que a perda de caixa e a perda de objetividade decrescem expressivamente até a cuarta época e depois continuam em decrecimento menos acelerado sem chegar em um platô. A perda de classificaçao permanece em zero durante todo o treinamento. para a validação a perda de caixa e a perda de objetividade decrescem apresentando ligeiras oscilações. A perda de classificaçao permanece em zero também para os datos de validação. A precisão do modelo cresce consistentemente até a segunda época e depois continua com caearateristicas de platê, com ligeiras oscilações e leve tendencia cresecente. A curva de re recordação cresce expressivamente até terceira época e depois continua em crescimento menos acentuado, com ligeiras oscilações sem chegar a caraterizar um platô. A curva de precisão média para limite de IoU de 0.5 tem comportamento similar a curva de precisão com menores oscilações na parte com carateristicas de platôe ainda com ligeira tedência de leve crescimento.  A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento com fortes oscilações para a última época.
 
 Métricas de treinamento e validação para 10 épocas
 
