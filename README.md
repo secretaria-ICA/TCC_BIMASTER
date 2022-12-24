@@ -123,8 +123,6 @@ São apresentadas na seguinte figura as métricas de treinamento e validação p
 
 Métricas de treinamento e validação para 50 épocas
 
-São apresentadas na seguinte figura as métricas de treinamento e validação para 40 épocas. Observa-se para o treinamento que
-
 <img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 600px">
 
 Na seguinte tabela são sumarizadas os melhores valores para as diferentes metricas apresentadas nas figuras anteriores para 10, 20 e 50 épocas.
