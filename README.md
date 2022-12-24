@@ -149,9 +149,7 @@ Na seguinte tabela são sumarizadas os melhores valores para as diferentes metri
 |x/lr2	|0,00208	|0,00109	|0,0005	|0,0005	|0,00208|
 
 
-São apresentadas a continuação figuras comas inferências para 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem.
-
-Observa-se para 10 épocas 
+São apresentadas a continuação figuras comas inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem.  Observa-se para a a partir de 10 épocas a maioria das aeronaves são detectadas. Desctaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando.
 
 Inferencia para 2 épocas
 
