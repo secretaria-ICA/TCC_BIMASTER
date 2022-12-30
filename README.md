@@ -61,7 +61,7 @@ A pasta `images  contém 103 extratos de imagens das Plêiades com aproximadamen
 
 <img src="img/Aeroporto_mostra.png" style="width: 600px">
 
-####Formato de de dados COCO e Pascal VOC para detecção de objetos.
+#### Formato de de dados COCO e Pascal VOC para detecção de objetos.
 
 Uma das tarefas mais importantes em visão computacional é rotular os dados. Existem várias ferramentas disponíveis onde você pode carregar as imagens, rotular os objetos usando segmentação por instância. Isso ajuda na localização precisa do objeto usando caixas delimitadoras ou mascaramento usando polígonos. Essas informações são armazenadas em arquivos de anotação. Arquivos/arquivos de anotação podem estar nos formatos de dados [COCO]http://host.robots.ox.ac.uk/pascal/VOC/voc2012/devkit_doc.pdf) (Everingham, 2012) ou [Pascal VOC](https://arxiv.org/pdf/1405.0312.pdf) (Lin,2014).
 
