@@ -39,13 +39,20 @@ In this work, an exploratory analysis of the Airbus aircraft detection dataset i
 
 ### Introdução
 
-Ao longo dos últimos anos, os detectores de objetos baseados em Rede Neural Convolucional (CNN) ganharam popularidade na comunidade de pesquisa devido à sua capacidade de calcular automaticamente recursos de imagens contextuais complexas  [8] . Os métodos atuais de vanguarda para detecção de objetos baseados em CNN podem ser amplamente categorizados como detectores de dois estágios baseados em região ou detectores de estágio único baseados em regressão. Exemplos de detectores baseados em região incluem CNN baseado em região (RCNN)  [9] , Fast RCNN  [10] e Faster RCNN  [11] , enquanto detectores como You Only Look Once (YOLO)  [12] e Single Shot MultiBox Detection ( SSD)  [13]são exemplos de detectores baseados em regressão. Os modelos baseados em regressão são geralmente menos precisos em comparação com os detectores baseados em região, no entanto, os detectores baseados em regressão são significativamente mais rápidos em comparação com os detectores baseados em região. Esforços têm sido feitos por pesquisadores para desenvolver novos modelos baseados em CNN para melhorar o desempenho e a eficiência  [14]. 
+Nos últimos anos, os detectores de objetos baseados em Rede Neural Convolucional (CNN) tem sido obejto de pesquisa devido à sua capacidade de calcular automaticamente recursos de imagens contextuais complexas [8]. Podedem se classificar os métodos atuais de detecção de objetos baseados em CNN em detectores de dois estágios baseados em região ou detectores de estágio único baseados em regressão. Exemplos de detectores baseados em região incluem CNN baseado em região (RCNN) [9], Fast RCNN [10] e Faster RCNN [11], enquanto detectores como You Only Look Once (YOLO) [12] e Single Shot MultiBox Detection (SSD) [13]são exemplos de detectores baseados em regressão. Os modelos baseados em regressão são geralmente menos precisos em comparação com os detectores baseados em região, no entanto, os detectores baseados em regressão são significativamente mais rápidos em comparação com os detectores baseados em região. Esforços têm sido feitos por pesquisadores para desenvolver novos modelos baseados em CNN para melhorar o desempenho e a eficiência [14].
 
 Dei et al (2020) seleionaram a rede neural YOLO para fazer o reconhecimento automático de defeitos de corrosão e fadiga na superfície das aeronaves. Foram esabelecidose comparados entre si os modelos de detecção de defeitos de superfície de aeronaves baseados na rede neural YOLO e no Faster-RCNN.
 
 Visando os problemas de baixa eficiência e baixa precisão em métodos convencionais de detecção de defeitos de superfície para componentes de motores aeronáuticos, Liet al (2022) propseram um modelo de detecção de defeitos de superfície baseado em um algoritmo de detecção de objetos YOLOv5 aprimorado.
  
 Ammart et. al. (2021) abordaram o problema de detecção de carros a partir de imagens aéreas usando Redes Neurais Convolucionais (CNNs).Eles avaliaram o desempenho de três algoritmos CNN de última geração, a saber, Faster R-CNN, bem como YOLOv3 e YOLOv4.
+
+O presente trabalho será dividido nas seguintes seções: metodologia, resultados, conclusões e trabalhos futuros.
+
+Metodologia - São descritos a base de dados, o modelo de aprendizado profundo, os parâmetros para treinamento do modelo, e as métricas que serão utilizadas para avaliar os resultados.  
+
+Resultados – São descritas as métricas  
+
 
 ### Metodologia
 
@@ -129,7 +136,7 @@ Métricas de treinamento e validação para 50 épocas
 
 <img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 600px">
 
-Na seguinte tabela são sumarizadas os melhores valores para as diferentes metricas apresentadas nas figuras anteriores para 10, 20 e 50 épocas.
+Na seguinte tabela são sumarizados os melhores valores para as diferentes métricas apresentadas nas figuras anteriores para 10, 20 e 50 épocas. Destaca que a melhor época para as diferentes rodadas foram a 9, a 20 e a 36 respectivamente. Como era de esperar geralmente para uma determinada métrica a o valor de melhor desempenho está associado ao treinamento de 50 épocas que teve o melhor ponto na época 36. Verificou-se que com o aumento de número de épocas obteve-se um aumento de desempenho, porem que é importante ter um critério de parada para eficiência computacional, já que a melhor época não necessariamente correspondera a última época do treinamento.
 
 |Epoch	|10	|20	|50	|min	|max|
 |---|---|---|---|---|---|
@@ -153,7 +160,7 @@ Na seguinte tabela são sumarizadas os melhores valores para as diferentes metri
 |x/lr2	|0,00208	|0,00109	|0,0005	|0,0005	|0,00208|
 
 
-São apresentadas a continuação figuras comas inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem.  Observa-se para a a partir de 10 épocas a maioria das aeronaves são detectadas. Desctaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando.
+São apresentadas a continuação figuras comas inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
 
 Inferencia para 2 épocas
 
