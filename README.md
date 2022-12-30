@@ -80,7 +80,7 @@ Todas as aeronaves foram anotadas com caixas delimitadoras nas imagens fornecida
 
 ##### Imagens extras
 
-Uma pasta chamada `extras' contém 6 imagens extras que não são anotadas, mas podem ser usadas para testar um modelo em imagens novas - nunca vistas antes.
+Uma pasta chamada `extras' contém 6 imagens extras que não são anotadas, e que são usadas para testar um modelo em imagens novas - nunca vistas antes.
 
 
 #### Modelo de aprendizado profundo usando YoloV5
@@ -105,13 +105,13 @@ train: weights=yolov5s.pt, cfg=, data=dataset.yaml, hyp=yolov5/data/hyps/hyp.scr
 
 As seguintes metricas foram usadas para avaliar o resultados: 
 
-loss_bbox: uma perda que mede o quão "apertadas" as caixas delimitadoras previstas são para o objeto de verdade básica (geralmente uma perda de regressão, L1, smoothL1etc.).
+Perdad de caixa delimitadora (loss_bbox): uma perda que mede o quão "apertadas" as caixas delimitadoras previstas são para o objeto de verdade básica (geralmente uma perda de regressão, L1, smoothL1etc.).
 
-loss_cls: uma perda que mede a exatidão da classificação de cada caixa delimitadora prevista: cada caixa pode conter uma classe de objeto ou um "background". Essa perda é geralmente chamada de perda de entropia cruzada.
+Perda de classificação (loss_cls): uma perda que mede a exatidão da classificação de cada caixa delimitadora prevista: cada caixa pode conter uma classe de objeto ou um "background". Essa perda é geralmente chamada de perda de entropia cruzada.
 
-Precisão é uma medida de quando "" seu modelo prevê com que frequência ele prevê corretamente ?"" Indica o quanto podemos confiar nas previsões positivas do modelo.
+Precisão: é uma medida de quando "" seu modelo prevê com que frequência ele prevê corretamente ?"" Indica o quanto podemos confiar nas previsões positivas do modelo.
 
-Recall é uma medida de "" seu modelo previu todas as vezes que deveria ter previsto? "" Indica quaisquer previsões que não deveriam ter sido perdidas se o modelo estiver ausente. 
+Recall: é uma medida de "" seu modelo previu todas as vezes que deveria ter previsto? "" Indica quaisquer previsões que não deveriam ter sido perdidas se o modelo estiver ausente. 
 
 Precisão Média Média (mAP). O mAP é usado como uma métrica padrão para analizar a precisão de um modelo de deteção de objetos.  O calculo de mAP é baseada nas seguintes submétricas: matriz de confusão, Interseção sobre a União (IoU), recall e precisão. The mAP incorpora um compromisso entre precisão e recall e considera tanto falsos positivos, como falsos negativos. Os verdadeiros e falsos positivos da tarefa de detecção de objetos são classificados usando o limite IoU.
 
@@ -179,13 +179,14 @@ Inferencia para 50 épocas
 <img src="img/predi50epoc.png" style="width: 600px">
 
 
-Trabalhos futuros
 
-No presente trabalho foi abordado o problema de reconhecimento de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves.  
+
 
 ### Conclusão 
 
-Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modeo é treinado pelo YoloV5 em diferentes números épocas.
+Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas.
+
+Trabalhos futuros: No presente trabalho foi abordado o problema de deteção de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves.  
 
 
 ### Referências
