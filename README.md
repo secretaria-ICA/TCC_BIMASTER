@@ -161,7 +161,7 @@ Na seguinte tabela são sumarizados os melhores valores para as diferentes métr
 
 
 
-São apresentadas a continuação figuras comas inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
+São apresentadas a continuação figuras com as inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
 
 Inferencia para 2 épocas
 
@@ -181,6 +181,8 @@ Inferencia para 50 épocas
 
 
 #### Variação do número de batch 
+
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos batch-size:  10, 20 e 50. Foi fixado um número de 20 épocas.
 
 |Batch	|16	|32	|48	|64	|min|max|
 |---|---|---|---|---|---|---|
@@ -209,15 +211,15 @@ Inferencia para batch _size = 16
 
 Inferencia para batch _size = 32 
 
-<img src="img/predi20epoc.png" style="width: 600px">
+<img src="img/predi20epocas32batch.png" style="width: 600px">
 
 Inferencia para batch _size = 48 
 
-<img src="img/predi20epoc.png" style="width: 600px">
+<img src="img/predi20epocas48batch.png" style="width: 600px">
 
 Inferencia para batch _size = 64 
 
-<img src="img/predi20epoc.png" style="width: 600px">
+<img src="img/predi20epocas64batch.png" style="width: 600px">
 
 
 ### Conclusão 
