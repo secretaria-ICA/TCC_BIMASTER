@@ -204,6 +204,22 @@ Inferencia para 50 épocas
 |	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 |	x/lr2	|	0.00109	|	0.00110	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
+Inferencia para 16 épocas
+
+<img src="img/predi20epoc.png" style="width: 600px">
+
+Inferencia para 32 épocas
+
+<img src="img/predi20epoc.png" style="width: 600px">
+
+Inferencia para 48 épocas
+
+<img src="img/predi20epoc.png" style="width: 600px">
+
+Inferencia para 64 épocas
+
+<img src="img/predi20epoc.png" style="width: 600px">
+
 
 ### Conclusão 
 
