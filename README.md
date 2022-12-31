@@ -117,6 +117,7 @@ Precisão Média Média (mAP). O mAP é usado como uma métrica padrão para ana
 
 Para acompanhamento das metricas do trinamento e validação é utilizado o  Wandb. WandB é um dashboard central para acompanhar  hiperparâmetros, métricas do sistema e previsões permitindo comparar modelos ao vivo.
 
+#### Variação do número de épocas 
 
 São apresentadas na seguinte figura as métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que a perda de caixa e a perda de objetividade decrescem expressivamente até a cuarta época e depois continuam em decrecimento menos acelerado sem chegar em um platô. A perda de classificaçao permanece em zero durante todo o treinamento. para a validação a perda de caixa e a perda de objetividade decrescem apresentando ligeiras oscilações. A perda de classificaçao permanece em zero também para os datos de validação. A precisão do modelo cresce consistentemente até a segunda época e depois continua com caearateristicas de platê, com ligeiras oscilações e leve tendencia cresecente. A curva de re recordação cresce expressivamente até terceira época e depois continua em crescimento menos acentuado, com ligeiras oscilações sem chegar a caraterizar um platô. A curva de precisão média para limite de IoU de 0.5 tem comportamento similar a curva de precisão com menores oscilações na parte com carateristicas de platô e ainda com ligeira tedência de leve crescimento.  A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento com fortes oscilações até a última época.
 
@@ -141,23 +142,24 @@ Na seguinte tabela são sumarizados os melhores valores para as diferentes métr
 |Epoch	|10	|20	|50	|min	|max|
 |---|---|---|---|---|---|
 |best/epoch	|9	|19	|36	|	||
-|best/mAP_0.5	|0,92437	|0,92197	|0,9272	|0,92197	|0,9272|
-|best/mAP_0.5:0.95	|0,6488	|0,67335	|0,68355	|0,6488	|0,68355|
-|best/precision	|0,96137	|0,95388	|0,96394	|0,95388	|0,96394|
-|best/recall	|0,8699	|0,87897	|0,87594	|0,8699	|0,87897|
-|metrics/mAP_0.5	|0,92422	|0,92199	|0,92718	|0,92199	|0,92718|
-|metrics/mAP_0.5:0.95	|0,64839	|0,67332	|0,68319	|0,64839	|0,68319|
-|metrics/precision	|0,96136	|0,9536	|0,96584	|0,9536	|0,96584|
-|metrics/recall	|0,86958	|0,87868	|0,87218	|0,86958	|0,87868|
-|train/box_loss	|0,02579	|0,02291	|0,01966	|0,01966	|0,02579|
+|best/mAP_0.5	|0.92437	|0.92197	|0.9272	|0.92197	|0.9272|
+|best/mAP_0.5:0.95	|0.6488	|0.67335	|0.68355	|0.6488	|0.68355|
+|best/precision	|0.96137	|0.95388	|0.96394	|0.95388	|0.96394|
+|best/recall	|0.8699	|0.87897	|0.87594	|0.8699	|0.87897|
+|metrics/mAP_0.5	|0.92422	|0.92199	|0.92718	|0.92199	|0.92718|
+|metrics/mAP_0.5:0.95	|0.64839	|0.67332	|0.68319	|0.64839	|0.68319|
+|metrics/precision	|0.96136	|0.9536	|0.96584	|0.9536	|0.96584|
+|metrics/recall	|0.86958	|0.87868	|0.87218	|0.86958	|0.87868|
+|train/box_loss	|0.02579	|0.02291	|0.01966	|0.01966	|0.02579|
 |train/cls_loss	|0	|0	|0	|0	|0|
-|train/obj_loss	|0,00982	|0,00891	|0,00789	|0,00789	|0,00982|
-|val/box_loss	|0,02359	|0,02229	|0,02196	|0,02196	|0,02359|
+|train/obj_loss	|0.00982	|0.00891	|0.00789	|0.00789	|0.00982|
+|val/box_loss	|0.02359	|0.02229	|0.02196	|0.02196	|0.02359|
 |val/cls_loss	|0	|0	|0	|0	|0|
-|val/obj_loss	|0,00698	|0,00671	|0,00665	|0,00665	|0,00698|
-|x/lr0	|0,00208	|0,00109	|0,0005	|0,0005	|0,00208|
-|x/lr1	|0,00208	|0,00109	|0,0005	|0,0005	|0,00208|
-|x/lr2	|0,00208	|0,00109	|0,0005	|0,0005	|0,00208|
+|val/obj_loss	|0.00698	|0.00671	|0.00665	|0.00665	|0.00698|
+|x/lr0	|0.00208	|0.00109	|0.0005	|0.0005	|0.00208|
+|x/lr1	|0.00208	|0.00109	|0.0005	|0.0005	|0.00208|
+|x/lr2	|0.00208	|0.00109	|0.0005	|0.0005	|0.00208|
+
 
 
 São apresentadas a continuação figuras comas inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
@@ -178,26 +180,29 @@ Inferencia para 50 épocas
 
 <img src="img/predi50epoc.png" style="width: 600px">
 
+
+#### Variação do número de batch 
+
 |Batch	|16	|32	|48	|64	|min|max|
 |---|---|---|---|---|---|---|
 |	best/epoch	|	19	|	17	|	19	|	17	|	min 	|	max	|
-|	best/mAP_0.5	|	0,92197	|	0.92698	|	0.92083	|	0.92462	|	0,92197	|	0,92197	|
-|	best/mAP_0.5:0.95	|	0,67335	|	0.67773	|	0.67508	|	0.67465	|	0,67335	|	0,67335	|
-|	best/precision	|	0,95388	|	0.95788	|	0.97052	|	0.95102	|	0,95388	|	0,95388	|
-|	best/recall	|	0,87897	|	0.87297	|	0.8684	|	0.87826	|	0,87897	|	0,87897	|
-|	metrics/mAP_0.5	|	0,92199	|	0.92695	|	0.92087	|	0.92427	|	0,92199	|	0,92199	|
-|	metrics/mAP_0.5:0.95	|	0,67332	|	0.67736	|	0.67488	|	0.67457	|	0,67332	|	0,67332	|
-|	metrics/precision	|	0,9536	|	0.95786	|	0.97052	|	0.95101	|	0,9536	|	0,9536	|
-|	metrics/recall	|	0,87868	|	0.8732	|	0.8684	|	0.8782	|	0,87868	|	0,87868	|
-|	train/box_loss	|	0,02291	|	0.02277	|	0.02235	|	0.0226	|	0,02291	|	0,02291	|
-|	train/cls_loss	|	0	|	0.0	|	0.0	|	0.0	|	0	|	0	|
-|	train/obj_loss	|	0,00891	|	0.00888	|	0.00893	|	0.00882	|	0,00891	|	0,00891	|
-|	val/box_loss	|	0,02229	|	0.02241	|	0.02213	|	0.02263	|	0,02229	|	0,02229	|
-|	val/cls_loss	|	0	|	0.0	|	0.0	|	0.0	|	0	|	0	|
-|	val/obj_loss	|	0,00671	|	0.00676	|	0.00674	|	0.0069	|	0,00671	|	0,00671	|
-|	x/lr0	|	0,00109	|	0.00109	|	0.00109	|	0.00109	|	0,00109	|	0,00109	|
-|	x/lr1	|	0,00109	|	0.00109	|	0.00109	|	0.00109	|	0,00109	|	0,00109	|
-|	x/lr2	|	0,00109	|	0.00110	|	0.00109	|	0.00109	|	0,00109	|	0,00109	|
+|	best/mAP_0.5	|	0.92197	|	0.92698	|	0.92083	|	0.92462	|	0.92197	|	0.92197	|
+|	best/mAP_0.5:0.95	|	0.67335	|	0.67773	|	0.67508	|	0.67465	|	0.67335	|	0.67335	|
+|	best/precision	|	0.95388	|	0.95788	|	0.97052	|	0.95102	|	0.95388	|	0.95388	|
+|	best/recall	|	0.87897	|	0.87297	|	0.8684	|	0.87826	|	0.87897	|	0.87897	|
+|	metrics/mAP_0.5	|	0.92199	|	0.92695	|	0.92087	|	0.92427	|	0.92199	|	0.92199	|
+|	metrics/mAP_0.5:0.95	|	0.67332	|	0.67736	|	0.67488	|	0.67457	|	0.67332	|	0.67332	|
+|	metrics/precision	|	0.9536	|	0.95786	|	0.97052	|	0.95101	|	0.9536	|	0.9536	|
+|	metrics/recall	|	0.87868	|	0.8732	|	0.8684	|	0.8782	|	0.87868	|	0.87868	|
+|	train/box_loss	|	0.02291	|	0.02277	|	0.02235	|	0.0226	|	0.02291	|	0.02291	|
+|	train/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
+|	train/obj_loss	|	0.00891	|	0.00888	|	0.00893	|	0.00882	|	0.00891	|	0.00891	|
+|	val/box_loss	|	0.02229	|	0.02241	|	0.02213	|	0.02263	|	0.02229	|	0.02229	|
+|	val/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
+|	val/obj_loss	|	0.00671	|	0.00676	|	0.00674	|	0.0069	|	0.00671	|	0.00671	|
+|	x/lr0	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+|	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+|	x/lr2	|	0.00109	|	0.00110	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
 
 ### Conclusão 
