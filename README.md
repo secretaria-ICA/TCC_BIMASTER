@@ -140,6 +140,7 @@ Na seguinte tabela são sumarizados os melhores valores para as diferentes métr
 
 |Epoch	|10	|20	|50	|min	|max|
 |---|---|---|---|---|---|
+|time(hours)|0.182	|0.357|0.876	|0.182	|0.876|
 |best/epoch	|9	|19	|36	|	||
 |best/mAP_0.5	|0.92437	|0.92197	|0.9272	|0.92197	|0.9272|
 |best/mAP_0.5:0.95	|0.6488	|0.67335	|0.68355	|0.6488	|0.68355|
@@ -186,7 +187,8 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 |Batch	|16	|32	|48	|64	|min|max|
 |---|---|---|---|---|---|---|
-best/epoch	|	19	|	17	|	19	|	17	|	min 	|	max	|
+|time(hours)|0.357	|0.360|0.359|0.353|0.353|0.360|
+best/epoch	|	19	|	17	|	19	|	17	|		|		|
 best/mAP_0.5	|	0.92197	|	0.92698	|	0.92083	|	0.92462	|	0.92197	|	0.92462	|
 best/mAP_0.5:0.95	|	0.67335	|	0.67773	|	0.67508	|	0.67465	|	0.67335	|	0.67465	|
 best/precision	|	0.95388	|	0.95788	|	0.97052	|	0.95102	|	0.95102	|	0.95388	|
