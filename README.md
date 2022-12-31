@@ -70,9 +70,7 @@ A pasta `images  contém 103 extratos de imagens das Plêiades com aproximadamen
 
 #### Formato de de dados COCO e Pascal VOC para detecção de objetos.
 
-Uma das tarefas mais importantes em visão computacional é rotular os dados. Existem várias ferramentas disponíveis onde você pode carregar as imagens, rotular os objetos usando segmentação por instância. Isso ajuda na localização precisa do objeto usando caixas delimitadoras ou mascaramento usando polígonos. Essas informações são armazenadas em arquivos de anotação. Arquivos/arquivos de anotação podem estar nos formatos de dados [COCO](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/devkit_doc.pdf) (Everingham, 2012) ou [Pascal VOC](https://arxiv.org/pdf/1405.0312.pdf) (Lin,2014).
-
-https://towardsdatascience.com/coco-data-format-for-object-detection-a4c5eaf518c5
+Uma das tarefas mais importantes em visão computacional é rotular os dados (Khandelwa, 2019). Existem várias ferramentas disponíveis onde você pode carregar as imagens, rotular os objetos usando segmentação por instância. Isso ajuda na localização precisa do objeto usando caixas delimitadoras ou mascaramento usando polígonos. Essas informações são armazenadas em arquivos de anotação. Arquivos/arquivos de anotação podem estar nos formatos de dados [COCO](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/devkit_doc.pdf) (Everingham, 2012) ou [Pascal VOC](https://arxiv.org/pdf/1405.0312.pdf) (Lin,2014).
 
 ##### Anotações
 
@@ -241,6 +239,8 @@ Everingham, M., & Winn, J. (2012). The PASCAL visual object classes challenge 20
 Ieamsaard, J., Charoensook, S. N., & Yammen, S. (2021, March). Deep learning-based face mask detection using yolov5. In 2021 9th International Electrical Engineering Congress (iEECON) (pp. 428-431). IEEE.
 
 Kasper-Eulaers, M., Hahn, N., Berger, S., Sebulonsen, T., Myrland, Ø., & Kummervold, P. E. (2021). Detecting heavy goods vehicles in rest areas in winter conditions using YOLOv5. Algorithms, 14(4), 114.
+
+Khandelwa, R. (2019). COCO and Pascal VOC data format for Object detection. Towards Data Science. Available online: https://towardsdatascience. com/coco-data-format-for-object-detection-a4c5eaf518c5 (accessed on 17 September 2020).
 
 Li, X.;Wang, C.; Ju, H.; Li, Z. Sc Appl. Sci. 2022, 12, 7235. https://doi.org/10.3390/app12147235
 
