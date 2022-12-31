@@ -97,7 +97,6 @@ As imagens do conjunto de dados de entrada são muito grandes para um correto ap
 
 Para a base de treino foram setados o:s seguintes parâmetros: epochs=10, batch_size=16, imgsz=512
 
-train: weights=yolov5s.pt, cfg=, data=dataset.yaml, hyp=yolov5/data/hyps/hyp.scratch-low.yaml, epochs=10, batch_size=16, imgsz=512, rect=False, resume=False, nosave=False, noval=False, noautoanchor=False, noplots=False, evolve=None, bucket=, cache=None, image_weights=False, device=, multi_scale=False, single_cls=False, optimizer=SGD, sync_bn=False, workers=8, project=yolov5/runs/train, name=exp, exist_ok=False, quad=False, cos_lr=False, label_smoothing=0.0, patience=100, freeze=[0], save_period=-1, seed=0, local_rank=-1, entity=None, upload_dataset=False, bbox_interval=-1, artifact_alias=latest
 
 ### Resultados obtidos
 
@@ -185,38 +184,38 @@ Inferencia para 50 épocas
 
 |Batch	|16	|32	|48	|64	|min|max|
 |---|---|---|---|---|---|---|
-|	best/epoch	|	19	|	17	|	19	|	17	|	min 	|	max	|
-|	best/mAP_0.5	|	0.92197	|	0.92698	|	0.92083	|	0.92462	|	0.92197	|	0.92197	|
-|	best/mAP_0.5:0.95	|	0.67335	|	0.67773	|	0.67508	|	0.67465	|	0.67335	|	0.67335	|
-|	best/precision	|	0.95388	|	0.95788	|	0.97052	|	0.95102	|	0.95388	|	0.95388	|
-|	best/recall	|	0.87897	|	0.87297	|	0.8684	|	0.87826	|	0.87897	|	0.87897	|
-|	metrics/mAP_0.5	|	0.92199	|	0.92695	|	0.92087	|	0.92427	|	0.92199	|	0.92199	|
-|	metrics/mAP_0.5:0.95	|	0.67332	|	0.67736	|	0.67488	|	0.67457	|	0.67332	|	0.67332	|
-|	metrics/precision	|	0.9536	|	0.95786	|	0.97052	|	0.95101	|	0.9536	|	0.9536	|
-|	metrics/recall	|	0.87868	|	0.8732	|	0.8684	|	0.8782	|	0.87868	|	0.87868	|
-|	train/box_loss	|	0.02291	|	0.02277	|	0.02235	|	0.0226	|	0.02291	|	0.02291	|
-|	train/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
-|	train/obj_loss	|	0.00891	|	0.00888	|	0.00893	|	0.00882	|	0.00891	|	0.00891	|
-|	val/box_loss	|	0.02229	|	0.02241	|	0.02213	|	0.02263	|	0.02229	|	0.02229	|
-|	val/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
-|	val/obj_loss	|	0.00671	|	0.00676	|	0.00674	|	0.0069	|	0.00671	|	0.00671	|
-|	x/lr0	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
-|	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
-|	x/lr2	|	0.00109	|	0.00110	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+best/epoch	|	19	|	17	|	19	|	17	|	min 	|	max	|
+best/mAP_0.5	|	0.92197	|	0.92698	|	0.92083	|	0.92462	|	0.92197	|	0.92462	|
+best/mAP_0.5:0.95	|	0.67335	|	0.67773	|	0.67508	|	0.67465	|	0.67335	|	0.67465	|
+best/precision	|	0.95388	|	0.95788	|	0.97052	|	0.95102	|	0.95102	|	0.95388	|
+best/recall	|	0.87897	|	0.87297	|	0.8684	|	0.87826	|	0.87826	|	0.87897	|
+metrics/mAP_0.5	|	0.92199	|	0.92695	|	0.92087	|	0.92427	|	0.92199	|	0.92427	|
+metrics/mAP_0.5:0.95	|	0.67332	|	0.67736	|	0.67488	|	0.67457	|	0.67332	|	0.67457	|
+metrics/precision	|	0.9536	|	0.95786	|	0.97052	|	0.95101	|	0.95101	|	0.9536	|
+metrics/recall	|	0.87868	|	0.8732	|	0.8684	|	0.8782	|	0.8782	|	0.87868	|
+train/box_loss	|	0.02291	|	0.02277	|	0.02235	|	0.0226	|	0.0226	|	0.02291	|
+train/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
+train/obj_loss	|	0.00891	|	0.00888	|	0.00893	|	0.00882	|	0.00882	|	0.00891	|
+val/box_loss	|	0.02229	|	0.02241	|	0.02213	|	0.02263	|	0.02229	|	0.02263	|
+val/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
+val/obj_loss	|	0.00671	|	0.00676	|	0.00674	|	0.0069	|	0.00671	|	0.0069	|
+x/lr0	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+x/lr2	|	0.00109	|	0.00110	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
-Inferencia para 16 épocas
-
-<img src="img/predi20epoc.png" style="width: 600px">
-
-Inferencia para 32 épocas
+Inferencia para batch _size = 16 
 
 <img src="img/predi20epoc.png" style="width: 600px">
 
-Inferencia para 48 épocas
+Inferencia para batch _size = 32 
 
 <img src="img/predi20epoc.png" style="width: 600px">
 
-Inferencia para 64 épocas
+Inferencia para batch _size = 48 
+
+<img src="img/predi20epoc.png" style="width: 600px">
+
+Inferencia para batch _size = 64 
 
 <img src="img/predi20epoc.png" style="width: 600px">
 
