@@ -222,7 +222,7 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 |	TILE_OVERLAP (Pixels)	|	0	|	32	|	64	|	128	|	min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
-|	time (hours)	|		|		|		|		|		|		|
+|	time (hours)	|	0.633	|	0.377	|	0.357	|	0.653	|		0.357|	0.653	|
 |	best/epoch	|	18	|	19	|	19	|	18	|		|		|
 |	best/mAP_0.5	|	0.91922	|	0.92105	|	0.92197	|	0.91999	|	0.91922	|	0.92197	|
 |	best/mAP_0.5:0.95	|	0.68888	|	0.67555	|	0.67335	|	0.68318	|	0.67335	|	0.68888	|
@@ -249,7 +249,7 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 |	TRUNCATED_PERCENTAGE	|	0	|	0.3	|	0.6	|	0.9	| min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
-|	time (hours)	|		|		|		|		|		|		|
+|	time (hours)	|	0.369	|	0.357	|	0.381	|	0.384	|	0.357	|	0.384	|
 |	best/epoch	|	19	|	19	|	19	|	19	|		|		|
 |	best/mAP_0.5	|	0.84363	|	0.92197	|	0.92234	|	0.92436	|	0.84363	|	0.92436	|
 |	best/mAP_0.5:0.95	|	0.59515	|	0.67335	|	0.69155	|	0.69118	|	0.59515	|	0.69155	|
