@@ -245,7 +245,7 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 #### Variação do Truncatate_Percentage
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Truncatate_Percentage:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas.
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Truncatate_Percentage:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influencia da variação do truncated_percentage nas diferentes metricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as metricas correspondetes à melor época. 
 
 |	TRUNCATED_PERCENTAGE	|	0	|	0.3	|	0.6	|	0.9	| min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
