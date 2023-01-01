@@ -274,6 +274,28 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Tile_Width_Heigth  128, 256, 512 e 1024. Foi fixado um número de 20 épocas.
 
+|	TILE_WIDTH/HEIGTH (Pixels)	|	128	|	256	|	512	|	1024	|	min	|	max	|
+|	---	|	---	|	---	|	---	|	---	|	---	|	---	|
+|	time (hours)	|	0.359	|	0.334	|	0.353	|		|	0.334	|	0.359	|
+|	best/epoch	|	18	|	19	|	19	|		|		|		|
+|	best/mAP_0.5	|	0.88973	|	0.90626	|	0.92197	|		|	0.88973	|	0.92197	|
+|	best/mAP_0.5:0.95	|	0.58002	|	0.66397	|	0.67335	|		|	0.58002	|	0.67335	|
+|	best/precision	|	0.90495	|	0.95083	|	0.95388	|		|	0.90495	|	0.95388	|
+|	best/recall	|	0.84194	|	0.85983	|	0.87897	|		|	0.84194	|	0.87897	|
+|	metrics/mAP_0.5	|	0.89023	|	0.90629	|	0.92199	|		|	0.89023	|	0.92199	|
+|	metrics/mAP_0.5:0.95	|	0.58066	|	0.66471	|	0.67332	|		|	0.58066	|	0.67332	|
+|	metrics/precision	|	0.90487	|	0.95114	|	0.9536	|		|	0.90487	|	0.9536	|
+|	metrics/recall	|	0.84102	|	0.85889	|	0.87868	|		|	0.84102	|	0.87868	|
+|	train/box_loss	|	0.03022	|	0.02463	|	0.02291	|		|	0.02291	|	0.03022	|
+|	train/cls_loss	|	0	|	0	|	0	|		|	0	|	0	|
+|	train/obj_loss	|	0.00282	|	0.00499	|	0.00891	|		|	0.00282	|	0.00891	|
+|	val/box_loss	|	0.02967	|	0.02185	|	0.02229	|		|	0.02185	|	0.02967	|
+|	val/cls_loss	|	0	|	0	|	0	|		|	0	|	0	|
+|	val/obj_loss	|	0.00373	|	0.00443	|	0.00671	|		|	0.00373	|	0.00671	|
+|	x/lr0	|	0.00109	|	0.00109	|	0.00109	|		|	0.00109	|	0.00109	|
+|	x/lr1	|	0.00109	|	0.00109	|	0.00109	|		|	0.00109	|	0.00109	|
+|	x/lr2	|	0.00109	|	0.00109	|	0.00109	|		|	0.00109	|	0.00109	|
+
 ### Conclusões
 
 Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de imagens e percentagens de treinamento. En termos de tempo de treinamento os parametros que mais inflencina são o número de epocas que tem ma relação de proporcionalidade e o sobreposicionamento dos tijolos (tile_overlap).
