@@ -176,7 +176,7 @@ Inferencia para 50 épocas
 
 #### Variação do número de batch_size
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos batch-size:  10, 20 e 50. Foi fixado um número de 20 épocas.
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos batch-size:  10, 20 e 50. Foi fixado um número de 20 épocas. Não se evidencias alterações significativas das metricas desempenho em função do parâmetro batch. Também não foram observadas variações significativas no tempo de treinamento dos modelos.
 
 |Batch	|16	|32	|48	|64	|min|max|
 |---|---|---|---|---|---|---|
@@ -218,7 +218,7 @@ Inferencia para batch _size = 64
 
 #### Variação do Tile_Overlap
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos tile_overlap:  0, 32, 64 e 128. Foi fixado um número de 20 épocas.
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para seguinte conjunto de valores do parâmetro tile_overlap:  0, 32, 64 e 128. Foi fixado um número de 20 épocas. Observa-se que não á uma tendencia clara no tempo de treinamento, sendo observado aproximadamente o dobro do tempo de treinamento para cuando o parâmetro tile_overlap é nulo ou quando é setado em 128 pixels em comparação com tempo de treinamento para valores setados em .32 e 64 pixels. Não se observa uma variação significativa nas metricas de desempenho em função da variação do parâmetro tile_overlap, mas eveidencia ma leve tendencia de degradação na maioria das metricas para os dois casos extremos. 
 
 |	TILE_OVERLAP (Pixels)	|	0	|	32	|	64	|	128	|	min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
@@ -245,7 +245,7 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 #### Variação do Truncatate_Percentage
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Truncatate_Percentage:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influencia da variação do truncated_percentage nas diferentes metricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as metricas correspondetes à melor época. 
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Truncatate_Percentage:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influencia da variação do truncated_percentage nas diferentes metricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as metricas correspondentes à melhor época. 
 
 |	TRUNCATED_PERCENTAGE	|	0	|	0.3	|	0.6	|	0.9	| min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
@@ -269,7 +269,8 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 |	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
-#### Variação do Truncatate_Percentage
+#### Variação dos parametros Tile_Width e Tile Heigth
+
 
 Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Tile_Width_Heigth  128, 256, 512 e 1024. Foi fixado um número de 20 épocas.
 
@@ -300,7 +301,6 @@ Lin, T. Y., Maire, M., Belongie, S., Hays, J., Perona, P., Ramanan, D., ... & Zi
 Wu, Z. Z., Wan, S. H., Wang, X. F., Tan, M., Zou, L., Li, X. L., & Chen, Y. (2020). A benchmark data set for aircraft type recognition from remote sensing images. Applied Soft Computing, 89, 106132.
 
 Zhao, A., Fu, K., Wang, S., Zuo, J., Zhang, Y., Hu, Y., & Wang, H. (2017). Aircraft recognition based on landmark detection in remote sensing images. IEEE Geoscience and Remote Sensing Letters, 14(8), 1413-1417.
-
 
 ---
 
