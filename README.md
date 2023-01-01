@@ -247,7 +247,7 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos Truncatate_Percentage:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas.
 
-|	TRUNCATED_PERCENTAGE	|	0	|	0.3	|	0.6	|	0.9		min	|	max	|
+|	TRUNCATED_PERCENTAGE	|	0	|	0.3	|	0.6	|	0.9	| min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
 |	time (hours)	|		|		|		|		|		|		|
 |	best/epoch	|	19	|	19	|	19	|	19	|		|		|
