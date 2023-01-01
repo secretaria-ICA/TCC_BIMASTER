@@ -276,7 +276,7 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 ### Conclusões
 
-Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas.
+Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de imagens e percentagens de treinamento. En termos de tempo de treinamento os parametros que mais inflencina são o número de epocas que tem ma relação de proporcionalidade e o sobreposicionamento dos tijolos (tile_overlap).
 
 Trabalhos futuros: No presente trabalho foi abordado o problema de deteção de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves.  
 
