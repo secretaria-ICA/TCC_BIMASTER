@@ -26,8 +26,6 @@ Neste trabalho é feita uma análise exploratoria do conjunto de dados de detec�
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
 
-<!-- trocar o texto abaixo pelo resumo do trabalho, em inglês -->
-
 Aircraft recognition from remote sensing images has many civil and military applications. The dynamic detection of aircraft can be an important source for decision making in military or defense strategies. In the civil field, aircraft detection is very useful to determine the level of congestion at an airport or to check the availability of aircraft in a region in case of emergency.
 
 In this work, an exploratory analysis of the Airbus aircraft detection dataset is performed. Subsequently, a convolutional neural network model is created, trained and validated using Yolov5. A parametric study is carried out in order to determine the influence of some hyperparameters such as epochs on the performance of the created network,, .
