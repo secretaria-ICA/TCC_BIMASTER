@@ -245,7 +245,7 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 #### Variação do Truncatate_Percentage
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos Truncatate_Percentage:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas.
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Truncatate_Percentage:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas.
 
 |	TRUNCATED_PERCENTAGE	|	0	|	0.3	|	0.6	|	0.9	| min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
@@ -268,6 +268,10 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr0	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 |	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 |	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+
+#### Variação do Truncatate_Percentage
+
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Tile_Width_Heigth  128, 256, 512 e 1024. Foi fixado um número de 20 épocas.
 
 ### Conclusões
 
