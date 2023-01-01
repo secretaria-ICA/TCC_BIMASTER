@@ -1,8 +1,6 @@
 # TCC_BIMASTER
 Trabalho de conclusão de Curso do BI-Master turma 2020-2 PUC-Rio
 
-<!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
-
 # Reconhecimento de Aeronaves a partir de Imagens de Sensoriameno Remoto
 
 #### Aluno: [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
@@ -22,12 +20,9 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 ### Resumo
 
-<!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
-
 O reconhecimento de aeronaves a partir de imagens de sensoriamento remoto tem muitas aplicações na área civil e militar. A deteção dinâmica de aeronaves pode ser uma fonte importante para tomadas de decisão em estrategias militares ou de defesa. No campo civil é muito util a deteção de aeronaves para determinar o nivel de congetionamento de um aeroporto ou para verificar a disponibilidades de aeronaves em uma região em caso de emergencia.
 
 Neste trabalho é feita uma análise exploratoria do conjunto de dados de detecçao de aeronaves da Airbus. Posterioremente é criado, treinado e validado um modelo de rede neural convolucional usando Yolov5. È realizado um estudo paramêtrico a fim de determinar a influência de alguns hiperparâmetros como épocas no desempenho da rede criada,
-
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
 
@@ -51,21 +46,19 @@ Este trabalho será dividido nas seguintes seções: metodologia, resultados, co
 
 ### Metodologia
 
-
-
 #### Base de dados
 
 Neste trabalho é utilizado como conjunto de dados de entrada o dataset de demostração de detecção de aeronaves Airbus. Este conjunto de dados é uma versão de demonstração de conjuntos de dados de aprendizado profundo maiores e mais avançados criados a partir de imagens de satélite da Airbus. [Airbus Defense and Space Intelligence](https://www.intelligence-airbusds.com/) opera a maior constelação comercial de satélites combinando imagens ópticas de Pléiades, SPOT, Vision-1 e DMC, bem como a constelação de radar (composta por TerraSAR -X, TanDEM-X e PAZ). [OneAtlas](https://oneatlas.airbus.com/) oferece acesso fácil e flexível a imagens de satélite premium da Airbus, análises geoespaciais inovadoras, insights específicos do setor e muito mais.
 
 ##### Imagens para treinamento
 
-A pasta `images  contém 103 extratos de imagens das Plêiades com aproximadamente 50 cm de resolução. Cada imagem é armazenada como um arquivo JPEG de tamanho 2560 x 2560 pixels (ou seja, 1280 metros no solo). Os locais são vários aeroportos em todo o mundo. Alguns aeroportos aparecem várias vezes em diferentes datas de aquisição. Algumas imagens também incluem neblina ou nuvem para diversidade.
+A pasta `images`  contém 103 extratos de imagens das Plêiades com aproximadamente 50 cm de resolução. Cada imagem é armazenada como um arquivo JPEG de tamanho 2560 x 2560 pixels (ou seja, 1280 metros no solo). Os locais são vários aeroportos em todo o mundo. Alguns aeroportos aparecem várias vezes em diferentes datas de aquisição. Algumas imagens também incluem neblina ou nuvem para diversidade.
 
 <img src="img/Aeroporto_mostra.png" style="width: 600px">
 
 #### Formato de de dados COCO e Pascal VOC para detecção de objetos.
 
-Uma das tarefas mais importantes em visão computacional é rotular os dados (Khandelwa, 2019). Existem várias ferramentas disponíveis onde você pode carregar as imagens, rotular os objetos usando segmentação por instância. Isso ajuda na localização precisa do objeto usando caixas delimitadoras ou mascaramento usando polígonos. Essas informações são armazenadas em arquivos de anotação. Arquivos/arquivos de anotação podem estar nos formatos de dados [COCO](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/devkit_doc.pdf) (Everingham, 2012) ou [Pascal VOC](https://arxiv.org/pdf/1405.0312.pdf) (Lin,2014).
+Uma das tarefas mais importantes em visão computacional é rotular os dados (Khandelwa, 2019). Existem várias ferramentas disponíveis onde podem-se carregar as imagens, rotular os objetos usando segmentação por instância. Isso ajuda na localização precisa do objeto usando caixas delimitadoras ou mascaramento usando polígonos. Essas informações são armazenadas em arquivos de anotação. Arquivos/arquivos de anotação podem estar nos formatos de dados [COCO](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/devkit_doc.pdf) (Everingham, 2012) ou [Pascal VOC](https://arxiv.org/pdf/1405.0312.pdf) (Lin,2014).
 
 ##### Anotações
 
@@ -74,7 +67,6 @@ Todas as aeronaves foram anotadas com caixas delimitadoras nas imagens fornecida
 ##### Imagens extras
 
 Uma pasta chamada `extras' contém 6 imagens extras que não são anotadas, e que são usadas para testar um modelo em imagens novas - nunca vistas antes.
-
 
 #### Modelo de aprendizado profundo usando YoloV5
 
