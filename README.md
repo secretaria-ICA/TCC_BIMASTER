@@ -13,7 +13,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 
 - Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
-    - [Nome do Trabalho 1](https://link_do_trabalho.com).
+    - [NAircraft Detection with YOLOv5](https://www.kaggle.com/code/jeffaudi/aircraft-detection-with-yolov5).
     - [Nome do Trabalho 2](https://link_do_trabalho.com).
 
 ---
