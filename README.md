@@ -174,7 +174,7 @@ Inferencia para 50 épocas
 <img src="img/predi50epoc.png" style="width: 600px">
 
 
-#### Variação do número de batch 
+#### Variação do número de batch_size
 
 Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos batch-size:  10, 20 e 50. Foi fixado um número de 20 épocas.
 
@@ -216,6 +216,58 @@ Inferencia para batch _size = 64
 
 <img src="img/predi20epocas64batch.png" style="width: 600px">
 
+#### Variação do Tile_Overlap
+
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos tile_overlap:  0, 32, 64 e 128. Foi fixado um número de 20 épocas.
+
+|	TILE_OVERLAP (Pixels)	|	0	|	32	|	64	|	128	|	min	|	max	|
+|	---	|	---	|	---	|	---	|	---	|	---	|	---	|
+|	time (hours)	|		|		|		|		|		|		|
+|	best/epoch	|	18	|	19	|	19	|	18	|		|		|
+|	best/mAP_0.5	|	0.91922	|	0.92105	|	0.92197	|	0.91999	|	0.91922	|	0.92197	|
+|	best/mAP_0.5:0.95	|	0.68888	|	0.67555	|	0.67335	|	0.68318	|	0.67335	|	0.68888	|
+|	best/precision	|	0.94331	|	0.96849	|	0.95388	|	0.93472	|	0.93472	|	0.96849	|
+|	best/recall	|	0.84347	|	0.86131	|	0.87897	|	0.8487	|	0.84347	|	0.87897	|
+|	metrics/mAP_0.5	|	0.9192	|	0.92109	|	0.92199	|	0.91995	|	0.9192	|	0.92199	|
+|	metrics/mAP_0.5:0.95	|	0.68881	|	0.67611	|	0.67332	|	0.6832	|	0.67332	|	0.68881	|
+|	metrics/precision	|	0.94353	|	0.96846	|	0.9536	|	0.93473	|	0.93473	|	0.96846	|
+|	metrics/recall	|	0.84347	|	0.86131	|	0.87868	|	0.84883	|	0.84347	|	0.87868	|
+|	train/box_loss	|	0.02124	|	0.02247	|	0.02291	|	0.02135	|	0.02124	|	0.02291	|
+|	train/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
+|	train/obj_loss	|	0.00811	|	0.00854	|	0.00891	|	0.00768	|	0.00768	|	0.00891	|
+|	val/box_loss	|	0.02039	|	0.02244	|	0.02229	|	0.02061	|	0.02039	|	0.02244	|
+|	val/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
+|	val/obj_loss	|	0.00608	|	0.0063	|	0.00671	|	0.00607	|	0.00607	|	0.00671	|
+|	x/lr0	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+|	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+|	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+
+
+#### Variação do Truncatate_Percentage
+
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos Truncatate_Percentage:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas.
+
+|	TRUNCATED_PERCENTAGE	|	0	|	0.3	|	0.6	|	0.9		min	|	max	|
+|	---	|	---	|	---	|	---	|	---	|	---	|	---	|
+|	time (hours)	|		|		|		|		|		|		|
+|	best/epoch	|	19	|	19	|	19	|	19	|		|		|
+|	best/mAP_0.5	|	0.84363	|	0.92197	|	0.92234	|	0.92436	|	0.84363	|	0.92436	|
+|	best/mAP_0.5:0.95	|	0.59515	|	0.67335	|	0.69155	|	0.69118	|	0.59515	|	0.69155	|
+|	best/precision	|	0.96473	|	0.95388	|	0.94908	|	0.94062	|	0.94062	|	0.96473	|
+|	best/recall	|	0.79547	|	0.87897	|	0.87676	|	0.87924	|	0.79547	|	0.87924	|
+|	metrics/mAP_0.5	|	0.84343	|	0.92199	|	0.92232	|	0.92436	|	0.84343	|	0.92436	|
+|	metrics/mAP_0.5:0.95	|	0.59493	|	0.67332	|	0.69141	|	0.69107	|	0.59493	|	0.69141	|
+|	metrics/precision	|	0.96544	|	0.9536	|	0.94876	|	0.94065	|	0.94065	|	0.96544	|
+|	metrics/recall	|	0.7953	|	0.87868	|	0.87676	|	0.87973	|	0.7953	|	0.87973	|
+|	train/box_loss	|	0.02348	|	0.02291	|	0.02206	|	0.02183	|	0.02183	|	0.02348	|
+|	train/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
+|	train/obj_loss	|	0.01207	|	0.00891	|	0.0075	|	0.00717	|	0.00717	|	0.01207	|
+|	val/box_loss	|	0.02384	|	0.02229	|	0.02052	|	0.02066	|	0.02052	|	0.02384	|
+|	val/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
+|	val/obj_loss	|	0.01049	|	0.00671	|	0.00487	|	0.005	|	0.00487	|	0.01049	|
+|	x/lr0	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+|	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
+|	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
 ### Conclusões
 
