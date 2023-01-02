@@ -314,9 +314,9 @@ Inferência para TILE_WIDTH = 512  (configuração base)  ----------------------
 
 <img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas1024tam.png" style="width: 500px">
 
-### Conclusões
+### Conclusão
 
-Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de ladrilhos e percentagens de truncamento. En termos de tempo de treinamento os parametros que mais o inflenciam são o número de epocas que tem uma relação de proporcionalidade e a sobreposicionamento dos ladrilhos (TILE_OVERLAP).
+Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de ladrilhos e percentagens de truncamento. En termos de tempo de treinamento os parametros que mais o inflenciam são o número de epocas que tem uma relação de proporcionalidade e a sobreposicionamento dos ladrilhos (TILE_OVERLAP). Com respeito à metricas de desempenho não se verificou influência significativa dos parametrôs batch_size, TILE_OVERLAP e TRUNCATED_PERCENT.  Observou-se uma tendencia de melhora geral nas metricas de de desempenho quando foi aumentado o número de épocas e o tamanho dos ladrilhos/imagens. As anteriores observações ficam limitadas a os intervalos e casos especificos testados, não sendo possivel ter uma generalização das tendências observadas. Do estudo verifica-se a necessidade de ao variar um  determinado paramêtro e deixar os outros inalterados, levar em conta que o desbalanceamento de relações entre eles também pode influenciar no desempenho do modelo.
 
 Trabalhos futuros: No presente trabalho foi abordado o problema de deteção de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves e/o de sbcomponentes da aeronave.  
 
