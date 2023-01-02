@@ -191,7 +191,9 @@ x/lr0	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 x/lr2	|	0.00109	|	0.00110	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
-Inferencia para batch _size = 16 
+São apresentadas a continuação figuras para seguinte conjunto de valores do parametro batch _size: 16, 32, 48 e 64. Para proposito de comparação foi fixada a mesma imagem. 
+
+Inferencia para batch_size = 16 (configuração base)
 
 <img src="img/predi20epoc.png" style="width: 600px">
 
@@ -234,7 +236,25 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
 
-#### Variação do Truncatate_Percentage
+São apresentadas a continuação figuras para seguinte conjunto de valores do parametro tile_overlap: 0, 32, 64 e 128 pixels. Para proposito de comparação foi fixada a mesma imagem. 
+
+Inferencia para tile_overlap = 0
+
+<img src="img/predi20epocas0pix.png" style="width: 600px">
+
+Inferencia para tile_overlap = 32 
+
+<img src="img/predi20epocas32pix.png" style="width: 600px">
+
+Inferencia para tile_overlap = 64 (configuração base)
+
+<img src="img/predi20epoc.png" style="width: 600px">
+
+Inferencia para tile_overlap = 128
+
+<img src="img/predi20epocas128pix.png" style="width: 600px">
+
+#### Variação do Truncate_Percentage
 
 Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Truncatate_Percentage:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influencia da variação do truncated_percentage nas diferentes metricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as metricas correspondentes à melhor época. 
 
@@ -260,8 +280,25 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 |	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
-#### Variação dos parametros Tile_Width e Tile Heigth
+São apresentadas a continuação figuras para seguinte conjunto de valores do parametro TRUNCATED_PERCENT: 0, 0.3, 0.6 e 0.9. Para proposito de comparação foi fixada a mesma imagem. 
 
+Inferencia para TRUNCATED_PERCENT = 0
+
+<img src="img/predi20epocas0per.png" style="width: 600px">
+
+Inferencia para TRUNCATED_PERCENT = 0.3 (configuração base)
+
+<img src="img/predi20epoc.png" style="width: 600px">
+
+Inferencia para TRUNCATED_PERCENT = 0.6 
+
+<img src="img/predi20epocas06per.png" style="width: 600px">
+
+Inferencia para TRUNCATED_PERCENT = 0.9
+
+<img src="img/predi20epocas09per.png" style="width: 600px">
+
+#### Variação dos parametros Tile_Width e Tile Heigth
 
 Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Tile_Width_Heigth  128, 256, 512 e 1024. Foi fixado um número de 20 épocas.
 
@@ -286,6 +323,24 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr0	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|
 |	x/lr1	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|
 |	x/lr2	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|
+
+São apresentadas a continuação figuras para seguinte conjunto de valores dos parametros TILE_WIDTH, TILE_HEIGTH,imgsz : 128, 256, 512 e 1024 pixels. O valor setado é o mesmo para os três parâmetros. Para proposito de comparação foi fixada a mesma imagem. 
+
+Inferencia para TILE_WIDTH = 128
+
+<img src="img/predi20epocas128tam.png" style="width: 600px">
+
+Inferencia para TILE_WIDTH = 256 
+
+<img src="img/predi20epocas256tam.png" style="width: 600px">
+
+Inferencia para TILE_WIDTH = 512  (configuração base)
+
+<img src="img/predi20epoc.png" style="width: 600px">
+
+Inferencia para TILE_WIDTH = 1024
+
+<img src="img/predi20epocas1024tam.png" style="width: 600px">
 
 ### Conclusões
 
