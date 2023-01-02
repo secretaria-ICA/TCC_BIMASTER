@@ -296,13 +296,13 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr1	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|
 |	x/lr2	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|
 
-São apresentadas a continuação figuras para seguinte conjunto de valores dos parametros TILE_WIDTH, TILE_HEIGTH,imgsz : 128, 256, 512 e 1024 pixels. O valor setado é o mesmo para os três parâmetros. Para proposito de comparação foi fixada a mesma imagem. 
+São apresentadas a continuação figuras para seguinte conjunto de valores dos parametros TILE_WIDTH, TILE_HEIGTH,imgsz : 128, 256, 512 e 1024 pixels. O valor setado é o mesmo para os três parâmetros. Para proposito de comparação foi fixada a mesma imagem. Observa-se uma grande quantidade de falsos negativos pra 128 pixels. Para 256 pixels observam-se dois falsos negativos incluindo um aeronave relativamente grande. Para 512 e 1024 pixels observa-se um falso negativo de uma aeronave comparativamente pequena. É importante destacar que o desempenho nas inferências  ao modificar o tamaho das imagens não estará influenciado só por este parâmetro, como com as sua relação com outro parametro que foi deixado constante como a superposição (TILE_OVERLAP). Esse desbalanceamento pode ser uma das causa da baixa qualidade de inferência para 128 pixels.  
 
-Inferencia para TILE_WIDTH = 128  -------------------------------- Inferencia para TILE_WIDTH = 256 
+Inferência para TILE_WIDTH = 128  -------------------------------- Inferência para TILE_WIDTH = 256 
 
 <img src="img/predi20epocas128tam.png" style="width: 500px"> <img src="img/predi20epocas256tam.png" style="width: 500px">
 
-Inferencia para TILE_WIDTH = 512  (configuração base)  --------------------------------                 Inferencia para TILE_WIDTH = 1024
+Inferência para TILE_WIDTH = 512  (configuração base)  --------------------------------                 Infereência para TILE_WIDTH = 1024
 
 <img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas1024tam.png" style="width: 500px">
 
