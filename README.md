@@ -20,7 +20,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 ### Resumo
 
-O reconhecimento de aeronaves a partir de imagens de sensoriamento remoto tem muitas aplicações na área civil e militar. A deteção dinâmica de aeronaves pode ser uma fonte importante para tomadas de decisão em estrategias militares ou de defesa. No campo civil é muito util a deteção de aeronaves para determinar o nivel de congetionamento de um aeroporto ou para verificar a disponibilidades de aeronaves em uma região em caso de emergencia.
+O reconhecimento de aeronaves a partir de imagens de sensoriamento remoto tem muitas aplicações na área civil e militar. A deteção dinâmica de aeronaves pode ser uma fonte importante para tomadas de decisão em estrategias militares ou de defesa. No campo civil é muito util a deteção de aeronaves para determinar o nivel de congestionamento de um aeroporto ou para verificar a disponibilidades de aeronaves em uma região em caso de emergencia.
 
 Neste trabalho é feita uma análise exploratoria do conjunto de dados de detecçao de aeronaves da Airbus. Posterioremente é criado, treinado e validado um modelo de rede neural convolucional usando Yolov5. È realizado um estudo paramêtrico a fim de determinar a influência de alguns hiperparâmetros como épocas no desempenho da rede criada,
 
@@ -32,21 +32,22 @@ In this work, an exploratory analysis of the Airbus aircraft detection dataset i
 
 ### Introdução
 
-Nos últimos anos, os detectores de objetos baseados em Rede Neural Convolucional (CNN) tem sido obejto de pesquisa devido à sua capacidade de calcular automaticamente recursos de imagens contextuais complexas [8]. Podedem se classificar os métodos atuais de detecção de objetos baseados em CNN em detectores de dois estágios baseados em região ou detectores de estágio único baseados em regressão. Exemplos de detectores baseados em região incluem CNN baseado em região (RCNN) [9], Fast RCNN [10] e Faster RCNN [11], enquanto detectores como You Only Look Once (YOLO) [12] e Single Shot MultiBox Detection (SSD) [13]são exemplos de detectores baseados em regressão. Os modelos baseados em regressão são geralmente menos precisos em comparação com os detectores baseados em região, no entanto, os detectores baseados em regressão são significativamente mais rápidos em comparação com os detectores baseados em região. Esforços têm sido feitos por pesquisadores para desenvolver novos modelos baseados em CNN para melhorar o desempenho e a eficiência [14].
+Nos últimos anos, os detectores de objetos baseados em Rede Neural Convolucional (CNN) tem sido objeto de pesquisa devido à sua capacidade de calcular automaticamente recursos de imagens contextuais complexas [8]. Podem-se classificar os métodos atuais de detecção de objetos baseados em CNN em detectores de dois estágios baseados em região ou detectores de estágio único baseados em regressão. Exemplos de detectores baseados em região incluem CNN baseado em região (RCNN) [9], Fast RCNN [10] e Faster RCNN [11], enquanto detectores como You Only Look Once (YOLO) [12] e Single Shot MultiBox Detection (SSD) [13] são exemplos de detectores baseados em regressão. Os modelos baseados em regressão são geralmente menos precisos em comparação com os detectores baseados em região, no entanto, os detectores baseados em regressão são significativamente mais rápidos em comparação com os detectores baseados em região. Esforços têm sido feitos por pesquisadores para desenvolver novos modelos baseados em CNN para melhorar o desempenho e a eficiência [14].
 
-No contexto aeronáutico, o uso de detectores tem sido usado também como ferramenta de diagnóstico e de monitoramento de saúde superficial e estrutural de diferentes componentes. Dei et al (2020) selecionaram a rede neural YOLO para fazer o reconhecimento automático de defeitos de corrosão e fadiga na superfície das aeronaves. Foram estabelecidos comparados entre si os modelos de detecção de defeitos de superfície de aeronaves baseados na rede neural YOLO e no Faster-RCNN. Visando os problemas de baixa eficiência e baixa precisão em métodos convencionais de detecção de defeitos de superfície para componentes de motores aeronáuticos, Liet al (2022) propuseram um modelo de detecção de defeitos de superfície baseado em um algoritmo de detecção de objetos YOLOv5 aprimorado.
+No contexto aeronáutico, o uso de detectores tem sido usado também como ferramenta de diagnóstico e de monitoramento de saúde superficial e estrutural de diferentes componentes aeronáuticos. Dei et al (2020) selecionaram a rede neural YOLO para fazer o reconhecimento automático de defeitos de corrosão e fadiga na superfície das aeronaves. Foram estabelecidos comparados entre si os modelos de detecção de defeitos de superfície de aeronaves baseados na rede neural YOLO e no Faster-RCNN. Visando os problemas de baixa eficiência e baixa precisão em métodos convencionais de detecção de defeitos de superfície para componentes de motores aeronáuticos, Liet al (2022) propuseram um modelo de detecção de defeitos de superfície baseado em um algoritmo de detecção de objetos YOLOv5 aprimorado.
 
 O uso de YOLOV para detecção de objetos a partir de imagens de satélites também aplica a outro tipo de veículos. Ammart et. al. (2021) abordaram o problema de detecção de carros a partir de imagens aéreas usando Redes Neurais Convolucionais (CNNs). Eles avaliaram o desempenho de três algoritmos CNN de última geração, a saber, Faster R-CNN, bem como YOLOv3 e YOLOv4.
 
 Neste trabalho é feita uma prova de conceito de análise exploratória e de detecção de conjunto de dados de aeronaves da Airbus usando Yolov5. Será avaliada a influência da variação de alguns hiperparâmetros como épocas e batch_size no desempenho dos modelos. 
 
-Este trabalho será dividido nas seguintes seções: metodologia, resultados, conclusões. Na seção metodologia são descritos a base de dados, o modelo de aprendizado profundo e os parâmetros para treinamento do modelo. Na seção resultados são apresentadas as métricas que serão utilizadas para avaliar os resultados e na sequencia são apresentados os resultados para variação de número de épocas e de batch-size. Na última seção são apresentadas as conclusões e sugeridos trabalhos futuros.
+Este trabalho será dividido nas seguintes seções: metodologia, resultados, conclusões. Na seção metodologia são descritos a base de dados, o modelo de aprendizado profundo e os parâmetros para treinamento do modelo. Na seção resultados são apresentadas as métricas que serão utilizadas para avaliar os resultados e na sequência são apresentados os resultados para variação de diferentes hiperparâmetros. Na última seção são apresentadas as conclusões e sugeridos trabalhos futuros.
+
 
 ### Metodologia
 
 #### Base de dados
 
-Neste trabalho é utilizado como conjunto de dados de entrada o dataset de demostração de detecção de aeronaves Airbus. Este conjunto de dados é uma versão de demonstração de conjuntos de dados de aprendizado profundo maiores e mais avançados criados a partir de imagens de satélite da Airbus. [Airbus Defense and Space Intelligence](https://www.intelligence-airbusds.com/) opera a maior constelação comercial de satélites combinando imagens ópticas de Pléiades, SPOT, Vision-1 e DMC, bem como a constelação de radar (composta por TerraSAR -X, TanDEM-X e PAZ). [OneAtlas](https://oneatlas.airbus.com/) oferece acesso fácil e flexível a imagens de satélite premium da Airbus, análises geoespaciais inovadoras, insights específicos do setor e muito mais.
+Neste trabalho é utilizado como conjunto de dados de entrada o dataset de demonstração de detecção de aeronaves Airbus. Este conjunto de dados é uma versão de demonstração de conjuntos de dados de aprendizado profundo maiores e mais avançados criados a partir de imagens de satélite da Airbus. [Airbus Defense and Space Intelligence](https://www.intelligence-airbusds.com/) opera a maior constelação comercial de satélites combinando imagens ópticas de Pléiades, SPOT, Vision-1 e DMC, bem como a constelação de radar (composta por TerraSAR -X, TanDEM-X e PAZ). [OneAtlas](https://oneatlas.airbus.com/) oferece acesso fácil e flexível a imagens de satélite premium da Airbus, análises geoespaciais inovadoras, insights específicos do setor e muito mais.
 
 ##### Imagens para treinamento
 
@@ -76,9 +77,9 @@ Na  arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a
 
 #### Treinamento do modelo
 
-As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessario s subdividisão das imagens em imegens menores ou ladrilhos (tiles). São gerados blocos antecipadamente  com um tamanho setado em 512 pixels por 512 pixels. paa garantir que todas a s aeronaves possam ser vistas pela rede na integra , é permitida uma sobreposição de 64 pixels entre os blocos.
+As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessario s subdividisão das imagens em imagens menores ou ladrilhos (tiles). Configuração base: são gerados blocos antecipadamente  com um tamanho setado em 512 pixels por 512 pixels. Para garantir que todas as aeronaves possam ser vistas pela rede na integra , é permitida uma sobreposição de 64 pixels entre os blocos.É setada uma porcentangem de truncamento de 0.3 (). Para a base de treino foram setados os seguintes parâmetros: epochs=10, batch_size=16, imgsz=512.
 
-Para a base de treino foram setados o:s seguintes parâmetros: epochs=10, batch_size=16, imgsz=512
+Neste trabalho serão variados os anteriores parametros e será avaliada a influencia no desempeno dos modelos.
 
 
 ### Resultados obtidos
@@ -266,25 +267,25 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 |	TILE_WIDTH/HEIGTH (Pixels)	|	128	|	256	|	512	|	1024	|	min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
-|	time (hours)	|	0.359	|	0.334	|	0.353	|		|	0.334	|	0.359	|
-|	best/epoch	|	18	|	19	|	19	|		|		|		|
-|	best/mAP_0.5	|	0.88973	|	0.90626	|	0.92197	|		|	0.88973	|	0.92197	|
-|	best/mAP_0.5:0.95	|	0.58002	|	0.66397	|	0.67335	|		|	0.58002	|	0.67335	|
-|	best/precision	|	0.90495	|	0.95083	|	0.95388	|		|	0.90495	|	0.95388	|
-|	best/recall	|	0.84194	|	0.85983	|	0.87897	|		|	0.84194	|	0.87897	|
-|	metrics/mAP_0.5	|	0.89023	|	0.90629	|	0.92199	|		|	0.89023	|	0.92199	|
-|	metrics/mAP_0.5:0.95	|	0.58066	|	0.66471	|	0.67332	|		|	0.58066	|	0.67332	|
-|	metrics/precision	|	0.90487	|	0.95114	|	0.9536	|		|	0.90487	|	0.9536	|
-|	metrics/recall	|	0.84102	|	0.85889	|	0.87868	|		|	0.84102	|	0.87868	|
-|	train/box_loss	|	0.03022	|	0.02463	|	0.02291	|		|	0.02291	|	0.03022	|
-|	train/cls_loss	|	0	|	0	|	0	|		|	0	|	0	|
-|	train/obj_loss	|	0.00282	|	0.00499	|	0.00891	|		|	0.00282	|	0.00891	|
-|	val/box_loss	|	0.02967	|	0.02185	|	0.02229	|		|	0.02185	|	0.02967	|
-|	val/cls_loss	|	0	|	0	|	0	|		|	0	|	0	|
-|	val/obj_loss	|	0.00373	|	0.00443	|	0.00671	|		|	0.00373	|	0.00671	|
-|	x/lr0	|	0.00109	|	0.00109	|	0.00109	|		|	0.00109	|	0.00109	|
-|	x/lr1	|	0.00109	|	0.00109	|	0.00109	|		|	0.00109	|	0.00109	|
-|	x/lr2	|	0.00109	|	0.00109	|	0.00109	|		|	0.00109	|	0.00109	|
+|	time (hours)	|	0,359	|	0,334	|	0,353	|	0,350	|	0,334	|	0,359	|
+|	best/epoch	|	18	|	19	|	19	|	18	|		|		|
+|	best/mAP_0,5	|	0,88973	|	0,90626	|	0,92197	|	0,94203	|	0,88973	|	0,94203	|
+|	best/mAP_0,5:0,95	|	0,58002	|	0,66397	|	0,67335	|	0,69823	|	0,58002	|	0,69823	|
+|	best/precision	|	0,90495	|	0,95083	|	0,95388	|	0,98485	|	0,90495	|	0,98485	|
+|	best/recall	|	0,84194	|	0,85983	|	0,87897	|	0,8991	|	0,84194	|	0,8991	|
+|	metrics/mAP_0,5	|	0,89023	|	0,90629	|	0,92199	|	0,94199	|	0,89023	|	0,94199	|
+|	metrics/mAP_0,5:0,95	|	0,58066	|	0,66471	|	0,67332	|	0,69829	|	0,58066	|	0,69829	|
+|	metrics/precision	|	0,90487	|	0,95114	|	0,9536	|	0,98487	|	0,90487	|	0,98487	|
+|	metrics/recall	|	0,84102	|	0,85889	|	0,87868	|	0,8991	|	0,84102	|	0,8991	|
+|	train/box_loss	|	0,03022	|	0,02463	|	0,02291	|	0,02295	|	0,02291	|	0,03022	|
+|	train/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
+|	train/obj_loss	|	0,00282	|	0,00499	|	0,00891	|	0,03079	|	0,00282	|	0,03079	|
+|	val/box_loss	|	0,02967	|	0,02185	|	0,02229	|	0,02177	|	0,02177	|	0,02967	|
+|	val/cls_loss	|	0	|	0	|	0	|	0	|	0	|	0	|
+|	val/obj_loss	|	0,00373	|	0,00443	|	0,00671	|	0,0264	|	0,00373	|	0,0264	|
+|	x/lr0	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|
+|	x/lr1	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|
+|	x/lr2	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|
 
 ### Conclusões
 
