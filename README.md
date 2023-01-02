@@ -32,7 +32,7 @@ In this work, an exploratory analysis of the Airbus aircraft detection dataset i
 
 ### Introdução
 
-Nos últimos anos, os detectores de objetos baseados em Rede Neural Convolucional (CNN) tem sido objeto de pesquisa devido à sua capacidade de calcular automaticamente recursos de imagens contextuais complexas [8]. Podem-se classificar os métodos atuais de detecção de objetos baseados em CNN em detectores de dois estágios baseados em região ou detectores de estágio único baseados em regressão. Exemplos de detectores baseados em região incluem CNN baseado em região (RCNN) [9], Fast RCNN [10] e Faster RCNN [11], enquanto detectores como You Only Look Once (YOLO) [12] e Single Shot MultiBox Detection (SSD) [13] são exemplos de detectores baseados em regressão. Os modelos baseados em regressão são geralmente menos precisos em comparação com os detectores baseados em região, no entanto, os detectores baseados em regressão são significativamente mais rápidos em comparação com os detectores baseados em região. Esforços têm sido feitos por pesquisadores para desenvolver novos modelos baseados em CNN para melhorar o desempenho e a eficiência [14].
+Nos últimos anos, os detectores de objetos baseados em Rede Neural Convolucional (CNN) tem sido objeto de pesquisa devido à sua capacidade de calcular automaticamente recursos de imagens contextuais complexas. Podem-se classificar os métodos atuais de detecção de objetos baseados em CNN em detectores de dois estágios baseados em região ou detectores de estágio único baseados em regressão. Exemplos de detectores baseados em região incluem CNN baseado em região (RCNN), Fast RCNN e Faster RCNN, enquanto detectores como You Only Look Once (YOLO) e Single Shot MultiBox Detection (SSD) são exemplos de detectores baseados em regressão. Os modelos baseados em regressão são geralmente menos precisos em comparação com os detectores baseados em região, no entanto, os detectores baseados em regressão são significativamente mais rápidos em comparação com os detectores baseados em região. Esforços têm sido feitos por pesquisadores para desenvolver novos modelos baseados em CNN para melhorar o desempenho e a eficiência.
 
 No contexto aeronáutico, o uso de detectores tem sido usado também como ferramenta de diagnóstico e de monitoramento de saúde superficial e estrutural de diferentes componentes aeronáuticos. Dei et al (2020) selecionaram a rede neural YOLO para fazer o reconhecimento automático de defeitos de corrosão e fadiga na superfície das aeronaves. Foram estabelecidos comparados entre si os modelos de detecção de defeitos de superfície de aeronaves baseados na rede neural YOLO e no Faster-RCNN. Visando os problemas de baixa eficiência e baixa precisão em métodos convencionais de detecção de defeitos de superfície para componentes de motores aeronáuticos, Liet al (2022) propuseram um modelo de detecção de defeitos de superfície baseado em um algoritmo de detecção de objetos YOLOv5 aprimorado.
 
@@ -149,7 +149,6 @@ Na seguinte tabela são sumarizados os melhores valores para as diferentes métr
 |x/lr0	|0.00208	|0.00109	|0.0005	|0.0005	|0.00208|
 |x/lr1	|0.00208	|0.00109	|0.0005	|0.0005	|0.00208|
 |x/lr2	|0.00208	|0.00109	|0.0005	|0.0005	|0.00208|
-
 
 
 São apresentadas a continuação figuras com as inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
@@ -273,7 +272,7 @@ Inferencia para TRUNCATED_PERCENT = 0.6 -------------------------------- Inferen
 
 #### Variação dos parametros Tile_Width e Tile Heigth
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Tile_Width_Heigth  128, 256, 512 e 1024. Foi fixado um número de 20 épocas.
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Tile_Width_Heigth  128, 256, 512 e 1024. Foi fixado um número de 20 épocas. Observa-se uma tendência de melhora de desemepenho com o aumento do tamanho das imagens. Não se verificou alterações significativas no tempo de treinamento.
 
 |	TILE_WIDTH/HEIGTH (Pixels)	|	128	|	256	|	512	|	1024	|	min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
