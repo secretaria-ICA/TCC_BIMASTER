@@ -14,7 +14,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 - Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
     - [Airbus Aircraft Detection](https://www.kaggle.com/datasets/airbusgeo/airbus-aircrafts-sample-dataset).
-    - [Nome do Trabalho 2](https://link_do_trabalho.com).
+    
 
 ---
 
@@ -22,13 +22,13 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 O reconhecimento de aeronaves a partir de imagens de sensoriamento remoto tem muitas aplicações na área civil e militar. A deteção dinâmica de aeronaves pode ser uma fonte importante para tomadas de decisão em estrategias militares ou de defesa. No campo civil é muito util a deteção de aeronaves para determinar o nivel de congestionamento de um aeroporto ou para verificar a disponibilidades de aeronaves em uma região em caso de emergencia.
 
-Neste trabalho é feita uma análise exploratoria do conjunto de dados de detecçao de aeronaves da Airbus. Posterioremente é criado, treinado e validado um modelo de rede neural convolucional usando Yolov5. È realizado um estudo paramêtrico a fim de determinar a influência de alguns hiperparâmetros como épocas no desempenho da rede criada,
+Neste trabalho é feita uma análise exploratoria do conjunto de dados de detecçao de aeronaves da Airbus. Posterioremente é criado, treinado e validado um modelo de rede neural convolucional usando Yolov5. È realizado um estudo paramêtrico a fim de determinar a influência de alguns hiperparâmetros como épocas no desempenho dosmodelos criados.
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
 
 Aircraft recognition from remote sensing images has many civil and military applications. The dynamic detection of aircraft can be an important source for decision making in military or defense strategies. In the civil field, aircraft detection is very useful to determine the level of congestion at an airport or to check the availability of aircraft in a region in case of emergency.
 
-In this work, an exploratory analysis of the Airbus aircraft detection dataset is performed. Subsequently, a convolutional neural network model is created, trained and validated using Yolov5. A parametric study is carried out in order to determine the influence of some hyperparameters such as epochs on the performance of the created network.
+In this work, an exploratory analysis of the Airbus aircraft detection dataset is performed. Subsequently, a convolutional neural network model is created, trained and validated using Yolov5. A parametric study is carried out in order to determine the influence of some hyperparameters such as epochs on the performance of the created models.
 
 ### Introdução
 
@@ -40,8 +40,7 @@ O uso de YOLOV para detecção de objetos a partir de imagens de satélites tamb
 
 Neste trabalho é feita uma prova de conceito de análise exploratória e de detecção de conjunto de dados de aeronaves da Airbus usando Yolov5. Será avaliada a influência da variação de alguns hiperparâmetros como épocas e batch_size no desempenho dos modelos. 
 
-Este trabalho será dividido nas seguintes seções: metodologia, resultados, conclusões. Na seção metodologia são descritos a base de dados, o modelo de aprendizado profundo e os parâmetros para treinamento do modelo. Na seção resultados são apresentadas as métricas que serão utilizadas para avaliar os resultados e na sequência são apresentados os resultados para variação de diferentes hiperparâmetros. Na última seção são apresentadas as conclusões e sugeridos trabalhos futuros.
-
+Este trabalho será dividido nas seguintes seções: metodologia, resultados e  conclusão. Na seção metodologia são descritos a base de dados, o modelo de aprendizado profundo e os parâmetros para treinamento do modelo. Na seção resultados são apresentadas as métricas que serão utilizadas para avaliar os resultados e na sequência são apresentados os resultados para variação de diferentes hiperparâmetros. Na última seção são apresentadas as conclusões e trabalhos futuros sugeridos.
 
 ### Metodologia
 
@@ -53,7 +52,7 @@ Neste trabalho é utilizado como conjunto de dados de entrada o dataset de demon
 
 A pasta `images`  contém 103 extratos de imagens das Plêiades com aproximadamente 50 cm de resolução. Cada imagem é armazenada como um arquivo JPEG de tamanho 2560 x 2560 pixels (ou seja, 1280 metros no solo). Os locais são vários aeroportos em todo o mundo. Alguns aeroportos aparecem várias vezes em diferentes datas de aquisição. Algumas imagens também incluem neblina ou nuvem para diversidade.
 
-Seguem algumas imagens do connto de treinamento:
+Seguem algumas imagens do conjunto de treinamento:
 
 <img src="img/Aeroporto_mostra.png" style="width: 500px"> <img src="img/Aeroporto_mostra2.png" style="width: 500px">
 
@@ -71,9 +70,9 @@ Segue figura com imagem na qual foram incorporadas as informações das caixas d
 
 ##### Análise exploratoria básica
 
-A partir de uma análise exploratoria básica é possivel verificar algumas carateristicas do conjunto de imagens base: são rotuladas 3316 aeronaves completas (Airplane) e 109 aeronaves truncadas (Truncated_airplane), verifica-se também que número mínimo de aeronaves por imagens é 5 e número máximos de aeronaves em ma imagem do conjunto é 92.
+A partir de uma análise exploratória básica é possível verificar algumas características do conjunto de imagens base: são rotuladas 3316 aeronaves completas (Airplane) e 109 aeronaves truncadas (Truncated_airplane), verifica-se também que número mínimo de aeronaves por imagens é 5 e número máximos de aeronaves em uma imagem do conjunto é 92.
 
-Seguem figuras mostrando a distribição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Esses valores são em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves.
+Seguem figuras mostrando a distribuição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Esses valores estão dados em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves.
 
 <img src="img/count_width.png" style="width: 500px"> <img src="img/count_heigth.png" style="width: 500px">
 
@@ -85,13 +84,13 @@ Uma pasta chamada `extras` contém 6 imagens extras que não são anotadas, e qu
 
 YOLO um acrônimo para 'You only look once', é um algoritmo de detecção de objetos que divide imagens em um sistema de grade. Cada célula na grade é responsável por detectar objetos dentro de si. %%YOLO é um dos algoritmos de detecção de objetos mais famosos devido à sua velocidade e precisão. O código-fonte aberto está disponível no [GitHub](https://github.com/ultralytics/yolov5).
 
-Na  arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a cabeça (head) e a detecção (detection). A espinha dorsal é uma rede neura convulocional (CNN) que coleta e modela carateristicas de imagem em diferentes granularidades. O YoloV5 implementa o gargalo (Bottleneck ) de previsão de centro e escala (CSP) para formular recursos de imagem. A cabeça é uma série de camadas para combinar carateristicas (features) de imagem para lançá-los em um processo de previsão. O YoloV5 também implementa o PA-NET para agregação de carateristicas. A detecção é um processo que utiliza recursos do cabeça (head) e realiza etapas de previsão de caixa e classe (Ieamsaard, 2021). Um diagrama da arquitetura YoloV5 é mostrado na seguinte figura.
+Na  arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a cabeça (head) e a detecção (detection). A espinha dorsal é uma rede neural convolucional (CNN) que coleta e modela caraterísticas de imagem em diferentes granularidades. O YoloV5 implementa o gargalo (Bottleneck ) de previsão de centro e escala (CSP) para formular recursos de imagem. A cabeça é uma série de camadas para combinar caraterísticas (features) de imagem para lançá-los em um processo de previsão. O YoloV5 também implementa o PA-NET para agregação de caraterísticas. A detecção é um processo que utiliza recursos do cabeça (head) e realiza etapas de previsão de caixa e classe (Ieamsaard, 2021). Um diagrama da arquitetura YoloV5 é mostrado na seguinte figura.
 
 <img src="img/Overview of model structure about YOLOv5.jpg" style="width: 600px">
 
 #### Treinamento do modelo
 
-As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessario s subdividisão das imagens em imagens menores ou ladrilhos (tiles). Configuração base: são gerados blocos antecipadamente  com um tamanho setado em 512 pixels por 512 pixels. Para garantir que todas as aeronaves possam ser vistas pela rede na integra , é permitida uma sobreposição de 64 pixels entre os blocos.É setada uma porcentangem de truncamento de 0.3 (). Para a base de treino foram setados os seguintes parâmetros: epochs=10, batch_size=16, imgsz=512.
+As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessario s subdividisão das imagens em imagens menores ou ladrilhos (tiles). Configuração base: são gerados blocos antecipadamente  com um tamanho setado em 512 pixels por 512 pixels. Para garantir que todas as aeronaves possam ser vistas pela rede na integra , é permitida uma sobreposição de 64 pixels entre os blocos.É setada uma porcentangem de truncamento de 0.3. Para a base de treino foram setados os seguintes parâmetros: epochs=10, batch_size=16, imgsz=512.
 
 Neste trabalho serão variados os anteriores parametros e será avaliada a influencia no desempeno dos modelos.
 
@@ -114,7 +113,7 @@ Precisão Média Média (mAP). O mAP é usado como uma métrica padrão para ana
 
 Para acompanhamento das metricas do trinamento e validação é utilizado o  Wandb. WandB é um dashboard central para acompanhar  hiperparâmetros, métricas do sistema e previsões permitindo comparar modelos ao vivo.
 
-#### Variação do número de épocas 
+#### Variação do número de épocas (epochs)
 
 São apresentadas na seguinte figura as métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que a perda de caixa e a perda de objetividade decrescem expressivamente até a cuarta época e depois continuam em decrecimento menos acelerado sem chegar em um platô. A perda de classificaçao permanece em zero durante todo o treinamento. para a validação a perda de caixa e a perda de objetividade decrescem apresentando ligeiras oscilações. A perda de classificaçao permanece em zero também para os datos de validação. A precisão do modelo cresce consistentemente até a segunda época e depois continua com caearateristicas de platê, com ligeiras oscilações e leve tendencia cresecente. A curva de re recordação cresce expressivamente até terceira época e depois continua em crescimento menos acentuado, com ligeiras oscilações sem chegar a caraterizar um platô. A curva de precisão média para limite de IoU de 0.5 tem comportamento similar a curva de precisão com menores oscilações na parte com carateristicas de platô e ainda com ligeira tedência de leve crescimento.  A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento com fortes oscilações até a última época.
 
@@ -134,7 +133,7 @@ Métricas de treinamento e validação para 50 épocas
 
 <img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 900px">
 
-Na seguinte tabela são sumarizados os melhores valores para as diferentes métricas apresentadas nas figuras anteriores para 10, 20 e 50 épocas. Destaca que a melhor época para as diferentes rodadas foram a 9, a 20 e a 36 respectivamente. Como era de esperar geralmente para uma determinada métrica a o valor de melhor desempenho está associado ao treinamento de 50 épocas que teve o melhor ponto na época 36. Verificou-se que com o aumento de número de épocas obteve-se um aumento de desempenho, porem que é importante ter um critério de parada para eficiência computacional, já que a melhor época não necessariamente correspondera a última época do treinamento.
+Na seguinte tabela são sumarizados os melhores valores para as diferentes métricas apresentadas nas figuras anteriores para 10, 20 e 50 épocas. Destaca que a melhor época para as diferentes rodadas foram a 9, a 20 e a 36 respectivamente. Como era de se esperar, geralmente para uma determinada métrica a o valor de melhor desempenho está associado ao treinamento de 50 épocas que teve o melhor ponto na época 36. Verificou-se que com o aumento de número de épocas obteve-se um aumento de desempenho, porem que é importante ter um critério de parada para eficiência computacional, já que a melhor época não necessariamente correspondera a última época do treinamento.
 
 |Epoch	|10	|20	|50	|min	|max|
 |---|---|---|---|---|---|
@@ -161,17 +160,17 @@ Na seguinte tabela são sumarizados os melhores valores para as diferentes métr
 
 São apresentadas a continuação figuras com as inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
 
-Inferencia para 2 épocas ------------------------------------------- Inferencia para 10 épocas
+Infereência para 2 épocas ------------------------------------------- Inferência para 10 épocas
 
 <img src="img/predi2epoc.png" style="width: 500px"> <img src="img/predi10epoc.png" style="width: 500px">
 
-Inferencia para 20 épocas (configuração base)------------------------------------------- Inferencia para 50 épocas
+Inferência para 20 épocas (configuração base)------------------------------------------- Inferência para 50 épocas
 
 <img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi50epoc.png" style="width: 500px">
 
 #### Variação do número de batch_size
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos batch-size:  10, 20 e 50. Foi fixado um número de 20 épocas. Não se evidencias alterações significativas das metricas desempenho em função do parâmetro batch. Também não foram observadas variações significativas no tempo de treinamento dos modelos.
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos batch-size:  10, 20 e 50. Foi fixado um número de 20 épocas. Não se evidenciam alterações significativas das métricas desempenho em função do parâmetro batch. Também não foram observadas variações significativas no tempo de treinamento dos modelos.
 
 |Batch	|16	|32	|48	|64	|min|max|
 |---|---|---|---|---|---|---|
@@ -197,17 +196,17 @@ x/lr2	|	0.00109	|	0.00110	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
 São apresentadas a continuação figuras para seguinte conjunto de valores do parametro batch_size: 16, 32, 48 e 64. Para proposito de comparação foi fixada a mesma imagem. 
 
-Inferencia para batch_size = 16 (configuração base) -------------------------------------------- Inferencia para batch _size = 32 
+Inferência para batch_size = 16 (configuração base) -------------------------------------------- Inferência para batch_size = 32 
 
 <img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas32batch.png" style="width: 500px">
 
-Inferencia para batch _size = 48 -------------------------------------------- Inferencia para batch _size = 64 
+Inferência para batch_size = 48 -------------------------------------------- Inferência para batch _size = 64 
 
 <img src="img/predi20epocas48batch.png" style="width: 500px"> <img src="img/predi20epocas64batch.png" style="width: 500px">
 
 #### Variação do parametro TILE_OVERLAP
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para seguinte conjunto de valores do parâmetro tile_overlap:  0, 32, 64 e 128. Foi fixado um número de 20 épocas. Observa-se que não á uma tendencia clara no tempo de treinamento, sendo observado aproximadamente o dobro do tempo de treinamento para cuando o parâmetro tile_overlap é nulo ou quando é setado em 128 pixels em comparação com tempo de treinamento para valores setados em .32 e 64 pixels. Não se observa uma variação significativa nas metricas de desempenho em função da variação do parâmetro tile_overlap, mas eveidencia ma leve tendencia de degradação na maioria das metricas para os dois casos extremos. 
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para seguinte conjunto de valores do parâmetro de sobreposição de ladrilho (TILE_OVERLAP):  0, 32, 64 e 128. Foi fixado um número de 20 épocas. Observa-se que não á uma tendencia clara no tempo de treinamento, sendo observado aproximadamente o dobro do tempo de treinamento para cuando o parâmetro tile_overlap é nulo ou quando é setado em 128 pixels em comparação com tempo de treinamento para valores setados em .32 e 64 pixels. Não se observa uma variação significativa nas métricas de desempenho em função da variação do parâmetro tile_overlap, mas eveidencia ma leve tendencia de degradação na maioria das métricas para os dois casos extremos. 
 
 |	TILE_OVERLAP (Pixels)	|	0	|	32	|	64	|	128	|	min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
@@ -232,19 +231,19 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
 
-São apresentadas a continuação figuras das inferêrencias para o seguinte conjunto de valores do parametro tile_overlap: 0, 32, 64 e 128 pixels. Para proposito de comparação foi fixada a mesma imagem. 
+São apresentadas a continuação figuras das inferêrencias para o seguinte conjunto de valores do parametro TILE_OVERLAP : 0, 32, 64 e 128 pixels. Para proposito de comparação foi fixada a mesma imagem. 
 
-Inferência para tile_overlap = 0 -------------------------------------------- Inferência para tile_overlap = 32 
+Inferência para TILE_OVERLAP  = 0 -------------------------------------------- Inferência para TILE_OVERLAP  = 32 
 
 <img src="img/predi20epocas0pix.png" style="width: 500px"> <img src="img/predi20epocas32pix.png" style="width: 500px">
 
-Inferência para tile_overlap = 64 (configuração base) -------------------------------------------- Inferência para tile_overlap = 128
+Inferência para TILE_OVERLAP  = 64 (configuração base) -------------------------------------------- Inferência para TILE_OVERLAP = 128
 
 <img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas128pix.png" style="width: 500px">
 
 #### Variação do Truncate_Percentage
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para o conjunto de valores do parametro de percentagem de truncamento TRUNCATED_PERCENTAGE:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influencia da variação do parâmetro TRUNCATED_PERCENTAGE nas diferentes metricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as metricas correspondentes à melhor época. 
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para o conjunto de valores do parametro de percentagem de truncamento (TRUNCATED_PERCENTAGE):  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influência da variação do parâmetro TRUNCATED_PERCENTAGE nas diferentes métricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as métricas correspondentes à melhor época. 
 
 |	TRUNCATED_PERCENTAGE	|	0	|	0.3	|	0.6	|	0.9	| min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
@@ -316,7 +315,7 @@ Inferência para TILE_WIDTH = 512  (configuração base)  ----------------------
 
 ### Conclusão
 
-Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de ladrilhos e percentagens de truncamento. En termos de tempo de treinamento os parametros que mais o inflenciam são o número de epocas que tem uma relação de proporcionalidade e a sobreposicionamento dos ladrilhos (TILE_OVERLAP). Com respeito à metricas de desempenho não se verificou influência significativa dos parametrôs batch_size, TILE_OVERLAP e TRUNCATED_PERCENT.  Observou-se uma tendencia de melhora geral nas metricas de de desempenho quando foi aumentado o número de épocas e o tamanho dos ladrilhos/imagens. As anteriores observações ficam limitadas a os intervalos e casos especificos testados, não sendo possivel ter uma generalização das tendências observadas. Do estudo verifica-se a necessidade de ao variar um  determinado paramêtro e deixar os outros inalterados, levar em conta que o desbalanceamento de relações entre eles também pode influenciar no desempenho do modelo.
+Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de ladrilhos e percentagens de truncamento. En termos de tempo de treinamento os parametros que mais o inflenciam são o número de epocas que tem uma relação de proporcionalidade e a sobreposicionamento dos ladrilhos (TILE_OVERLAP). Com respeito à métricas de desempenho não se verificou influência significativa dos parametrôs batch_size, TILE_OVERLAP e TRUNCATED_PERCENT.  Observou-se uma tendencia de melhora geral nas métricas de de desempenho quando foi aumentado o número de épocas e o tamanho dos ladrilhos/imagens. As anteriores observações ficam limitadas a os intervalos e casos especificos testados, não sendo possivel ter uma generalização das tendências observadas. Do estudo verifica-se a necessidade de ao variar um  determinado paramêtro e deixar os outros inalterados, levar em conta que o desbalanceamento de relações entre eles também pode influenciar no desempenho do modelo.
 
 Trabalhos futuros: No presente trabalho foi abordado o problema de deteção de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves e/o de sbcomponentes da aeronave.  
 
