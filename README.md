@@ -65,6 +65,10 @@ Uma das tarefas mais importantes em visão computacional é rotular os dados (Kh
 
 Todas as aeronaves foram anotadas com caixas delimitadoras nas imagens fornecidas. As anotações são fornecidas na forma de polígonos GeoJSON fechados. Um arquivo CSV chamado `annotations.csv` fornece todas as anotações - uma anotação por linha com o nome de arquivo correspondente da imagem como `image_id` e a classe da anotação, principalmente `Aircraft` ou `Truncated_Aircraft` para aeronaves localizadas na fronteira de a imagem.
 
+Segue figura com imagem na qual foi incorporada as informações das caixas delimitadoras.
+
+<img src="img/Aeroporto_pol.png" style="width: 70px">
+
 ##### Imagens extras
 
 Uma pasta chamada `extras' contém 6 imagens extras que não são anotadas, e que são usadas para testar um modelo em imagens novas - nunca vistas antes.
