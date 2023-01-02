@@ -74,7 +74,7 @@ A partir de uma análise exploratória básica é possível verificar algumas ca
 
 Seguem figuras mostrando a distribuição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Esses valores estão dados em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves.
 
-<img src="img/count_width.png" style="width: 500px"> <img src="img/count_heigth.png" style="width: 500px">
+<img src="img/count_width.png" style="width: 400px"> <img src="img/count_heigth.png" style="width: 400px">
 
 ##### Imagens extras
 
@@ -92,7 +92,7 @@ Na  arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a
 
 As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessario s subdividisão das imagens em imagens menores ou ladrilhos (tiles). Configuração base: são gerados blocos antecipadamente  com um tamanho setado em 512 pixels por 512 pixels. Para garantir que todas as aeronaves possam ser vistas pela rede na integra , é permitida uma sobreposição de 64 pixels entre os blocos.É setada uma porcentangem de truncamento de 0.3. Para a base de treino foram setados os seguintes parâmetros: epochs=10, batch_size=16, imgsz=512.
 
-Neste trabalho serão variados os anteriores parametros e será avaliada a influencia no desempeno dos modelos.
+Neste trabalho serão variados os anteriores parametros e será avaliada a influência no desempenho dos modelos.
 
 
 ### Resultados obtidos
@@ -241,11 +241,11 @@ Inferência para TILE_OVERLAP  = 64 (configuração base) ----------------------
 
 <img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas128pix.png" style="width: 500px">
 
-#### Variação do Truncate_Percentage
+#### Variação do parâmetro TRUNCATED_PERCENT
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para o conjunto de valores do parametro de percentagem de truncamento (TRUNCATED_PERCENTAGE):  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influência da variação do parâmetro TRUNCATED_PERCENTAGE nas diferentes métricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as métricas correspondentes à melhor época. 
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para o conjunto de valores do parametro de percentagem de truncamento (TRUNCATED_PERCENT):  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influência da variação do parâmetro TRUNCATED_PERCENT nas diferentes métricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as métricas correspondentes à melhor época. 
 
-|	TRUNCATED_PERCENTAGE	|	0	|	0.3	|	0.6	|	0.9	| min	|	max	|
+|	TRUNCATED_PERCENT	|	0	|	0.3	|	0.6	|	0.9	| min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
 |	time (hours)	|	0.369	|	0.357	|	0.381	|	0.384	|	0.357	|	0.384	|
 |	best/epoch	|	19	|	19	|	19	|	19	|		|		|
