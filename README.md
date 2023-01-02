@@ -65,9 +65,17 @@ Uma das tarefas mais importantes em visão computacional é rotular os dados (Kh
 
 Todas as aeronaves foram anotadas com caixas delimitadoras nas imagens fornecidas. As anotações são fornecidas na forma de polígonos GeoJSON fechados. Um arquivo CSV chamado `annotations.csv` fornece todas as anotações - uma anotação por linha com o nome de arquivo correspondente da imagem como `image_id` e a classe da anotação, principalmente `Aircraft` ou `Truncated_Aircraft` para aeronaves localizadas na fronteira de a imagem.
 
-Segue figura com imagem na qual foi incorporada as informações das caixas delimitadoras.
+Segue figura com imagem na qual foram incorporadas as informações das caixas delimitadoras.
 
 <img src="img/Aeroporto_pol.png" style="width: 700px">
+
+##### Análise exploratoria básica
+
+A partir de uma análise exploratoria básica é possivel verificar algumas carateristicas do conjunto de imagens base: são rotuladas 3316 aeronaves completas (Airplane) e 109 aeronaves truncadas (Truncated_airplane), verifica-se também que número mínimo de aeronaves por imagens é 5 e número máximos de aeronaves em ma imagem do conjunto é 92.
+
+Seguem figuras mostrando a distribição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Esses valores são em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves.
+
+<img src="img/count_width.png" style="width: 500px"> <img src="img/count_heigth.png" style="width: 500px">
 
 ##### Imagens extras
 
