@@ -150,22 +150,13 @@ Na seguinte tabela são sumarizados os melhores valores para as diferentes métr
 
 São apresentadas a continuação figuras com as inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
 
-Inferencia para 2 épocas
+Inferencia para 2 épocas ------------------------------------------- Inferencia para 10 épocas
 
-<img src="img/predi2epoc.png" style="width: 600px">
+<img src="img/predi2epoc.png" style="width: 500px"> <img src="img/predi10epoc.png" style="width: 500px">
 
-Inferencia para 10 épocas
+Inferencia para 20 épocas (configuração base)------------------------------------------- Inferencia para 50 épocas
 
-<img src="img/predi10epoc.png" style="width: 600px">
-
-Inferencia para 20 épocas
-
-<img src="img/predi20epoc.png" style="width: 600px">
-
-Inferencia para 50 épocas
-
-<img src="img/predi50epoc.png" style="width: 600px">
-
+<img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi50epoc.png" style="width: 500px">
 
 #### Variação do número de batch_size
 
@@ -193,25 +184,17 @@ x/lr0	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 x/lr2	|	0.00109	|	0.00110	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
-São apresentadas a continuação figuras para seguinte conjunto de valores do parametro batch _size: 16, 32, 48 e 64. Para proposito de comparação foi fixada a mesma imagem. 
+São apresentadas a continuação figuras para seguinte conjunto de valores do parametro batch_size: 16, 32, 48 e 64. Para proposito de comparação foi fixada a mesma imagem. 
 
-Inferencia para batch_size = 16 (configuração base)
+Inferencia para batch_size = 16 (configuração base) -------------------------------------------- Inferencia para batch _size = 32 
 
-<img src="img/predi20epoc.png" style="width: 600px">
+<img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas32batch.png" style="width: 500px">
 
-Inferencia para batch _size = 32 
+Inferencia para batch _size = 48 -------------------------------------------- Inferencia para batch _size = 64 
 
-<img src="img/predi20epocas32batch.png" style="width: 600px">
+<img src="img/predi20epocas48batch.png" style="width: 500px"> <img src="img/predi20epocas64batch.png" style="width: 500px">
 
-Inferencia para batch _size = 48 
-
-<img src="img/predi20epocas48batch.png" style="width: 600px">
-
-Inferencia para batch _size = 64 
-
-<img src="img/predi20epocas64batch.png" style="width: 600px">
-
-#### Variação do Tile_Overlap
+#### Variação do parametro TILE_OVERLAP
 
 Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para seguinte conjunto de valores do parâmetro tile_overlap:  0, 32, 64 e 128. Foi fixado um número de 20 épocas. Observa-se que não á uma tendencia clara no tempo de treinamento, sendo observado aproximadamente o dobro do tempo de treinamento para cuando o parâmetro tile_overlap é nulo ou quando é setado em 128 pixels em comparação com tempo de treinamento para valores setados em .32 e 64 pixels. Não se observa uma variação significativa nas metricas de desempenho em função da variação do parâmetro tile_overlap, mas eveidencia ma leve tendencia de degradação na maioria das metricas para os dois casos extremos. 
 
@@ -240,21 +223,13 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 São apresentadas a continuação figuras para seguinte conjunto de valores do parametro tile_overlap: 0, 32, 64 e 128 pixels. Para proposito de comparação foi fixada a mesma imagem. 
 
-Inferencia para tile_overlap = 0
+Inferencia para tile_overlap = 0 -------------------------------------------- Inferencia para tile_overlap = 32 
 
-<img src="img/predi20epocas0pix.png" style="width: 600px">
+<img src="img/predi20epocas0pix.png" style="width: 500px"> <img src="img/predi20epocas32pix.png" style="width: 500px">
 
-Inferencia para tile_overlap = 32 
+Inferencia para tile_overlap = 64 (configuração base) -------------------------------------------- Inferencia para tile_overlap = 128
 
-<img src="img/predi20epocas32pix.png" style="width: 600px">
-
-Inferencia para tile_overlap = 64 (configuração base)
-
-<img src="img/predi20epoc.png" style="width: 600px">
-
-Inferencia para tile_overlap = 128
-
-<img src="img/predi20epocas128pix.png" style="width: 600px">
+<img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas128pix.png" style="width: 500px">
 
 #### Variação do Truncate_Percentage
 
