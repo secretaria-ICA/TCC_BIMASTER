@@ -67,7 +67,7 @@ Todas as aeronaves foram anotadas com caixas delimitadoras nas imagens fornecida
 
 Segue figura com imagem na qual foi incorporada as informações das caixas delimitadoras.
 
-<img src="img/Aeroporto_pol.png" style="width: 70px">
+<img src="img/Aeroporto_pol.png" style="width: 700px">
 
 ##### Imagens extras
 
