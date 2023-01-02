@@ -92,7 +92,7 @@ Na  arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a
 
 As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessario s subdividisão das imagens em imagens menores ou ladrilhos (tiles). Configuração base: são gerados blocos antecipadamente  com um tamanho setado em 512 pixels por 512 pixels. Para garantir que todas as aeronaves possam ser vistas pela rede na integra , é permitida uma sobreposição de 64 pixels entre os blocos.É setada uma porcentangem de truncamento de 0.3. Para a base de treino foram setados os seguintes parâmetros: epochs=10, batch_size=16, imgsz=512.
 
-Neste trabalho serão variados os anteriores parametros e será avaliada a influência no desempenho dos modelos.
+Neste trabalho serão variados os anteriores parametros e será avaliada a influência no desempenho dos modelos. Para o treinamento e inferências dos modelos é utilizado o COLAB no ambiente de execução com GPU. 
 
 
 ### Resultados obtidos
