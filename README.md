@@ -224,19 +224,19 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
 
-São apresentadas a continuação figuras para seguinte conjunto de valores do parametro tile_overlap: 0, 32, 64 e 128 pixels. Para proposito de comparação foi fixada a mesma imagem. 
+São apresentadas a continuação figuras das inferêrencias para o seguinte conjunto de valores do parametro tile_overlap: 0, 32, 64 e 128 pixels. Para proposito de comparação foi fixada a mesma imagem. 
 
-Inferencia para tile_overlap = 0 -------------------------------------------- Inferencia para tile_overlap = 32 
+Inferência para tile_overlap = 0 -------------------------------------------- Inferência para tile_overlap = 32 
 
 <img src="img/predi20epocas0pix.png" style="width: 500px"> <img src="img/predi20epocas32pix.png" style="width: 500px">
 
-Inferencia para tile_overlap = 64 (configuração base) -------------------------------------------- Inferencia para tile_overlap = 128
+Inferência para tile_overlap = 64 (configuração base) -------------------------------------------- Inferência para tile_overlap = 128
 
 <img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas128pix.png" style="width: 500px">
 
 #### Variação do Truncate_Percentage
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Truncatate_Percentage:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influencia da variação do truncated_percentage nas diferentes metricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as metricas correspondentes à melhor época. 
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para o conjunto de valores do parametro de percentagem de truncamento TRUNCATED_PERCENTAGE:  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influencia da variação do parâmetro TRUNCATED_PERCENTAGE nas diferentes metricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as metricas correspondentes à melhor época. 
 
 |	TRUNCATED_PERCENTAGE	|	0	|	0.3	|	0.6	|	0.9	| min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
@@ -262,11 +262,11 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 São apresentadas a continuação figuras para seguinte conjunto de valores do parametro TRUNCATED_PERCENT: 0, 0.3, 0.6 e 0.9. Para proposito de comparação foi fixada a mesma imagem. 
 
-Inferencia para TRUNCATED_PERCENT = 0 -------------------------------- Inferencia para TRUNCATED_PERCENT = 0.3 (configuração base)
+Inferência para TRUNCATED_PERCENT = 0 -------------------------------- Inferência para TRUNCATED_PERCENT = 0.3 (configuração base)
 
 <img src="img/predi20epocas0per.png" style="width: 500px"> <img src="img/predi20epoc.png" style="width: 500px">
 
-Inferencia para TRUNCATED_PERCENT = 0.6 -------------------------------- Inferencia para TRUNCATED_PERCENT = 0.9
+Inferência para TRUNCATED_PERCENT = 0.6 -------------------------------- Inferência para TRUNCATED_PERCENT = 0.9
 
 <img src="img/predi20epocas06per.png" style="width: 500px"> <img src="img/predi20epocas09per.png" style="width: 500px">
 
