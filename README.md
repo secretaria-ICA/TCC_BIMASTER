@@ -334,7 +334,7 @@ Inferencia para TILE_WIDTH = 128  ------------------------------ Inferencia para
 
 Inferencia para TILE_WIDTH = 512  (configuração base)  ------------------------------                 Inferencia para TILE_WIDTH = 1024
 
-<img src="img/predi20epoc.png" style="width: 550px"> <img src="img/predi20epocas1024tam.png" style="width: 550px">
+<img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas1024tam.png" style="width: 500px">
 
 ### Conclusões
 
