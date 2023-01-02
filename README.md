@@ -261,11 +261,11 @@ São apresentadas a continuação figuras para seguinte conjunto de valores do p
 
 Inferencia para TRUNCATED_PERCENT = 0 -------------------------------- Inferencia para TRUNCATED_PERCENT = 0.3 (configuração base)
 
-<img src="img/predi20epocas0per.png" style="width: 600px"> <img src="img/predi20epoc.png" style="width: 600px">
+<img src="img/predi20epocas0per.png" style="width: 500px"> <img src="img/predi20epoc.png" style="width: 500px">
 
 Inferencia para TRUNCATED_PERCENT = 0.6 -------------------------------- Inferencia para TRUNCATED_PERCENT = 0.9
 
-<img src="img/predi20epocas06per.png" style="width: 600px"> <img src="img/predi20epocas09per.png" style="width: 600px">
+<img src="img/predi20epocas06per.png" style="width: 500px"> <img src="img/predi20epocas09per.png" style="width: 500px">
 
 #### Variação dos parametros Tile_Width e Tile Heigth
 
