@@ -259,21 +259,13 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 São apresentadas a continuação figuras para seguinte conjunto de valores do parametro TRUNCATED_PERCENT: 0, 0.3, 0.6 e 0.9. Para proposito de comparação foi fixada a mesma imagem. 
 
-Inferencia para TRUNCATED_PERCENT = 0
+Inferencia para TRUNCATED_PERCENT = 0 -------------------------------- Inferencia para TRUNCATED_PERCENT = 0.3 (configuração base)
 
-<img src="img/predi20epocas0per.png" style="width: 600px">
+<img src="img/predi20epocas0per.png" style="width: 600px"> <img src="img/predi20epoc.png" style="width: 600px">
 
-Inferencia para TRUNCATED_PERCENT = 0.3 (configuração base)
+Inferencia para TRUNCATED_PERCENT = 0.6 -------------------------------- Inferencia para TRUNCATED_PERCENT = 0.9
 
-<img src="img/predi20epoc.png" style="width: 600px">
-
-Inferencia para TRUNCATED_PERCENT = 0.6 
-
-<img src="img/predi20epocas06per.png" style="width: 600px">
-
-Inferencia para TRUNCATED_PERCENT = 0.9
-
-<img src="img/predi20epocas09per.png" style="width: 600px">
+<img src="img/predi20epocas06per.png" style="width: 600px"> <img src="img/predi20epocas09per.png" style="width: 600px">
 
 #### Variação dos parametros Tile_Width e Tile Heigth
 
@@ -303,11 +295,11 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 São apresentadas a continuação figuras para seguinte conjunto de valores dos parametros TILE_WIDTH, TILE_HEIGTH,imgsz : 128, 256, 512 e 1024 pixels. O valor setado é o mesmo para os três parâmetros. Para proposito de comparação foi fixada a mesma imagem. 
 
-Inferencia para TILE_WIDTH = 128  ------------------------------ Inferencia para TILE_WIDTH = 256 
+Inferencia para TILE_WIDTH = 128  -------------------------------- Inferencia para TILE_WIDTH = 256 
 
 <img src="img/predi20epocas128tam.png" style="width: 500px"> <img src="img/predi20epocas256tam.png" style="width: 500px">
 
-Inferencia para TILE_WIDTH = 512  (configuração base)  ------------------------------                 Inferencia para TILE_WIDTH = 1024
+Inferencia para TILE_WIDTH = 512  (configuração base)  --------------------------------                 Inferencia para TILE_WIDTH = 1024
 
 <img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas1024tam.png" style="width: 500px">
 
