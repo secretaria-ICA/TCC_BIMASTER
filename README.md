@@ -71,7 +71,7 @@ Segue figura com imagem na qual foi incorporada as informações das caixas deli
 
 ##### Imagens extras
 
-Uma pasta chamada `extras' contém 6 imagens extras que não são anotadas, e que são usadas para testar um modelo em imagens novas - nunca vistas antes.
+Uma pasta chamada `extras` contém 6 imagens extras que não são anotadas, e que são usadas para testar um modelo em imagens novas - nunca vistas antes.
 
 #### Modelo de aprendizado profundo usando YoloV5
 
@@ -309,9 +309,9 @@ Inferencia para TILE_WIDTH = 512  (configuração base)  -----------------------
 
 ### Conclusões
 
-Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de imagens e percentagens de treinamento. En termos de tempo de treinamento os parametros que mais inflencina são o número de epocas que tem ma relação de proporcionalidade e o sobreposicionamento dos tijolos (tile_overlap).
+Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de ladrilhos e percentagens de truncamento. En termos de tempo de treinamento os parametros que mais o inflenciam são o número de epocas que tem uma relação de proporcionalidade e a sobreposicionamento dos ladrilhos (TILE_OVERLAP).
 
-Trabalhos futuros: No presente trabalho foi abordado o problema de deteção de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves.  
+Trabalhos futuros: No presente trabalho foi abordado o problema de deteção de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves e/o de sbcomponentes da aeronave.  
 
 
 ### Referências
