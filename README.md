@@ -191,17 +191,15 @@ x/lr2	|	0.00109	|	0.00110	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
 São apresentadas a continuação figuras para seguinte conjunto de valores do parametro batch_size: 16, 32, 48 e 64. Para proposito de comparação foi fixada a mesma imagem. 
 
-Inferência para batch_size = 16 (configuração base) -------------------------------------------- Inferência para batch_size = 32 
+|Inferência para batch_size = 16 (configuração base)| Inferência para batch_size = 32  |
+|---|---|
+|<img src="img/predi20epoc.png" style="width: 500px">|<img src="img/predi20epocas32batch.png" style="width: 500px">|
+|**Inferência para batch_size = 48**|**Inferência para batch_size = 64**|
+|<img src="img/predi20epocas48batch.png" style="width: 500px"> |<img src="img/predi20epocas64batch.png" style="width: 500px">|
 
-<img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas32batch.png" style="width: 500px">
+#### Variação do parâmetro *TILE_OVERLAP*
 
-Inferência para batch_size = 48 -------------------------------------------- Inferência para batch _size = 64 
-
-<img src="img/predi20epocas48batch.png" style="width: 500px"> <img src="img/predi20epocas64batch.png" style="width: 500px">
-
-#### Variação do parametro TILE_OVERLAP
-
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para seguinte conjunto de valores do parâmetro de sobreposição de ladrilho (TILE_OVERLAP):  0, 32, 64 e 128. Foi fixado um número de 20 épocas. Observa-se que não á uma tendencia clara no tempo de treinamento, sendo observado aproximadamente o dobro do tempo de treinamento para cuando o parâmetro tile_overlap é nulo ou quando é setado em 128 pixels em comparação com tempo de treinamento para valores setados em .32 e 64 pixels. Não se observa uma variação significativa nas métricas de desempenho em função da variação do parâmetro tile_overlap, mas eveidencia ma leve tendencia de degradação na maioria das métricas para os dois casos extremos. 
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para seguinte conjunto de valores do parâmetro de sobreposição de ladrilho (*TILE_OVERLAP*):  0, 32, 64 e 128. Foi fixado um número de 20 épocas. Observa-se que não á uma tendencia clara no tempo de treinamento, sendo observado aproximadamente o dobro do tempo de treinamento para cuando o parâmetro tile_overlap é nulo ou quando é setado em 128 pixels em comparação com tempo de treinamento para valores setados em .32 e 64 pixels. Não se observa uma variação significativa nas métricas de desempenho em função da variação do parâmetro *TILE_OVERLAP*, mas eveidencia ma leve tendencia de degradação na maioria das métricas para os dois casos extremos. 
 
 |	TILE_OVERLAP (Pixels)	|	0	|	32	|	64	|	128	|	min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
@@ -262,15 +260,14 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 |	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
-São apresentadas a continuação figuras para seguinte conjunto de valores do parametro TRUNCATED_PERCENT: 0, 0.3, 0.6 e 0.9. Para proposito de comparação foi fixada a mesma imagem. 
+São apresentadas a continuação figuras para o seguinte conjunto de valores do parâmetro *TRUNCATED_PERCENT*: 0, 0.3, 0.6 e 0.9. Para proposito de comparação foi fixada a mesma imagem. 
 
-Inferência para TRUNCATED_PERCENT = 0 -------------------------------- Inferência para TRUNCATED_PERCENT = 0.3 (configuração base)
-
-<img src="img/predi20epocas0per.png" style="width: 500px"> <img src="img/predi20epoc.png" style="width: 500px">
-
-Inferência para TRUNCATED_PERCENT = 0.6 -------------------------------- Inferência para TRUNCATED_PERCENT = 0.9
-
-<img src="img/predi20epocas06per.png" style="width: 500px"> <img src="img/predi20epocas09per.png" style="width: 500px">
+|Inferência para TRUNCATED_PERCENT = 0|Inferência para TRUNCATED_PERCENT = 0.3 (configuração base)|
+|---|---|
+|<img src="img/predi20epocas0per.png" style="width: 500px">|<img src="img/predi20epoc.png" style="width: 500px">|
+|Inferência para TRUNCATED_PERCENT = 0.6|Inferência para TRUNCATED_PERCENT = 0.9|
+|---|---|
+|<img src="img/predi20epocas06per.png" style="width: 500px"> |<img src="img/predi20epocas09per.png" style="width: 500px">|
 
 #### Variação dos parametros Tile_Width e Tile Heigth
 
@@ -300,17 +297,15 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 
 São apresentadas a continuação figuras para seguinte conjunto de valores dos parametros TILE_WIDTH, TILE_HEIGTH,imgsz : 128, 256, 512 e 1024 pixels. O valor setado é o mesmo para os três parâmetros. Para proposito de comparação foi fixada a mesma imagem. Observa-se uma grande quantidade de falsos negativos pra 128 pixels. Para 256 pixels observam-se dois falsos negativos incluindo um aeronave relativamente grande. Para 512 e 1024 pixels observa-se um falso negativo de uma aeronave comparativamente pequena. É importante destacar que o desempenho nas inferências  ao modificar o tamaho das imagens não estará influenciado só por este parâmetro, como com as sua relação com outro parametro que foi deixado constante como a superposição (TILE_OVERLAP). Esse desbalanceamento pode ser uma das causa da baixa qualidade de inferência para 128 pixels.  
 
-Inferência para TILE_WIDTH = 128  -------------------------------- Inferência para TILE_WIDTH = 256 
-
-<img src="img/predi20epocas128tam.png" style="width: 500px"> <img src="img/predi20epocas256tam.png" style="width: 500px">
-
-Inferência para TILE_WIDTH = 512  (configuração base)  --------------------------------                 Infereência para TILE_WIDTH = 1024
-
-<img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas1024tam.png" style="width: 500px">
+|Inferência para TILE_WIDTH = 128|Inferência para TILE_WIDTH = 256 |
+|---|---|
+|<img src="img/predi20epocas128tam.png" style="width: 500px">| <img src="img/predi20epocas256tam.png" style="width: 500px">|
+|Inferência para TILE_WIDTH = 512  (configuração base)|Inferência para TILE_WIDTH = 1024|
+|<img src="img/predi20epoc.png" style="width: 500px">|<img src="img/predi20epocas1024tam.png" style="width: 500px">| 
 
 ### Conclusão
 
-Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens remotas de sensoreamento. O modelo é treinado pelo YoloV5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de ladrilhos e percentagens de truncamento. En termos de tempo de treinamento os parametros que mais o inflenciam são o número de epocas que tem uma relação de proporcionalidade e a sobreposicionamento dos ladrilhos (TILE_OVERLAP). Com respeito à métricas de desempenho não se verificou influência significativa dos parametrôs batch_size, TILE_OVERLAP e TRUNCATED_PERCENT.  Observou-se uma tendencia de melhora geral nas métricas de de desempenho quando foi aumentado o número de épocas e o tamanho dos ladrilhos/imagens. As anteriores observações ficam limitadas a os intervalos e casos especificos testados, não sendo possivel ter uma generalização das tendências observadas. Do estudo verifica-se a necessidade de ao variar um  determinado paramêtro e deixar os outros inalterados, levar em conta que o desbalanceamento de relações entre eles também pode influenciar no desempenho do modelo.
+Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens de sensoreamento remoto. O modelo é treinado pelo YOLOV v5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de ladrilhos e percentagens de truncamento. En termos de tempo de treinamento os parametros que mais o inflenciam são o número de epocas que tem uma relação de proporcionalidade e a sobreposicionamento dos ladrilhos (TILE_OVERLAP). Com respeito à métricas de desempenho não se verificou influência significativa dos parametrôs batch_size, TILE_OVERLAP e TRUNCATED_PERCENT.  Observou-se uma tendencia de melhora geral nas métricas de de desempenho quando foi aumentado o número de épocas e o tamanho dos ladrilhos/imagens. As anteriores observações ficam limitadas a os intervalos e casos especificos testados, não sendo possivel ter uma generalização das tendências observadas. Do estudo verifica-se a necessidade de ao variar um  determinado paramêtro e deixar os outros inalterados, levar em conta que o desbalanceamento de relações entre eles também pode influenciar no desempenho do modelo.
 
 Trabalhos futuros: No presente trabalho foi abordado o problema de deteção de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves e/o de sbcomponentes da aeronave.  
 
