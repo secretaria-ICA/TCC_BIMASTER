@@ -233,7 +233,7 @@ São apresentadas a continuação figuras das inferências para o seguinte conju
 |Inferência para TILE_OVERLAP  = 0|Inferência para TILE_OVERLAP  = 32 |
 |---|---|
 |<img src="img/predi20epocas0pix.png" style="width: 500px">|<img src="img/predi20epocas32pix.png" style="width: 500px">|
-|**Inferência para TILE_OVERLAP  = 64 (configuração base)|Inferência para TILE_OVERLAP = 128|
+|**Inferência para TILE_OVERLAP  = 64 (configuração base)**|Inferência para TILE_OVERLAP = 128**|
 |<img src="img/predi20epoc.png" style="width: 500px"> |<img src="img/predi20epocas128pix.png" style="width: 500px">|
 
 #### Variação do parâmetro TRUNCATED_PERCENT
@@ -267,8 +267,7 @@ São apresentadas a continuação figuras com as inferências para o seguinte co
 |Inferência para TRUNCATED_PERCENT = 0|Inferência para TRUNCATED_PERCENT = 0.3 (configuração base)|
 |---|---|
 |<img src="img/predi20epocas0per.png" style="width: 500px">|<img src="img/predi20epoc.png" style="width: 500px">|
-|**Inferência para TRUNCATED_PERCENT = 0.6|Inferência para TRUNCATED_PERCENT = 0.9|
-|---|---|
+|**Inferência para TRUNCATED_PERCENT = 0.6**|**Inferência para TRUNCATED_PERCENT = 0.9**|
 |<img src="img/predi20epocas06per.png" style="width: 500px"> |<img src="img/predi20epocas09per.png" style="width: 500px">|
 
 #### Variação dos parâmetros Tile_Width e Tile Heigth
@@ -302,7 +301,7 @@ São apresentadas a continuação figuras com as inferências para o seguinte co
 |Inferência para TILE_WIDTH = 128|Inferência para TILE_WIDTH = 256 |
 |---|---|
 |<img src="img/predi20epocas128tam.png" style="width: 500px">| <img src="img/predi20epocas256tam.png" style="width: 500px">|
-|**Inferência para TILE_WIDTH = 512  (configuração base)|Inferência para TILE_WIDTH = 1024|
+|**Inferência para TILE_WIDTH = 512  (configuração base)**|**Inferência para TILE_WIDTH = 1024**|
 |<img src="img/predi20epoc.png" style="width: 500px">|<img src="img/predi20epocas1024tam.png" style="width: 500px">| 
 
 ### Conclusão
