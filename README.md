@@ -85,51 +85,51 @@ Uma pasta chamada `extras` contém 6 imagens extras que não são anotadas, e qu
 
 YOLO um acrônimo para 'You only look once', é um algoritmo de detecção de objetos que divide imagens em um sistema de grade. Cada célula na grade é responsável por detectar objetos dentro de si. %%YOLO é um dos algoritmos de detecção de objetos mais famosos devido à sua velocidade e precisão. O código-fonte aberto está disponível no [GitHub](https://github.com/ultralytics/yolov5).
 
-Na  arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a cabeça (head) e a detecção (detection). A espinha dorsal é uma rede neural convolucional (CNN) que coleta e modela caraterísticas de imagem em diferentes granularidades. O YoloV5 implementa o gargalo (Bottleneck ) de previsão de centro e escala (CSP) para formular recursos de imagem. A cabeça é uma série de camadas para combinar caraterísticas (features) de imagem para lançá-los em um processo de previsão. O YoloV5 também implementa o PA-NET para agregação de caraterísticas. A detecção é um processo que utiliza recursos do cabeça (head) e realiza etapas de previsão de caixa e classe (Ieamsaard, 2021). Um diagrama da arquitetura YoloV5 é mostrado na seguinte figura.
+Na arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a cabeça (head) e a detecção (detection). A espinha dorsal é uma rede neural convolucional (CNN) que coleta e modela caraterísticas de imagem em diferentes granularidades. O YoloV5 implementa o gargalo (Bottleneck ) de previsão de centro e escala (CSP) para formular recursos de imagem. A cabeça é uma série de camadas para combinar caraterísticas (features) de imagem para lançá-los em um processo de previsão. O YoloV5 também implementa o PA-NET para agregação de caraterísticas. A detecção é um processo que utiliza recursos do cabeça (head) e realiza etapas de previsão de caixa e classe (Ieamsaard, 2021). Um diagrama da arquitetura YoloV5 é mostrado na seguinte figura.
 
 |<img src="img/Overview of model structure about YOLOv5.jpg" style="width: 900px">|
 |---|
 
 #### Treinamento do modelo
 
-As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessario s subdividisão das imagens em imagens menores ou ladrilhos (tiles). Configuração base: são gerados blocos antecipadamente  com um tamanho setado em 512 pixels por 512 pixels. Para garantir que todas as aeronaves possam ser vistas pela rede na integra , é permitida uma sobreposição de 64 pixels entre os blocos.É setada uma porcentangem de truncamento de 0.3. Para a base de treino foram setados os seguintes parâmetros: epochs=10, batch_size=16, imgsz=512.
+As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessário a subdividisão das imagens em imagens menores ou ladrilhos (tiles). Configuração base: são gerados blocos antecipadamente com um tamanho setado em 512 pixels por 512 pixels. Para garantir que todas as aeronaves possam ser vistas pela rede na integra, é permitida uma sobreposição de 64 pixels entre os blocos. É setada uma porcentagem de truncamento de 0.3. Para a configuração base de treino foram setados os seguintes parâmetros: epochs=10, batch_size=16, imgsz=512.
 
-Neste trabalho serão variados os anteriores parametros e será avaliada a influência no desempenho dos modelos. Para o treinamento e inferências dos modelos é utilizado o COLAB no ambiente de execução com GPU. 
-
+Neste trabalho serão variados os anteriores parâmetros e será avaliada a influência no desempenho dos modelos. Para o treinamento e inferências dos modelos é utilizado o COLAB no ambiente de execução com GPU.
 
 ### Resultados obtidos
 
 #### Metricas 
 
-As seguintes metricas foram usadas para avaliar o resultados: 
+As seguintes métricas foram usadas para avaliar os resultados: 
 
-Perdad de caixa delimitadora (loss_bbox): uma perda que mede o quão "apertadas" as caixas delimitadoras previstas são para o objeto de verdade básica (geralmente uma perda de regressão, L1, smoothL1etc.).
+Perda de caixa delimitadora (loss_bbox): uma perda que mede o quão "apertadas" as caixas delimitadoras previstas são para o objeto de verdade básica (geralmente uma perda de regressão, L1, smoothL1etc.).
 
 Perda de classificação (loss_cls): uma perda que mede a exatidão da classificação de cada caixa delimitadora prevista: cada caixa pode conter uma classe de objeto ou um "background". Essa perda é geralmente chamada de perda de entropia cruzada.
 
-Precisão: é uma medida de quando "" seu modelo prevê com que frequência ele prevê corretamente ?"" Indica o quanto podemos confiar nas previsões positivas do modelo.
+Precisão: é uma medida de quando" seu modelo prevê com que frequência ele prevê corretamente?" Indica o quanto podemos confiar nas previsões positivas do modelo.
 
-Recall: é uma medida de "" seu modelo previu todas as vezes que deveria ter previsto? "" Indica quaisquer previsões que não deveriam ter sido perdidas se o modelo estiver ausente. 
+Recall: é uma medida de "" seu modelo previu todas as vezes que deveria ter previsto?" Indica quaisquer previsões que não deveriam ter sido perdidas se o modelo estiver ausente. 
 
-Precisão Média Média (mAP). O mAP é usado como uma métrica padrão para analizar a precisão de um modelo de deteção de objetos.  O calculo de mAP é baseada nas seguintes submétricas: matriz de confusão, Interseção sobre a União (IoU), recall e precisão. The mAP incorpora um compromisso entre precisão e recall e considera tanto falsos positivos, como falsos negativos. Os verdadeiros e falsos positivos da tarefa de detecção de objetos são classificados usando o limite IoU.
+Precisão Média Média (mAP). O mAP é usado como uma métrica padrão para analisar a precisão de um modelo de deteção de objetos.  O cálculo de mAP é baseada nas seguintes submétricas: matriz de confusão, Interseção sobre a União (IoU), recall e precisão. The mAP incorpora um compromisso entre precisão e recall e considera tanto falsos positivos, como falsos negativos. Os verdadeiros e falsos positivos da tarefa de detecção de objetos são classificados usando o limite IoU.
 
-Para acompanhamento das metricas do trinamento e validação é utilizado o  Wandb. WandB é um dashboard central para acompanhar  hiperparâmetros, métricas do sistema e previsões permitindo comparar modelos ao vivo.
+Para acompanhamento das métricas do treinamento e validação é utilizado o Wandb. WandB é um dashboard central para acompanhar hiperparâmetros, métricas do sistema e previsões permitindo comparar modelos ao vivo.
+
 
 #### Variação do número de épocas (epochs)
 
-São apresentadas na seguinte figura as métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que a perda de caixa e a perda de objetividade decrescem expressivamente até a cuarta época e depois continuam em decrecimento menos acelerado sem chegar em um platô. A perda de classificaçao permanece em zero durante todo o treinamento. para a validação a perda de caixa e a perda de objetividade decrescem apresentando ligeiras oscilações. A perda de classificaçao permanece em zero também para os datos de validação. A precisão do modelo cresce consistentemente até a segunda época e depois continua com caearateristicas de platê, com ligeiras oscilações e leve tendencia cresecente. A curva de re recordação cresce expressivamente até terceira época e depois continua em crescimento menos acentuado, com ligeiras oscilações sem chegar a caraterizar um platô. A curva de precisão média para limite de IoU de 0.5 tem comportamento similar a curva de precisão com menores oscilações na parte com carateristicas de platô e ainda com ligeira tedência de leve crescimento.  A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento com fortes oscilações até a última época.
+São apresentadas na seguinte figura as métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que a perda de caixa e a perda de objetividade decrescem expressivamente até a quarta época e depois continuam em decrescimento menos acelerado sem chegar em um platô. A perda de classificação permanece em zero durante todo o treinamento. para a validação a perda de caixa e a perda de objetividade decrescem apresentando ligeiras oscilações. A perda de classificação permanece em zero também para os dados de validação. A precisão do modelo cresce consistentemente até a segunda época e depois continua com características de platô, com ligeiras oscilações e leve tendencia crescente. A curva de recordação cresce expressivamente até terceira época e depois continua em crescimento menos acentuado, com ligeiras oscilações sem chegar a caracterizar um platô. A curva de precisão média para limite de IoU de 0.5 tem comportamento similar a curva de precisão com menores oscilações na parte com características de platô e ainda com ligeira tendência de leve crescimento.  A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresenta um crescimento com fortes oscilações até a última época.
 
 |Métricas de treinamento e validação para 10 épocas|
 |---|
 |<img src="img/media_images_Results_10_0326a98d691b6ae1c41b_Compilado.png" style="width: 900px">|
 
-São apresentadas na seguinte figura as métricas de treinamento e validação para 20 épocas. Nas curvas de perda observa-se um comportamento semelhante ao apontado para as curvas de perda de 10 épocas, obervando-se maores oscilações nas  nas curvas de perda dos dados de validação. As curvas de precisão e precisão média para limite de IoU de 0.5 crescen consistentemente com algumas oscilações até sexta época e depois apresentam carateristicas de platô. A curva de recordação tem comportamento similar às curvas de precisão, mas não chega a ter uma região de platô tão consolidada, tendo ainda uma leve tendencia crescente. A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento expresivo com oscilações até a  época dez e depois continua crescendo de forma menos acentuada.   
+São apresentadas na seguinte figura as métricas de treinamento e validação para 20 épocas. Nas curvas de perda observa-se um comportamento semelhante ao apontado para as curvas de perda de 10 épocas, observando-se maiores oscilações nas curvas de perda dos dados de validação. As curvas de precisão e precisão média para limite de IoU de 0.5 crescem consistentemente com algumas oscilações até sexta época e depois apresentam características de platô. A curva de recordação tem comportamento similar às curvas de precisão, mas não chega a ter uma região de platô tão consolidada, tendo ainda uma leve tendencia crescente. A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresenta um crescimento expressivo com oscilações até a época dez e depois continua crescendo de forma menos acentuada.      
 
 |Métricas de treinamento e validação para 20 épocas|
 |---|
 |<img src="img/media_images_Results_20_6afe5cd66e9ae3135d0e_Compilado.png" style="width: 900px">|
 
-São apresentadas na seguinte figura as métricas de treinamento e validação para 50 épocas. Nas curvas de perda para os dados de treinamento e validação observa-se uma carateristica de cotovelo  a partir da época 10, onde a tendncia de consolidação do platô é mais evidente para os dados de validação. As curvas de precisão e precisão média para limite de IoU de 0.5 crescen consistentemente com algumas oscilações até sexta época e depois apresentam carateristicas de platô. A curva de recordação tem comportamento similar às curvas de precisão, mas a consolidação sa região de platô aparece consolidada um pouco mais tarde depois da época 10. A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento expresivo com oscilações até a  época vinte e depois continua com uma região de convergencia/platô com ligeira tendencia crescente.
+São apresentadas na seguinte figura as métricas de treinamento e validação para 50 épocas. Nas curvas de perda para os dados de treinamento e validação observa-se uma característica de cotovelo a partir da época 10, onde a tendencia de consolidação do platô é mais evidente para os dados de validação. As curvas de precisão e precisão média para limite de IoU de 0.5 crescem consistentemente com algumas oscilações até sexta época e depois apresentam características de platô. A curva de recordação tem comportamento similar às curvas de precisão, mas a consolidação da região de platô aparece consolidada um pouco mais tarde depois da época 10. A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresenta um crescimento expressivo com oscilações até da época vinte e depois continua com uma região de convergência/platô com ligeira tendencia crescente.
 
 |Métricas de treinamento e validação para 50 épocas|
 |---|
@@ -160,7 +160,7 @@ Na seguinte tabela são sumarizados os melhores valores para as diferentes métr
 |x/lr2	|0.00208	|0.00109	|0.0005	|0.0005	|0.00208|
 
 
-São apresentadas a continuação figuras com as inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
+São apresentadas a continuação figuras com as inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o índice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
 
 | Inferência para 2 épocas | Inferência para 10 épocas |
 |---|---|
@@ -168,9 +168,9 @@ São apresentadas a continuação figuras com as inferências para 2, 10, 20 e 5
 |**Inferência para 20 épocas (configuração base)**|**Inferência para 50 épocas**|
 |<img src="img/predi20epoc.png" style="width: 500px"> |<img src="img/predi50epoc.png" style="width: 500px">|
 
-#### Variação do número de batch_size
+#### Variação do parâmetro batch_size
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas paraos batch-size:  10, 20 e 50. Foi fixado um número de 20 épocas. Não se evidenciam alterações significativas das métricas desempenho em função do parâmetro batch. Também não foram observadas variações significativas no tempo de treinamento dos modelos.
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para o parâmetro batch_size:  10, 20 e 50. Foi fixado um número de 20 épocas. Não se evidenciam alterações significativas das métricas de desempenho em função do parâmetro batch. Também não foram observadas variações significativas no tempo de treinamento dos modelos.
 
 |Batch	|16	|32	|48	|64	|min|max|
 |---|---|---|---|---|---|---|
@@ -194,7 +194,7 @@ x/lr0	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 x/lr2	|	0.00109	|	0.00110	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
-São apresentadas a continuação figuras para seguinte conjunto de valores do parametro batch_size: 16, 32, 48 e 64. Para proposito de comparação foi fixada a mesma imagem. 
+São apresentadas a continuação figuras das inferências para seguinte conjunto de valores do parâmetro batch_size: 16, 32, 48 e 64. Para proposito de comparação foi fixada a mesma imagem. 
 
 |Inferência para batch_size = 16 (configuração base)| Inferência para batch_size = 32  |
 |---|---|
@@ -202,9 +202,9 @@ São apresentadas a continuação figuras para seguinte conjunto de valores do p
 |**Inferência para batch_size = 48**|**Inferência para batch_size = 64**|
 |<img src="img/predi20epocas48batch.png" style="width: 500px"> |<img src="img/predi20epocas64batch.png" style="width: 500px">|
 
-#### Variação do parâmetro *TILE_OVERLAP*
+#### Variação do parâmetro TILE_OVERLAP
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para seguinte conjunto de valores do parâmetro de sobreposição de ladrilho (*TILE_OVERLAP*):  0, 32, 64 e 128. Foi fixado um número de 20 épocas. Observa-se que não á uma tendencia clara no tempo de treinamento, sendo observado aproximadamente o dobro do tempo de treinamento para cuando o parâmetro tile_overlap é nulo ou quando é setado em 128 pixels em comparação com tempo de treinamento para valores setados em .32 e 64 pixels. Não se observa uma variação significativa nas métricas de desempenho em função da variação do parâmetro *TILE_OVERLAP*, mas eveidencia ma leve tendencia de degradação na maioria das métricas para os dois casos extremos. 
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para seguinte conjunto de valores do parâmetro de sobreposição de ladrilho (TILE_OVERLAP):  0, 32, 64 e 128. Foi fixado um número de 20 épocas. Observa-se que não há uma tendencia clara no tempo de treinamento, sendo observado aproximadamente o dobro do tempo de treinamento para cuando o parâmetro TILE_OVERLAP é nulo ou quando é setado em 128 pixels em comparação com tempo de treinamento para valores setados em .32 e 64 pixels. Não se observa uma variação significativa nas métricas de desempenho em função da variação do parâmetro TILE_OVERLAP, mas evidencia uma leve tendencia de degradação na maioria das métricas para os dois casos extremos. 
 
 |	TILE_OVERLAP (Pixels)	|	0	|	32	|	64	|	128	|	min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
@@ -228,20 +228,17 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 |	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
+São apresentadas a continuação figuras das inferências para o seguinte conjunto de valores do parâmetro TILE_OVERLAP : 0, 32, 64 e 128 pixels. Para proposito de comparação foi fixada a mesma imagem.
 
-São apresentadas a continuação figuras das inferêrencias para o seguinte conjunto de valores do parametro TILE_OVERLAP : 0, 32, 64 e 128 pixels. Para proposito de comparação foi fixada a mesma imagem. 
-
-Inferência para TILE_OVERLAP  = 0 -------------------------------------------- Inferência para TILE_OVERLAP  = 32 
-
-<img src="img/predi20epocas0pix.png" style="width: 500px"> <img src="img/predi20epocas32pix.png" style="width: 500px">
-
-Inferência para TILE_OVERLAP  = 64 (configuração base) -------------------------------------------- Inferência para TILE_OVERLAP = 128
-
-<img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi20epocas128pix.png" style="width: 500px">
+|Inferência para TILE_OVERLAP  = 0|Inferência para TILE_OVERLAP  = 32 |
+|---|---|
+|<img src="img/predi20epocas0pix.png" style="width: 500px">|<img src="img/predi20epocas32pix.png" style="width: 500px">|
+|**Inferência para TILE_OVERLAP  = 64 (configuração base)|Inferência para TILE_OVERLAP = 128|
+|<img src="img/predi20epoc.png" style="width: 500px"> |<img src="img/predi20epocas128pix.png" style="width: 500px">|
 
 #### Variação do parâmetro TRUNCATED_PERCENT
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para o conjunto de valores do parametro de percentagem de truncamento (TRUNCATED_PERCENT):  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a a melhor época sempre foi a número 19. De forma geral não se evidenciou influência da variação do parâmetro TRUNCATED_PERCENT nas diferentes métricas desempenho a exepção de cuando este este tem um valor nulo e observa-se um desempeno degradado para as métricas correspondentes à melhor época. 
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para o conjunto de valores do parâmetro de percentagem de truncamento (TRUNCATED_PERCENT):  0, 0.3, 0.6 e 0.9. Foi fixado um número de 20 épocas. Observa-se que em termos de tempo de treinamento não houve variações significativas entre os diferentes modelos. Para todos os modelos considerados a melhor época sempre foi a número 19. De forma geral não se evidenciou influência da variação do parâmetro TRUNCATED_PERCENT nas diferentes métricas de desempenho a exceção de cuando este tem um valor nulo e observa-se um desempeno degradado para as métricas correspondentes à melhor época. 
 
 |	TRUNCATED_PERCENT	|	0	|	0.3	|	0.6	|	0.9	| min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
@@ -265,18 +262,18 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr1	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 |	x/lr2	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 
-São apresentadas a continuação figuras para o seguinte conjunto de valores do parâmetro *TRUNCATED_PERCENT*: 0, 0.3, 0.6 e 0.9. Para proposito de comparação foi fixada a mesma imagem. 
+São apresentadas a continuação figuras com as inferências para o seguinte conjunto de valores do parâmetro *TRUNCATED_PERCENT*: 0, 0.3, 0.6 e 0.9. Para proposito de comparação foi fixada a mesma imagem. 
 
 |Inferência para TRUNCATED_PERCENT = 0|Inferência para TRUNCATED_PERCENT = 0.3 (configuração base)|
 |---|---|
 |<img src="img/predi20epocas0per.png" style="width: 500px">|<img src="img/predi20epoc.png" style="width: 500px">|
-|Inferência para TRUNCATED_PERCENT = 0.6|Inferência para TRUNCATED_PERCENT = 0.9|
+|**Inferência para TRUNCATED_PERCENT = 0.6|Inferência para TRUNCATED_PERCENT = 0.9|
 |---|---|
 |<img src="img/predi20epocas06per.png" style="width: 500px"> |<img src="img/predi20epocas09per.png" style="width: 500px">|
 
-#### Variação dos parametros Tile_Width e Tile Heigth
+#### Variação dos parâmetros Tile_Width e Tile Heigth
 
-Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para os Tile_Width_Heigth  128, 256, 512 e 1024. Foi fixado um número de 20 épocas. Observa-se uma tendência de melhora de desemepenho com o aumento do tamanho das imagens. Não se verificou alterações significativas no tempo de treinamento.
+Na seguinte tabela são sumarizados os melhores valores das diferentes métricas para o seguinte conjunto de valores dos parâmetros Tile_Width, Tile_Heigth e imgsz: 128, 256, 512 e 1024. Foi fixado um número de 20 épocas. Observa-se uma tendência de melhora de desempenho com o aumento do tamanho das imagens. Não se verificou alterações significativas no tempo de treinamento.
 
 |	TILE_WIDTH/HEIGTH (Pixels)	|	128	|	256	|	512	|	1024	|	min	|	max	|
 |	---	|	---	|	---	|	---	|	---	|	---	|	---	|
@@ -300,20 +297,19 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 |	x/lr1	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|
 |	x/lr2	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|	0,00109	|
 
-São apresentadas a continuação figuras para seguinte conjunto de valores dos parametros TILE_WIDTH, TILE_HEIGTH,imgsz : 128, 256, 512 e 1024 pixels. O valor setado é o mesmo para os três parâmetros. Para proposito de comparação foi fixada a mesma imagem. Observa-se uma grande quantidade de falsos negativos pra 128 pixels. Para 256 pixels observam-se dois falsos negativos incluindo um aeronave relativamente grande. Para 512 e 1024 pixels observa-se um falso negativo de uma aeronave comparativamente pequena. É importante destacar que o desempenho nas inferências  ao modificar o tamaho das imagens não estará influenciado só por este parâmetro, como com as sua relação com outro parametro que foi deixado constante como a superposição (TILE_OVERLAP). Esse desbalanceamento pode ser uma das causa da baixa qualidade de inferência para 128 pixels.  
+São apresentadas a continuação figuras com as inferências para o seguinte conjunto de valores dos parâmetros TILE_WIDTH, TILE_HEIGTH e imgsz: 128, 256, 512 e 1024 pixels. O valor setado é o mesmo para os três parâmetros. Para proposito de comparação foi fixada a mesma imagem. Observa-se uma grande quantidade de falsos negativos pra 128 pixels. Para 256 pixels observam-se dois falsos negativos incluindo uma aeronave relativamente grande. Para 512 e 1024 pixels observa-se um falso negativo de uma aeronave comparativamente pequena. É importante destacar que o desempenho nas inferências ao modificar o tamanho das imagens não estará influenciado só por este parâmetro, como com a sua relação com outro parâmetro que foi deixado constante como a superposição (TILE_OVERLAP). Esse desbalanceamento pode ser uma das causas da baixa qualidade de inferência para 128 pixels.    
 
 |Inferência para TILE_WIDTH = 128|Inferência para TILE_WIDTH = 256 |
 |---|---|
 |<img src="img/predi20epocas128tam.png" style="width: 500px">| <img src="img/predi20epocas256tam.png" style="width: 500px">|
-|Inferência para TILE_WIDTH = 512  (configuração base)|Inferência para TILE_WIDTH = 1024|
+|**Inferência para TILE_WIDTH = 512  (configuração base)|Inferência para TILE_WIDTH = 1024|
 |<img src="img/predi20epoc.png" style="width: 500px">|<img src="img/predi20epocas1024tam.png" style="width: 500px">| 
 
 ### Conclusão
 
-Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens de sensoreamento remoto. O modelo é treinado pelo YOLOV v5 em diferentes números épocas, batch size, tamanho de imagens, sobreposição de ladrilhos e percentagens de truncamento. En termos de tempo de treinamento os parametros que mais o inflenciam são o número de epocas que tem uma relação de proporcionalidade e a sobreposicionamento dos ladrilhos (TILE_OVERLAP). Com respeito à métricas de desempenho não se verificou influência significativa dos parametrôs batch_size, TILE_OVERLAP e TRUNCATED_PERCENT.  Observou-se uma tendencia de melhora geral nas métricas de de desempenho quando foi aumentado o número de épocas e o tamanho dos ladrilhos/imagens. As anteriores observações ficam limitadas a os intervalos e casos especificos testados, não sendo possivel ter uma generalização das tendências observadas. Do estudo verifica-se a necessidade de ao variar um  determinado paramêtro e deixar os outros inalterados, levar em conta que o desbalanceamento de relações entre eles também pode influenciar no desempenho do modelo.
+Neste trabalho foi desenvolvido e estudado um modelo para deteção de aeronaves a partir de imagens de sensoriamento remoto. O modelo é treinado pelo YOLOVv5 em diferentes números épocas, *batch size*, tamanho de imagens, sobreposição de ladrilhos e percentagens de truncamento. En termos de tempo de treinamento os parâmetros que mais o influenciam são o número de épocas que tem uma relação de proporcionalidade e a sobreposição dos ladrilhos (TILE_OVERLAP). Com respeito à métricas de desempenho não se verificou influência significativa dos parâmetros batch_size* TILE_OVERLAP e TRUNCATED_PERCENT.  Observou-se uma tendencia de melhora geral nas métricas de desempenho quando foi aumentado o número de épocas e o tamanho dos ladrilhos/imagens. As anteriores observações ficam limitadas a os intervalos e casos específicos testados, não sendo possível ter uma generalização das tendências observadas. Do estudo verifica-se a necessidade de ao variar um determinado parâmetro e deixar os outros inalterados, levar em conta que o desbalanceamento de relações entre eles também pode influenciar no desempenho do modelo.
 
-Trabalhos futuros: No presente trabalho foi abordado o problema de deteção de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves e/o de sbcomponentes da aeronave.  
-
+Trabalhos futuros: No presente trabalho foi abordado o problema de deteção de uma classe, em futuros estudos pode ser abordado o problema de reconhecimento de diferentes tipos de aeronaves e/o de subcomponentes da aeronave.  
 
 ### Referências
 
