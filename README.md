@@ -66,7 +66,8 @@ Todas as aeronaves foram anotadas com caixas delimitadoras nas imagens fornecida
 
 Segue figura com imagem na qual foram incorporadas as informações das caixas delimitadoras.
 
-<img src="img/Aeroporto_pol.png" style="width: 700px">
+|<img src="img/Aeroporto_pol.png" style="width: 700px">|
+|:---:|
 
 ##### Análise exploratoria básica
 
@@ -81,11 +82,11 @@ Seguem figuras mostrando a distribuição da largura e altura das caixas delimit
 
 Uma pasta chamada [`extras`](https://github.com/davidfer88/TCC_BIMASTER/tree/main/Airbus_Aircrafts_Detection_Sample_Dataset/extras) contém 6 imagens extras que não são anotadas, e que são usadas para testar um modelo em imagens novas - nunca vistas antes.
 
-#### Modelo de aprendizado profundo usando YoloV5
+#### Modelo de aprendizado profundo usando YOLOv5
 
 YOLO um acrônimo para 'You only look once', é um algoritmo de detecção de objetos que divide imagens em um sistema de grade. Cada célula na grade é responsável por detectar objetos dentro de si. %%YOLO é um dos algoritmos de detecção de objetos mais famosos devido à sua velocidade e precisão. O código-fonte aberto está disponível no [GitHub](https://github.com/ultralytics/yolov5).
 
-Na arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a cabeça (head) e a detecção (detection). A espinha dorsal é uma rede neural convolucional (CNN) que coleta e modela caraterísticas de imagem em diferentes granularidades. O YoloV5 implementa o gargalo (Bottleneck ) de previsão de centro e escala (CSP) para formular recursos de imagem. A cabeça é uma série de camadas para combinar caraterísticas (features) de imagem para lançá-los em um processo de previsão. O YoloV5 também implementa o PA-NET para agregação de caraterísticas. A detecção é um processo que utiliza recursos do cabeça (head) e realiza etapas de previsão de caixa e classe (Ieamsaard, 2021). Um diagrama da arquitetura YoloV5 é mostrado na seguinte figura.
+Na arquitetura do YOLOv5 destacam 3 componentes: a espinha dorsal (backbone), a cabeça (head) e a detecção (detection). A espinha dorsal é uma rede neural convolucional (CNN) que coleta e modela caraterísticas de imagem em diferentes granularidades. O YOLOv5 implementa o gargalo (Bottleneck ) de previsão de centro e escala (CSP) para formular recursos de imagem. A cabeça é uma série de camadas para combinar caraterísticas (features) de imagem para lançá-los em um processo de previsão. O YOLOv5 também implementa o PA-NET para agregação de caraterísticas. A detecção é um processo que utiliza recursos do cabeça (head) e realiza etapas de previsão de caixa e classe (Ieamsaard, 2021). Um diagrama da arquitetura YOLOv5 é mostrado na seguinte figura.
 
 |<img src="img/Overview of model structure about YOLOv5.jpg" style="width: 900px">|
 |:---:|
