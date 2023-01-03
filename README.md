@@ -51,8 +51,9 @@ A pasta `images`  contém 103 extratos de imagens das Plêiades com aproximadame
 
 Seguem algumas imagens do conjunto de treinamento:
 
-|---|---|
 |<img src="img/Aeroporto_mostra.png" style="width: 500px">| <img src="img/Aeroporto_mostra2.png" style="width: 500px">|
+|---|---|
+
 
 
 #### Formato de de dados COCO e Pascal VOC para detecção de objetos.
