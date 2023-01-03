@@ -18,7 +18,7 @@ All aircrafts have been annotated with bounding boxes on the provided imagery. T
 
 ## Extra imagery
 
-A folder named [`extras`] (https://github.com/davidfer88/TCC_BIMASTER/tree/main/Airbus_Aircrafts_Detection_Sample_Dataset/extras) contains 6 extra images which are not annotated but could be used to test a model on new - unseen before - images. 
+A folder named [`extras`](https://github.com/davidfer88/TCC_BIMASTER/tree/main/Airbus_Aircrafts_Detection_Sample_Dataset/extras) contains 6 extra images which are not annotated but could be used to test a model on new - unseen before - images. 
 
 ## License
 
