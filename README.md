@@ -47,7 +47,7 @@ Neste trabalho é utilizado como conjunto de dados de entrada o dataset de demon
 
 ##### Imagens para treinamento
 
-A pasta `images`  contém 103 extratos de imagens das Plêiades com aproximadamente 50 cm de resolução. Cada imagem é armazenada como um arquivo JPEG de tamanho 2560 x 2560 pixels (ou seja, 1280 metros no solo). Os locais são vários aeroportos em todo o mundo. Alguns aeroportos aparecem várias vezes em diferentes datas de aquisição. Algumas imagens também incluem neblina ou nuvem para diversidade.
+A pasta [`images`](https://github.com/davidfer88/TCC_BIMASTER/tree/main/Airbus_Aircrafts_Detection_Sample_Dataset/images) contém 103 extratos de imagens das Plêiades com aproximadamente 50 cm de resolução. Cada imagem é armazenada como um arquivo JPEG de tamanho 2560 x 2560 pixels (ou seja, 1280 metros no solo). Os locais são vários aeroportos em todo o mundo. Alguns aeroportos aparecem várias vezes em diferentes datas de aquisição. Algumas imagens também incluem neblina ou nuvem para diversidade.
 
 Seguem algumas imagens do conjunto de treinamento:
 
@@ -79,7 +79,7 @@ Seguem figuras mostrando a distribuição da largura e altura das caixas delimit
 
 ##### Imagens extras
 
-Uma pasta chamada `extras` contém 6 imagens extras que não são anotadas, e que são usadas para testar um modelo em imagens novas - nunca vistas antes.
+Uma pasta chamada [`extras`](https://github.com/davidfer88/TCC_BIMASTER/tree/main/Airbus_Aircrafts_Detection_Sample_Dataset/extras) contém 6 imagens extras que não são anotadas, e que são usadas para testar um modelo em imagens novas - nunca vistas antes.
 
 #### Modelo de aprendizado profundo usando YoloV5
 
