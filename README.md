@@ -74,7 +74,7 @@ A partir de uma análise exploratória básica é possível verificar algumas ca
 
 Seguem figuras mostrando a distribuição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Esses valores estão dados em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves.
 
-|<img src="img/count_width.png" style="width: 400px"> |<img src="img/count_heigth.png" style="width: 400px">|
+| <img src="img/count_width.png" style="width: 400px"> | <img src="img/count_heigth.png" style="width: 400px"> |
 |---|---|
 
 ##### Imagens extras
