@@ -10,7 +10,7 @@ This dataset is a demonstration version of larger and more advanced deep learnin
 
 ## Imagery for training
 
-The `images` folder contains 103 extract of Pleiades imagery at roughly 50 cm resolution. Each each image is stored as a JPEG file of size 2560 x 2560 pixels (i.e. 1280 meters on ground). The locations are various airports worldwide. Some airports appear multiple time at different acquisition dates. Some images also include fog or cloud for diversity.
+The [`images`](https://github.com/davidfer88/TCC_BIMASTER/tree/main/Airbus_Aircrafts_Detection_Sample_Dataset/images) folder contains 103 extract of Pleiades imagery at roughly 50 cm resolution. Each each image is stored as a JPEG file of size 2560 x 2560 pixels (i.e. 1280 meters on ground). The locations are various airports worldwide. Some airports appear multiple time at different acquisition dates. Some images also include fog or cloud for diversity.
 
 ## Annotations
 
@@ -18,7 +18,7 @@ All aircrafts have been annotated with bounding boxes on the provided imagery. T
 
 ## Extra imagery
 
-A folder named `extras` contains 6 extra images which are not annotated but could be used to test a model on new - unseen before - images. 
+A folder named [`extras`] (https://github.com/davidfer88/TCC_BIMASTER/tree/main/Airbus_Aircrafts_Detection_Sample_Dataset/extras) contains 6 extra images which are not annotated but could be used to test a model on new - unseen before - images. 
 
 ## License
 
