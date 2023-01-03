@@ -1,6 +1,3 @@
-# TCC_BIMASTER
-Trabalho de conclusão de Curso do BI-Master turma 2020-2 PUC-Rio
-
 # Reconhecimento de Aeronaves a partir de Imagens de Sensoriameno Remoto usando Deep Learning
 
 #### Aluno: [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
@@ -127,7 +124,7 @@ Métricas de treinamento e validação para 20 épocas
 
 <img src="img/media_images_Results_20_6afe5cd66e9ae3135d0e_Compilado.png" style="width: 900px">
 
-São apresentadas na seguinte figura as métricas de treinamento e validação para 50 épocas. Nas curvas de perda para os dados de treinamento e validação observa-se uma carateristica de cotovelo  a partir da época 10, onde a tendencia de consolidação do platô é mais evidente para os dados de validação. As curvas de precisão e precisão média para limite de IoU de 0.5 crescen consistentemente com algumas oscilações até sexta época e depois apresentam carateristicas de platô. A curva de recordação tem comportamento similar às curvas de precisão, mas a consolidação sa região de platô aparece consolidada um pouco mais tarde depois da época 10. A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento expresivo com oscilações até a  época vinte e depois continua com uma região de convergencia/platô com ligeira tendencia crescente.
+São apresentadas na seguinte figura as métricas de treinamento e validação para 50 épocas. Nas curvas de perda para os dados de treinamento e validação observa-se uma carateristica de cotovelo  a partir da época 10, onde a tendncia de consolidação do platô é mais evidente para os dados de validação. As curvas de precisão e precisão média para limite de IoU de 0.5 crescen consistentemente com algumas oscilações até sexta época e depois apresentam carateristicas de platô. A curva de recordação tem comportamento similar às curvas de precisão, mas a consolidação sa região de platô aparece consolidada um pouco mais tarde depois da época 10. A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento expresivo com oscilações até a  época vinte e depois continua com uma região de convergencia/platô com ligeira tendencia crescente.
 
 Métricas de treinamento e validação para 50 épocas
 
