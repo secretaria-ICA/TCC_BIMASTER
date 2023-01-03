@@ -1,4 +1,4 @@
-# Reconhecimento de Aeronaves a partir de Imagens de Sensoriameno Remoto usando Deep Learning
+# Reconhecimento de Aeronaves a partir de Imagens de Sensoriamento Remoto usando Deep Learning
 
 #### Aluno: [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
 #### Orientador: [Leonardo Forero Mendoza](https://github.com/leofome8).
@@ -157,7 +157,11 @@ Na seguinte tabela são sumarizados os melhores valores para as diferentes métr
 
 São apresentadas a continuação figuras com as inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o indice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
 
-Infereência para 2 épocas ------------------------------------------- Inferência para 10 épocas
+| Inferência para 2 épocas | Inferência para 10 épocas |
+|---|---|
+| <img src="img/predi2epoc.png" style="width: 500px">| <img src="img/predi10epoc.png" style="width: 500px">|
+
+Inferência para 2 épocas ------------------------------------------- Inferência para 10 épocas
 
 <img src="img/predi2epoc.png" style="width: 500px"> <img src="img/predi10epoc.png" style="width: 500px">
 
