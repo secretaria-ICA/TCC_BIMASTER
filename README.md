@@ -52,7 +52,7 @@ A pasta `images`  contém 103 extratos de imagens das Plêiades com aproximadame
 Seguem algumas imagens do conjunto de treinamento:
 
 |<img src="img/Aeroporto_mostra.png" style="width: 500px">| <img src="img/Aeroporto_mostra2.png" style="width: 500px">|
-|---|---|
+|:---:|:---:|
 
 
 
@@ -75,7 +75,7 @@ A partir de uma análise exploratória básica é possível verificar algumas ca
 Seguem figuras mostrando a distribuição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Esses valores estão dados em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves.
 
 | <img src="img/count_width.png" style="width: 400px"> | <img src="img/count_heigth.png" style="width: 400px"> |
-|---|---|
+|:---:|:---:|
 
 ##### Imagens extras
 
@@ -88,7 +88,7 @@ YOLO um acrônimo para 'You only look once', é um algoritmo de detecção de ob
 Na arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a cabeça (head) e a detecção (detection). A espinha dorsal é uma rede neural convolucional (CNN) que coleta e modela caraterísticas de imagem em diferentes granularidades. O YoloV5 implementa o gargalo (Bottleneck ) de previsão de centro e escala (CSP) para formular recursos de imagem. A cabeça é uma série de camadas para combinar caraterísticas (features) de imagem para lançá-los em um processo de previsão. O YoloV5 também implementa o PA-NET para agregação de caraterísticas. A detecção é um processo que utiliza recursos do cabeça (head) e realiza etapas de previsão de caixa e classe (Ieamsaard, 2021). Um diagrama da arquitetura YoloV5 é mostrado na seguinte figura.
 
 |<img src="img/Overview of model structure about YOLOv5.jpg" style="width: 900px">|
-|---|
+|:---:|
 
 #### Treinamento do modelo
 
@@ -120,19 +120,19 @@ Para acompanhamento das métricas do treinamento e validação é utilizado o Wa
 São apresentadas na seguinte figura as métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que a perda de caixa e a perda de objetividade decrescem expressivamente até a quarta época e depois continuam em decrescimento menos acelerado sem chegar em um platô. A perda de classificação permanece em zero durante todo o treinamento. para a validação a perda de caixa e a perda de objetividade decrescem apresentando ligeiras oscilações. A perda de classificação permanece em zero também para os dados de validação. A precisão do modelo cresce consistentemente até a segunda época e depois continua com características de platô, com ligeiras oscilações e leve tendencia crescente. A curva de recordação cresce expressivamente até terceira época e depois continua em crescimento menos acentuado, com ligeiras oscilações sem chegar a caracterizar um platô. A curva de precisão média para limite de IoU de 0.5 tem comportamento similar a curva de precisão com menores oscilações na parte com características de platô e ainda com ligeira tendência de leve crescimento.  A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresenta um crescimento com fortes oscilações até a última época.
 
 |Métricas de treinamento e validação para 10 épocas|
-|---|
+|:---:|
 |<img src="img/media_images_Results_10_0326a98d691b6ae1c41b_Compilado.png" style="width: 900px">|
 
 São apresentadas na seguinte figura as métricas de treinamento e validação para 20 épocas. Nas curvas de perda observa-se um comportamento semelhante ao apontado para as curvas de perda de 10 épocas, observando-se maiores oscilações nas curvas de perda dos dados de validação. As curvas de precisão e precisão média para limite de IoU de 0.5 crescem consistentemente com algumas oscilações até sexta época e depois apresentam características de platô. A curva de recordação tem comportamento similar às curvas de precisão, mas não chega a ter uma região de platô tão consolidada, tendo ainda uma leve tendencia crescente. A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresenta um crescimento expressivo com oscilações até a época dez e depois continua crescendo de forma menos acentuada.      
 
 |Métricas de treinamento e validação para 20 épocas|
-|---|
+|:---:|
 |<img src="img/media_images_Results_20_6afe5cd66e9ae3135d0e_Compilado.png" style="width: 900px">|
 
 São apresentadas na seguinte figura as métricas de treinamento e validação para 50 épocas. Nas curvas de perda para os dados de treinamento e validação observa-se uma característica de cotovelo a partir da época 10, onde a tendencia de consolidação do platô é mais evidente para os dados de validação. As curvas de precisão e precisão média para limite de IoU de 0.5 crescem consistentemente com algumas oscilações até sexta época e depois apresentam características de platô. A curva de recordação tem comportamento similar às curvas de precisão, mas a consolidação da região de platô aparece consolidada um pouco mais tarde depois da época 10. A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresenta um crescimento expressivo com oscilações até da época vinte e depois continua com uma região de convergência/platô com ligeira tendencia crescente.
 
 |Métricas de treinamento e validação para 50 épocas|
-|---|
+|:---:|
 |<img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 900px">|
 
 Na seguinte tabela são sumarizados os melhores valores para as diferentes métricas apresentadas nas figuras anteriores para 10, 20 e 50 épocas. Destaca que a melhor época para as diferentes rodadas foram a 9, a 20 e a 36 respectivamente. Como era de se esperar, geralmente para uma determinada métrica a o valor de melhor desempenho está associado ao treinamento de 50 épocas que teve o melhor ponto na época 36. Verificou-se que com o aumento de número de épocas obteve-se um aumento de desempenho, porem que é importante ter um critério de parada para eficiência computacional, já que a melhor época não necessariamente correspondera a última época do treinamento.
@@ -163,7 +163,7 @@ Na seguinte tabela são sumarizados os melhores valores para as diferentes métr
 São apresentadas a continuação figuras com as inferências para 2, 10, 20 e 50 épocas respectivamente. Para proposito de comparação foi fixada a mesma imagem. Observa-se para a partir de 10 épocas a maioria das aeronaves são detectadas. Destaca-se que com o aumento das épocas o índice IoU nas detecções vai incrementando. Interessante observar que uma pequena aeronave que foi detectada no modelo de 10 épocas não aparece nas previsões dos modelos de 20 e 50 épocas. Este fato permite fazer lembrança da importância do compromisso entre precisão e recall. 
 
 | Inferência para 2 épocas | Inferência para 10 épocas |
-|---|---|
+|:---:|:---:|
 | <img src="img/predi2epoc.png" style="width: 500px">| <img src="img/predi10epoc.png" style="width: 500px">|
 |**Inferência para 20 épocas (configuração base)**|**Inferência para 50 épocas**|
 |<img src="img/predi20epoc.png" style="width: 500px"> |<img src="img/predi50epoc.png" style="width: 500px">|
@@ -197,7 +197,7 @@ x/lr2	|	0.00109	|	0.00110	|	0.00109	|	0.00109	|	0.00109	|	0.00109	|
 São apresentadas a continuação figuras das inferências para seguinte conjunto de valores do parâmetro batch_size: 16, 32, 48 e 64. Para proposito de comparação foi fixada a mesma imagem. 
 
 |Inferência para batch_size = 16 (configuração base)| Inferência para batch_size = 32  |
-|---|---|
+|:---:|:---:|
 |<img src="img/predi20epoc.png" style="width: 500px">|<img src="img/predi20epocas32batch.png" style="width: 500px">|
 |**Inferência para batch_size = 48**|**Inferência para batch_size = 64**|
 |<img src="img/predi20epocas48batch.png" style="width: 500px"> |<img src="img/predi20epocas64batch.png" style="width: 500px">|
@@ -231,7 +231,7 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 São apresentadas a continuação figuras das inferências para o seguinte conjunto de valores do parâmetro TILE_OVERLAP : 0, 32, 64 e 128 pixels. Para proposito de comparação foi fixada a mesma imagem.
 
 |Inferência para TILE_OVERLAP  = 0|Inferência para TILE_OVERLAP  = 32 |
-|---|---|
+|:---:|:---:|
 |<img src="img/predi20epocas0pix.png" style="width: 500px">|<img src="img/predi20epocas32pix.png" style="width: 500px">|
 |**Inferência para TILE_OVERLAP  = 64 (configuração base)**|Inferência para TILE_OVERLAP = 128**|
 |<img src="img/predi20epoc.png" style="width: 500px"> |<img src="img/predi20epocas128pix.png" style="width: 500px">|
@@ -265,7 +265,7 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 São apresentadas a continuação figuras com as inferências para o seguinte conjunto de valores do parâmetro *TRUNCATED_PERCENT*: 0, 0.3, 0.6 e 0.9. Para proposito de comparação foi fixada a mesma imagem. 
 
 |Inferência para TRUNCATED_PERCENT = 0|Inferência para TRUNCATED_PERCENT = 0.3 (configuração base)|
-|---|---|
+|:---:|:---:|
 |<img src="img/predi20epocas0per.png" style="width: 500px">|<img src="img/predi20epoc.png" style="width: 500px">|
 |**Inferência para TRUNCATED_PERCENT = 0.6**|**Inferência para TRUNCATED_PERCENT = 0.9**|
 |<img src="img/predi20epocas06per.png" style="width: 500px"> |<img src="img/predi20epocas09per.png" style="width: 500px">|
@@ -299,7 +299,7 @@ Na seguinte tabela são sumarizados os melhores valores das diferentes métricas
 São apresentadas a continuação figuras com as inferências para o seguinte conjunto de valores dos parâmetros TILE_WIDTH, TILE_HEIGTH e imgsz: 128, 256, 512 e 1024 pixels. O valor setado é o mesmo para os três parâmetros. Para proposito de comparação foi fixada a mesma imagem. Observa-se uma grande quantidade de falsos negativos pra 128 pixels. Para 256 pixels observam-se dois falsos negativos incluindo uma aeronave relativamente grande. Para 512 e 1024 pixels observa-se um falso negativo de uma aeronave comparativamente pequena. É importante destacar que o desempenho nas inferências ao modificar o tamanho das imagens não estará influenciado só por este parâmetro, como com a sua relação com outro parâmetro que foi deixado constante como a superposição (TILE_OVERLAP). Esse desbalanceamento pode ser uma das causas da baixa qualidade de inferência para 128 pixels.    
 
 |Inferência para TILE_WIDTH = 128|Inferência para TILE_WIDTH = 256 |
-|---|---|
+|:---:|:---:|
 |<img src="img/predi20epocas128tam.png" style="width: 500px">| <img src="img/predi20epocas256tam.png" style="width: 500px">|
 |**Inferência para TILE_WIDTH = 512  (configuração base)**|**Inferência para TILE_WIDTH = 1024**|
 |<img src="img/predi20epoc.png" style="width: 500px">|<img src="img/predi20epocas1024tam.png" style="width: 500px">| 
