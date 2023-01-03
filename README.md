@@ -71,10 +71,11 @@ Segue figura com imagem na qual foram incorporadas as informações das caixas d
 
 ##### Análise exploratoria básica
 
-A partir de uma análise exploratória básica é possível verificar algumas características do conjunto de imagens base: são rotuladas 3316 aeronaves completas (Airplane) e 109 aeronaves truncadas (Truncated_airplane), verifica-se também que número mínimo de aeronaves por imagens é 5 e número máximos de aeronaves em uma imagem do conjunto é 92.
+A partir de uma análise exploratória básica é possível verificar algumas características do conjunto de imagens base: são rotuladas 3316 aeronaves completas (Airplane) e 109 aeronaves truncadas (Truncated_airplane), verifica-se também que número mínimo de aeronaves por imagens é 5 e número máximos de aeronaves em uma imagem do conjunto é 92. 
 
-Seguem figuras mostrando a distribuição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Esses valores estão dados em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves.
+Seguem figuras mostrando a distribuição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Não deve se confundir esta estimação da largura e altura da caixa delimitadora  com estimativa da envergadura ou comprimento da aeronave. Observa-se uma variação das caixas delimitadoras entre 14 m a 115 m. Esses valores estão dados em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves. Por exemplo um Airbus A380 tem um comprimento de 72 m e uma envergadura de 80 m.  Se for levado em conta varição na orientação de planos pode sé obterm um máximo de 113 m.
 
+|Distribuição de largura [m]  das caixas delimitadoras | Distribuição de altura [m] das caixas delimitadoras|
 | <img src="img/count_width.png" style="width: 400px"> | <img src="img/count_heigth.png" style="width: 400px"> |
 |:---:|:---:|
 
@@ -93,7 +94,7 @@ Na arquitetura do YOLOv5 destacam 3 componentes: a espinha dorsal (backbone), a 
 
 #### Treinamento do modelo
 
-As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessário a subdividisão das imagens em imagens menores ou ladrilhos (tiles). Configuração base: são gerados blocos antecipadamente com um tamanho setado em 512 pixels por 512 pixels. Para garantir que todas as aeronaves possam ser vistas pela rede na integra, é permitida uma sobreposição de 64 pixels entre os blocos. É setada uma porcentagem de truncamento de 0.3. Para a configuração base de treino foram setados os seguintes parâmetros: epochs=10, batch_size=16, imgsz=512.
+As imagens do conjunto de dados de entrada são muito grandes para um correto aprendizado pelo YOLO. É necessário a subdividisão das imagens em imagens menores ou ladrilhos (tiles). Configuração base: são gerados blocos antecipadamente com um tamanho setado em 512 pixels por 512 pixels. Para garantir que todas as aeronaves possam ser vistas pela rede na integra, é permitida uma sobreposição de 64 pixels entre os blocos. Serão gerados muitos objetos truncados, mas a rede será capaz de detectar as aeronaves truncadas se  forem o suficientemente visíveeis. É setada uma porcentagem de truncamento de 0.3, ou seja será removida a anotação apenas se houver menos de 30% da caixa delimitadora visível na imagem. Para a configuração base de treino foram setados os seguintes parâmetros: epochs=10, batch_size=16, imgsz=512.
 
 Neste trabalho serão variados os anteriores parâmetros e será avaliada a influência no desempenho dos modelos. Para o treinamento e inferências dos modelos é utilizado o COLAB no ambiente de execução com GPU.
 
