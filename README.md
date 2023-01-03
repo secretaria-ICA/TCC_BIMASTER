@@ -119,21 +119,21 @@ Para acompanhamento das metricas do trinamento e validação é utilizado o  Wan
 
 São apresentadas na seguinte figura as métricas de treinamento e validação para 10 épocas. Observa-se para o treinamento que a perda de caixa e a perda de objetividade decrescem expressivamente até a cuarta época e depois continuam em decrecimento menos acelerado sem chegar em um platô. A perda de classificaçao permanece em zero durante todo o treinamento. para a validação a perda de caixa e a perda de objetividade decrescem apresentando ligeiras oscilações. A perda de classificaçao permanece em zero também para os datos de validação. A precisão do modelo cresce consistentemente até a segunda época e depois continua com caearateristicas de platê, com ligeiras oscilações e leve tendencia cresecente. A curva de re recordação cresce expressivamente até terceira época e depois continua em crescimento menos acentuado, com ligeiras oscilações sem chegar a caraterizar um platô. A curva de precisão média para limite de IoU de 0.5 tem comportamento similar a curva de precisão com menores oscilações na parte com carateristicas de platô e ainda com ligeira tedência de leve crescimento.  A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento com fortes oscilações até a última época.
 
-Métricas de treinamento e validação para 10 épocas
-
-<img src="img/media_images_Results_10_0326a98d691b6ae1c41b_Compilado.png" style="width: 900px">
+|Métricas de treinamento e validação para 10 épocas|
+|---|
+|<img src="img/media_images_Results_10_0326a98d691b6ae1c41b_Compilado.png" style="width: 900px">|
 
 São apresentadas na seguinte figura as métricas de treinamento e validação para 20 épocas. Nas curvas de perda observa-se um comportamento semelhante ao apontado para as curvas de perda de 10 épocas, obervando-se maores oscilações nas  nas curvas de perda dos dados de validação. As curvas de precisão e precisão média para limite de IoU de 0.5 crescen consistentemente com algumas oscilações até sexta época e depois apresentam carateristicas de platô. A curva de recordação tem comportamento similar às curvas de precisão, mas não chega a ter uma região de platô tão consolidada, tendo ainda uma leve tendencia crescente. A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento expresivo com oscilações até a  época dez e depois continua crescendo de forma menos acentuada.   
 
-Métricas de treinamento e validação para 20 épocas
-
-<img src="img/media_images_Results_20_6afe5cd66e9ae3135d0e_Compilado.png" style="width: 900px">
+|Métricas de treinamento e validação para 20 épocas|
+|---|
+|<img src="img/media_images_Results_20_6afe5cd66e9ae3135d0e_Compilado.png" style="width: 900px">|
 
 São apresentadas na seguinte figura as métricas de treinamento e validação para 50 épocas. Nas curvas de perda para os dados de treinamento e validação observa-se uma carateristica de cotovelo  a partir da época 10, onde a tendncia de consolidação do platô é mais evidente para os dados de validação. As curvas de precisão e precisão média para limite de IoU de 0.5 crescen consistentemente com algumas oscilações até sexta época e depois apresentam carateristicas de platô. A curva de recordação tem comportamento similar às curvas de precisão, mas a consolidação sa região de platô aparece consolidada um pouco mais tarde depois da época 10. A curva de precisão média para limite de IoU entre 0.5 e 0.95 apresnta um crescimento expresivo com oscilações até a  época vinte e depois continua com uma região de convergencia/platô com ligeira tendencia crescente.
 
-Métricas de treinamento e validação para 50 épocas
-
-<img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 900px">
+|Métricas de treinamento e validação para 50 épocas|
+|---|
+|<img src="img/media_images_Results_50_fa5a90ae58da257eb152_Compilado.png" style="width: 900px">|
 
 Na seguinte tabela são sumarizados os melhores valores para as diferentes métricas apresentadas nas figuras anteriores para 10, 20 e 50 épocas. Destaca que a melhor época para as diferentes rodadas foram a 9, a 20 e a 36 respectivamente. Como era de se esperar, geralmente para uma determinada métrica a o valor de melhor desempenho está associado ao treinamento de 50 épocas que teve o melhor ponto na época 36. Verificou-se que com o aumento de número de épocas obteve-se um aumento de desempenho, porem que é importante ter um critério de parada para eficiência computacional, já que a melhor época não necessariamente correspondera a última época do treinamento.
 
