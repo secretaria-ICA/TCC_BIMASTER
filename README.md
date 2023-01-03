@@ -75,7 +75,7 @@ A partir de uma análise exploratória básica é possível verificar algumas ca
 Seguem figuras mostrando a distribuição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Esses valores estão dados em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves.
 
 |<img src="img/count_width.png" style="width: 400px"> |<img src="img/count_heigth.png" style="width: 400px">|
-|||
+|---|---|
 
 ##### Imagens extras
 
@@ -87,7 +87,8 @@ YOLO um acrônimo para 'You only look once', é um algoritmo de detecção de ob
 
 Na  arquitetura do YoloV5 destacam 3 componentes: a espinha dorsal (backbone), a cabeça (head) e a detecção (detection). A espinha dorsal é uma rede neural convolucional (CNN) que coleta e modela caraterísticas de imagem em diferentes granularidades. O YoloV5 implementa o gargalo (Bottleneck ) de previsão de centro e escala (CSP) para formular recursos de imagem. A cabeça é uma série de camadas para combinar caraterísticas (features) de imagem para lançá-los em um processo de previsão. O YoloV5 também implementa o PA-NET para agregação de caraterísticas. A detecção é um processo que utiliza recursos do cabeça (head) e realiza etapas de previsão de caixa e classe (Ieamsaard, 2021). Um diagrama da arquitetura YoloV5 é mostrado na seguinte figura.
 
-<img src="img/Overview of model structure about YOLOv5.jpg" style="width: 600px">
+|<img src="img/Overview of model structure about YOLOv5.jpg" style="width: 600px">|
+|---|
 
 #### Treinamento do modelo
 
