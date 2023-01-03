@@ -1,7 +1,7 @@
 # TCC_BIMASTER
 Trabalho de conclusão de Curso do BI-Master turma 2020-2 PUC-Rio
 
-# Reconhecimento de Aeronaves a partir de Imagens de Sensoriameno Remoto
+# Reconhecimento de Aeronaves a partir de Imagens de Sensoriameno Remoto usando Deep Learning
 
 #### Aluno: [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
 #### Orientador: [Leonardo Forero Mendoza](https://github.com/leofome8).
