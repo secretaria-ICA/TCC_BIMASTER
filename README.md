@@ -160,14 +160,8 @@ São apresentadas a continuação figuras com as inferências para 2, 10, 20 e 5
 | Inferência para 2 épocas | Inferência para 10 épocas |
 |---|---|
 | <img src="img/predi2epoc.png" style="width: 500px">| <img src="img/predi10epoc.png" style="width: 500px">|
-
-Inferência para 2 épocas ------------------------------------------- Inferência para 10 épocas
-
-<img src="img/predi2epoc.png" style="width: 500px"> <img src="img/predi10epoc.png" style="width: 500px">
-
-Inferência para 20 épocas (configuração base)------------------------------------------- Inferência para 50 épocas
-
-<img src="img/predi20epoc.png" style="width: 500px"> <img src="img/predi50epoc.png" style="width: 500px">
+|**Inferência para 20 épocas (configuração base)**|**Inferência para 50 épocas**|
+|<img src="img/predi20epoc.png" style="width: 500px"> |<img src="img/predi50epoc.png" style="width: 500px">|
 
 #### Variação do número de batch_size
 
