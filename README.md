@@ -54,8 +54,6 @@ Seguem algumas imagens do conjunto de treinamento:
 |<img src="img/Aeroporto_mostra.png" style="width: 500px">| <img src="img/Aeroporto_mostra2.png" style="width: 500px">|
 |:---:|:---:|
 
-
-
 #### Formato de de dados COCO e Pascal VOC para detecção de objetos.
 
 Uma das tarefas mais importantes em visão computacional é rotular os dados (Khandelwa, 2019). Existem várias ferramentas disponíveis onde podem-se carregar as imagens, rotular os objetos usando segmentação por instância. Isso ajuda na localização precisa do objeto usando caixas delimitadoras ou mascaramento usando polígonos. Essas informações são armazenadas em arquivos de anotação. Arquivos/arquivos de anotação podem estar nos formatos de dados [COCO](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/devkit_doc.pdf) (Everingham, 2012) ou [Pascal VOC](https://arxiv.org/pdf/1405.0312.pdf) (Lin,2014).
@@ -73,11 +71,12 @@ Segue figura com imagem na qual foram incorporadas as informações das caixas d
 
 A partir de uma análise exploratória básica é possível verificar algumas características do conjunto de imagens base: são rotuladas 3316 aeronaves completas (Airplane) e 109 aeronaves truncadas (Truncated_airplane), verifica-se também que número mínimo de aeronaves por imagens é 5 e número máximos de aeronaves em uma imagem do conjunto é 92. 
 
-Seguem figuras mostrando a distribuição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Não deve se confundir esta estimação da largura e altura da caixa delimitadora  com estimativa da envergadura ou comprimento da aeronave. Observa-se uma variação das caixas delimitadoras entre 14 m a 115 m. Esses valores estão dados em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves. Por exemplo um Airbus A380 tem um comprimento de 72 m e uma envergadura de 80 m.  Se for levado em conta varição na orientação de planos pode sé obterm um máximo de 113 m.
+Seguem figuras mostrando a distribuição da largura e altura das caixas delimitadoras que rotulam as aeronaves. Não deve se confundir esta estimação da largura e altura da caixa delimitadora  com estimativa da envergadura ou comprimento da aeronave. Observa-se uma variação das caixas delimitadoras entre 14 m a 115 m. Esses valores estão dados em metros [m] e são coerentes com dimensões comuns de diferentes aeronaves. Por exemplo um Airbus A380 tem um comprimento de 72 m e uma envergadura de 80 m. Se for levado em conta varição na orientação de planos pode sé obterm um máximo de 113 m.
 
-|Distribuição de largura [m]  das caixas delimitadoras | Distribuição de altura [m] das caixas delimitadoras|
-| <img src="img/count_width.png" style="width: 400px"> | <img src="img/count_heigth.png" style="width: 400px"> |
+|Distribuição de largura [m] das caixas delimitadoras | Distribuição de altura [m] das caixas delimitadoras|
 |:---:|:---:|
+| <img src="img/count_width.png" style="width: 400px"> | <img src="img/count_heigth.png" style="width: 400px"> |
+
 
 ##### Imagens extras
 
