@@ -1,4 +1,4 @@
-# Reconhecimento de Aeronaves a partir de Imagens de Sensoriamento Remoto usando Deep Learning
+# Reconhecimento_de_Aeronaves_a_Partir_de_Imagens_de_Sensoriamento_Remoto_Usando_Deep_Learning
 
 #### Aluno: [David Fernando Castillo Zúñiga](https://github.com/davidfer88).
 #### Orientador: [Leonardo Forero Mendoza](https://github.com/leofome8).
